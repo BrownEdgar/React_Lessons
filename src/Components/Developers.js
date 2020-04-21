@@ -1,18 +1,13 @@
-import React, { Component } from 'react';
-import  './Developers.css'
+import React from 'react';
+import s from  './Developers.module.css'
 
 
-class Developers extends Component {
-	state = {
-		isOpen:true
-	}
-	render(){
+function Developers(props) {
 		return (
-			<div className='box'>
-				<h1>Name: {this.props.name}</h1>
-				<h4>Skilss: {this.props.skilss}</h4>
+			<div className={s.box}>
+				<h1>Name: {props.name}</h1>
+				<h4>Skilss: {props.skilss}</h4>
 			</div>
 		);
-	}
 }
 export default Developers;

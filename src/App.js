@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import Developers from './Components/Developers'
+import './style.css'
+
+
 
 class App extends Component {
 	state = {
 		developers:[
 			{ name: "Sebastian", skilss: "Html, css"},
 			{ name: "Baghdaser", skilss: "Html, css, js"},
-			{ name: "Max", skilss: "Html, css, js, React.js, Node.js" }
+			{ name: "Mix", skilss: "Html, css, js, React.js, Node.js" }
 		],
 		title:"Our Developers"
 	}
@@ -15,13 +18,15 @@ class App extends Component {
 		console.log("click");
 		// this.state.title= "new Title"
 		this.setState({
-			title: "new Title"
+			title: "new Title",
+			open:false
 		})
 	}
 	render(){
 	
 		const d = this.state.developers;
 		return (
+
 			<div>
 				<h1>{this.state.title}</h1>
 				<Developers 
@@ -32,7 +37,8 @@ class App extends Component {
 					skilss={d[1].skilss} />
 				<Developers 
 					name={d[2].name}
-					skilss={d[2].skilss}/>
+					skilss={d[2].skilss}
+				/>
 				<button onClick={this.changeTitleHandler}>Change Title</button>
 			</div>
 		);

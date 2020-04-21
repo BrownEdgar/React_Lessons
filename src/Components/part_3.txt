@@ -1,0 +1,7 @@
+1. в предыдущих сериях...) 
+2. add css +1 style.module.css
+3. props.children
+4. default props
+5. Debugging 
+6. PropTypes in react.js (Տիպային ստուգում)
+7. what is Git | GitHub
