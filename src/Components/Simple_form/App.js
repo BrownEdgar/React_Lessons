@@ -32,6 +32,7 @@ export default class App extends Component {
 		 };
 	
 		this.handleChange = this.handleChange.bind(this);
+		this.handleChangeForSelect = this.handleChangeForSelect.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleSubmit2 = this.handleSubmit2.bind(this);
 		this.changeCounter = this.changeCounter.bind(this);
@@ -59,6 +60,9 @@ password:${this.state.valueForPassword}`);
 	// }
 
 	handleChange(event) {
+		this.setState({ value: event.target.value });
+	}
+	handleChangeForSelect(event) {
 		this.setState({ valueForSelect: event.target.value });
 	}
 	changeCounter() {
@@ -72,7 +76,6 @@ password:${this.state.valueForPassword}`);
 		this.setState({
 			[name]: event.target.value
 		});
-		this.setState({ valueForLogin: event.target.value });
 	}
 
 	multiplePasswordChange(event) {
@@ -99,7 +102,7 @@ password:${this.state.valueForPassword}`);
 					{/* select */}
 					<label>
 						Ընտրեք Ձեր սիրած լեզուն:
-          			<select value={this.state.valueForSelect} onChange={this.handleChange}>
+          			<select value={this.state.valueForSelect} onChange={this.handleChangeForSelect}>
 						<option value="React.js">React.js</option>
 						<option value="Java_Script">Java Script</option>
 						<option value="Html_Css">Html Css</option>
