@@ -73,13 +73,13 @@ password:${this.state.valueForPassword}`);
 	multipleLoginChange(event) {
 		const name = event.target.name;
 
+		//state.value === input.name պայմանի դեպքում
 		this.setState({
 			[name]: event.target.value
 		});
 	}
 
 	multiplePasswordChange(event) {
-		console.log('event.target.name', event.target.name)
 		this.setState({ valueForPassword: event.target.value });
 	}
 
@@ -99,6 +99,7 @@ password:${this.state.valueForPassword}`);
 					</label>
 					<hr />
 					<h3>{this.state.valueForSelect}</h3>
+					
 					{/* select */}
 					<label>
 						Ընտրեք Ձեր սիրած լեզուն:
@@ -110,6 +111,7 @@ password:${this.state.valueForPassword}`);
 					</select>
 					</label>
 				<hr/>
+
 					{/* textarea */}
 					<textarea>
 						Доброго здоровья, тут просто немного текста внутри тега textarea
@@ -117,6 +119,7 @@ password:${this.state.valueForPassword}`);
 					<textarea value={this.state.valueForTextArea} onChange={this.handleChange} />
 					<input type="submit" value="Отправить" />
 				</form>
+
 				<hr />
 				{/* Increment Button */}
 				<h2>Increment Button </h2>

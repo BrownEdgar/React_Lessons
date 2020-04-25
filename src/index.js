@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './Components/Simple_form/App';
-//import App from "./Components/Form/App"
+//import './index.css';
+import App from "./App"
+//import App from './Components/Exersizes/Part_4/App';
+//import App from "./Components/Simple_form/App"
+//import App from "./Components/X/App"
+//import App from "./Components/Navbar/App"
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
