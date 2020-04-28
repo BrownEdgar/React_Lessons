@@ -3,6 +3,12 @@ import s from  './Developers.module.css'
 
 
 class Developers extends React.Component {
+	
+	//Component-ը DOM-ից ջնջելու առաջ
+	//մյուս դասի թեմա 
+	componentWillUnmount() {
+		console.log("jnjvec");
+	}
 	render() {
 		return (
 			<div className={s.box} onClick={this.props.click}>

@@ -1,0 +1,26 @@
+body {
+	padding: 0;
+	margin: 50px auto;
+	background-color: tomato;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+img {
+	text-align: center;
+	box-shadow: 1px 1px 10px 5px rgb(0, 0, 0, 0.6);
+}
+
+p {
+	text-align: center;
+}
+button{
+	padding: 8px 15px;
+	border:none;
+	font-weight: bold;
+	background: skyblue;
+
+
+}
