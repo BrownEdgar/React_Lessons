@@ -7,12 +7,14 @@ import ReactDOM from 'react-dom';
 //import App from "./Components/X/App"
 import App from "./Components/Navbar/App"
 //import App from "./Components/LifeCycle/LifeCycle"
+//import App from "./Components/Site/App"
+//import App from "./Components/Route_site/App"
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-//   <React.StrictMode>
+  <React.StrictMode>
     <App />,
-//   </React.StrictMode>,
+  </React.StrictMode>,
   document.getElementById('root')
 );
 

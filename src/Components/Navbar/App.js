@@ -19,6 +19,7 @@
 // -  exact կվալիֆիկատորը  մատնանշում է, որ հարցման տողը պետք է "խիստ"
 // համապատասխանի "path" արգումենտին /about և /about/
 // -  strict "/about/" -միայն "/about/" ոչ /about
+// - Redirect կոռեկտ չի աշխատում Switch-ի հետ, օգտագործել առանց Switch-ի
 // //////////////////////////////////////////////////////////////////////////////
 
 import React, {Component} from 'react'
@@ -42,6 +43,7 @@ export class App extends Component {
                             path='/about/:id?/:name?'
                             render={(props) => <About {...props} name="part2"/>}/> {/* <Route path='/developers' component={Developers}/> */}
                         <Route exact path='/blog' render={() => <Blog title="Blog Page"/>}/> {/* <Redirect to={'/'} /> */}
+						<Redirect from={"/about"} to={'/'}/>
                     </Switch>
                 </div>
             </Router>
