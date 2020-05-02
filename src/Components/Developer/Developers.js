@@ -8,6 +8,7 @@ class Developers extends React.Component {
 	//մյուս դասի թեմա 
 	componentWillUnmount() {
 		console.log("jnjvec");
+		
 	}
 	render() {
 		return (
