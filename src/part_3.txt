@@ -6,7 +6,9 @@
 6. PropTypes in react.js (Տիպային ստուգում)
 7. what is Git | GitHub
 
-
+font-family: 'Indie Flower', cursive;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Montserrat', sans-serif;
 
 Տնային 
 1․	--> PropTypes գրադարանը օգտագործելով, կատարել props օբյեկտով կոմպոնենտին փոխանցած առնվազն 5 հատկությունների ստուգում(վալիդացիա) և պատկերել տվյալները HTML Էջում 

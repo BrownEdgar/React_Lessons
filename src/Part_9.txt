@@ -1,0 +1,14 @@
+1. Տնայինների վերլուծություն
+2. մեր developers կոմպոնենտի բարելավում
+3. componentDidCatch LifeCycle մեթոդ + օրինակ 
+4. React.Fragment + օրինակ 
+5. Error Handler in React.js
+
+
+
+նյութերը  գտնվում են  հետևյալ թղթապանակներում
+1.--> "D:\my-app\src\Components\Exersizes\Das8-9"
+2.--> "D:\my-app\src\Components\Developer\BetterDevelopers"
+3.--> "D:\my-app\src\Components\LifeCycle\LifeCycle2"
+4.--> "D:\my-app\src\Components\React.Fragment"  
+5.--> "D:\my-app\src\Components\Error"  

@@ -19,7 +19,7 @@
 import React from 'react'
 
 class LifeComponent extends React.Component {
-
+//Հնացած մեթոդ
     UNSAFE_componentWillReceiveProps(nextProps) {
         console.log('nextProps', nextProps)
     }

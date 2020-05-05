@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Developers from './Components/Developer/Developers';
+import BetterDevelopers from './Components/Developer/BetterDevelopers';
 
 class App extends Component {
     state = {
@@ -47,41 +47,19 @@ class App extends Component {
         developers.splice(devIndex, 1);
         this.setState({developers: developers});
     }
-
     render() {
-        const d = this.state.developers;
         let result = null;
-
         if (this.state.showDiv) {
-            result = d.map((elem, index) => {
-                return (<Developers
-                    click={() => this.deletePersonHandler(index)}
-                    key={index}
-                    name={elem.name}
-                    skilss={elem.skilss}
-                    changeTitle={this
-                    .changeTitleHandler
-                    .bind(this, elem.name)}/>);
-            })
-        }
+			result = <BetterDevelopers
+				developers={this.state.developers}
+				changeTitleHandler={this.changeTitleHandler.bind(this)}
+				clicked={this.deletePersonHandler.bind(this)}
+				/>            
+            }
         return (
             <div>
                 <h1>{this.state.title}</h1>
                 {result}
-                {/*
-			<Developers
-			name={d[0].name}
-			skilss={d[0].skilss}/>
-				<Developers
-			name={d[0].name}
-			skilss={d[0].skilss}/>
-			<Developers
-				name={d[1].name}
-				skilss={d[1].skilss} />
-			<Developers
-				name={d[2].name}
-				skilss={d[2].skilss}
-			/> */}
                 <button
                     onClick={this
                     .changeTitleHandler
@@ -97,7 +75,6 @@ class App extends Component {
                     count: this.state.count - 1
                 })}>Decriment
                 </button>
-
             </div>
         );
     }

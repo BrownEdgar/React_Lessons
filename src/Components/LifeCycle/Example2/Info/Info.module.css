@@ -1,0 +1,19 @@
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	margin-top: 25px;
+	padding: 10px;
+	color: #f2f2f2;
+}
+
+.box li {
+	list-style: none;
+	line-height: 50px;
+	color: rgb(134, 134, 167);
+	font-size: 2em;
+	letter-spacing: 2px;
+	font-family: 'Montserrat', sans-serif;
+}
