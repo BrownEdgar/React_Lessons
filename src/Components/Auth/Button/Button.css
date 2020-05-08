@@ -7,6 +7,20 @@
 	font-weight: bold;
 }
 
+.btn:focus {
+	outline: none;
+}
+
+.btn:active {
+	box-shadow: inset 2px 2px 1px rgba(0, 0, 0, .3);
+}
+
+.btn:disabled {
+	background: #ccc;
+	color:#000;
+	cursor:not-allowed;
+}
+
 .btn-primary {
 	background: #1e90ff;
 	color: #f2f2f2;

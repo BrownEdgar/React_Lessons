@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import classes from './App.module.css'
 import Button from './Button/Button'
-import Input from './Button/input/Input'
+import Input from './input/Input'
 //email validation RegExp
 function validateEmail(email) {
 	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -41,6 +41,7 @@ export class App extends Component {
 	}
 
 	loginHandler = ()=>{
+	// Form Validation Etap 4
 
 	}
 
@@ -81,7 +82,16 @@ export class App extends Component {
 		control.valid = this.validateControl(control.value, control.validation);
 		// փոփոխություններից հետո օրիգինալը փոխում ենք մեր սարքածով
 		formControls[controlName] = control;
-		this.setState({ formControls });
+
+		// etap 4
+		let isFormValid = true;
+		Object.keys(formControls).forEach(name=>{
+			isFormValid = formControls[name].valid && isFormValid
+		})
+		this.setState({ 
+			formControls, 
+			isFormValid
+		});
 	}
 
 	//Input Generator
@@ -120,11 +130,13 @@ export class App extends Component {
 					<Button 
 					type='success'
 					onClick={this.loginHandler}
+					disabled={!this.state.isFormValid}
 					>Войти</Button>
-						<Button
-							type='primary'
-							onClick={this.reginterHandler}
-						>Зарегистрироваться</Button>
+					<Button
+					type='primary'
+					onClick={this.reginterHandler}
+					disabled={!this.state.isFormValid}
+					>Зарегистрироваться</Button>
 				</form>
 			</div>
 		)
