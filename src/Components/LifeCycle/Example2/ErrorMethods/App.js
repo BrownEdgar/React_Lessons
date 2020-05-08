@@ -7,13 +7,7 @@ export default class App extends Component {
 			<div>
 				<ErrorHandler>
 					<Welcome name="warning name" />	
-				</ErrorHandler>
-				<ErrorHandler2>
-					<Welcome2 name="warning name2" />	
-				</ErrorHandler2>
-					
-				
-				
+				</ErrorHandler>			
 			</div>
 		)
 	}

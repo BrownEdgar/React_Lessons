@@ -16,10 +16,10 @@ export default function Player(props) {
         return <div>Sorry, but this developer was not found</div>
 	}
 	const clickhandler = (e) =>{
-		
 		let x = e.pageX;
 		let y = e.pageY;
-		$('.light').css({
+		console.log(x);
+		$('.Player_main__jT9V5').css({
 			"background": `radial-gradient(circle at ${x}px ${y}px, transparent, #000 20%)`,
 		})
 	}

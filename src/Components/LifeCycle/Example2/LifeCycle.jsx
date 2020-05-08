@@ -40,7 +40,8 @@ export default class LifeCycle extends Component {
     render() {
         console.log('%cApp render method run', color);
         const {name} = this.state;
-        const {followDeleting} = this.state;
+		const {followDeleting} = this.state;
+	
         const params = this.state.params;
         return (
             <div className="main">

@@ -17,6 +17,8 @@ class Component2 extends Component {
                 padding: "10px",
                 textAlign: 'center'
             }}>
+				{/*Consumer-ը ընդունում է ֆունկցիա որպես ՛child՛ կոմպոնենտ։
+				Այդ Ֆունկցիան վերցնում է ընթացիկ "context"-ը վերադարձնում է React-կոմպոնենտ։: */}
                 <MyContext.Consumer>
                     {value => <p>{value}</p>}
                 </MyContext.Consumer>

@@ -1,6 +1,8 @@
 // /////////////////////////////////////////////////////////////////////////////
+// - React - ին բնորոշ տվյալների փոխանցումն իրականացվում է վերևից ներքև(ծնողից մինչև երեխա) 
+// - `օգտագործելով ՛props՛-ը
 // - React.createContext-ը թույլ է տալիս կ-րի միջև փոխանցել տվյալներ, առանց
-// 		միջանկյալ մակարդակներում ՛props՛-ի փոխանցման,
+//	միջանկյալ մակարդակներում ՛props՛-ի փոխանցման,
 // - Context-ը կարելի է ասել ստեղծված է ՛ԳԼՈԲԱԼ՛ տվյալների փոխանցման համար
 // - Context-ը մեկ այլ տեղ օգտագործելու համար պետք է ՛export՛ անել
 // - Կազմված է 2 մասից․-օգտագործման եղանակը ցույց է տրված օրինակում
@@ -18,7 +20,7 @@ import RContext from './R_Context';
 
 export const MyContext = React.createContext("Default value");
 export const MyContext2 = React.createContext("Default value2");
-
+MyContext.displayName = 'MyDisplayName';
 class App extends Component {
     constructor(props) {
         super(props);
@@ -29,6 +31,9 @@ class App extends Component {
     render() {
         return (
             <div>
+				{/* Provider թույլ է տալիս օգտագործոլ այստեղ "context"-ը
+				և հետևել նրա թարմացումներին։Իր մեջ ստանում է 'prop':value
+				որը փոխանցվում է բոլոր զավակներին */}
                 <MyContext.Provider value={"Hedding1"}>
                     <MyContext2.Provider value={"Hedding2"}>
                         <RContext/>

@@ -6,17 +6,21 @@ import ReactDOM from 'react-dom';
 // import App from"./Components/Simple_form/App" 
 // import App from "./Components/Navbar/App"
 // import App from "./Components/Site/App" 
-// import App from "./Components/Route_site/App"
-//import App from "./Components/Error/App" 
- import App from "./Components/React_Fragment/App"
-//import App from "./Components/LifeCycle/Example2/ErrorMethods/App"
-//import App from "./Components/Exersizes/Das8-9/App"
-//import App from "./Components/LifeCycle/Example2/ErrorMethods/App"
+//import App from "./Components/Route_site/App"
+// import App from "./Components/Error/App" 
+// import App from "./Components/React_Fragment/App"
+// import App from "./Components/LifeCycle/Example2/ErrorMethods/App"
+// import App from "./Components/Exersizes/Das8-9/App"
+// import App from "./Components/SITE/App";
+// import data from "./Components/SITE/data"
+//import App from "./Components/Context/App"
+//import App from "./Components/Auth/App"
+import App from "./Components/Quiz/QuizCreator"
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
 //<React.StrictMode>
-    <App/>,
+	<App />,
 //</React.StrictMode>,
  document.getElementById('root'));
 
@@ -31,3 +35,5 @@ serviceWorker.unregister();
 // կանչում է ՝կյանքի ցիկլի՝ մեթոդներ componentDidMount և componentDidUpdate-ը:
 
 // Դրա համար ՝կյանքի ցիկլի՝ որոշ մեթոդներ կանչվում են 2 անգամ
+
+//font-family: 'Montserrat', sans-serif;
