@@ -4,6 +4,7 @@ import QuizCreator from './QuizCreator/QuizCreator'
 import QuizList from './QuizList/QuizList'
 import Header from './Header/Header'
 import './App.css'
+import Home from './Home/Home'
 
 export default class App extends Component {
 	render() {
@@ -12,8 +13,10 @@ export default class App extends Component {
 				<Router>
 				<Header/>
 					<Switch>
+						<Route exact path='/' component={Home} /> 
 						<Route exact path='/quizCreator' component={QuizCreator} /> 
 						<Route exact path='/quizList' component={QuizList} /> 
+						<Redirect to={"/"}/>
 					</Switch>
 				</Router>
 			</div>
