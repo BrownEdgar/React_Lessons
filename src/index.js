@@ -15,7 +15,9 @@ import ReactDOM from 'react-dom';
 // import data from "./Components/SITE/data"
 //import App from "./Components/Context/App"
 //import App from "./Components/Auth/App"
-import App from "./Components/Quiz/QuizCreator"
+//import App from "./Components/Quiz/QuizCreator"
+//import App from "./Components/Quiz/QuizList/QuizList"
+import App from "./Components/Quiz/App"
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
