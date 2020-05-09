@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import classes from './App.module.css'
 import Button from './Button/Button'
 import Input from './input/Input'
+
+import axios from 'axios';
+
 //email validation RegExp
 function validateEmail(email) {
 	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -108,7 +111,7 @@ export class App extends Component {
 					label={control.label}
 					errorMessage={control.errorMessage}
 					// !! սարքում է Boolean տիպի փոփոխական
-					shoulValidate={!!control.validation}
+					shouldValidate={!!control.validation}
 					onChange={event => this.onChangeHandler(event, controlName)}
 				/>
 			)
@@ -140,6 +143,13 @@ export class App extends Component {
 				</form>
 			</div>
 		)
+	}
+	componentDidMount(){
+		// firebase լինկ՝վերջում ավելացնել .json
+		axios.get("https://react-project-n1.firebaseio.com/quiz.json")
+		.then(response=>{
+			console.log('response', response)//response--> 'console' պետք է արտածի արդեն firebase DB-ն
+		})
 	}
 }
 export default App;

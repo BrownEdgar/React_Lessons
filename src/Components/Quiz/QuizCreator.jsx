@@ -1,9 +1,20 @@
+////////////////////////////////////////////////////////////////////////////////
+// branch useAxios 
+// - մեր սարքած հարցերը պահում ենք "Firebase"-ում օգտագործելով axios 
+// - createQuizHandler-ում արվում է փոստ հարցում, որի արդյունքը կարող ենք տեսնել ՛Network՛
+//	քոնսոլի բաժնում։ Մեկը 'method:options', մյուսը 'method:post'
+// - 'method:options' -ստուգում է արդյոք հասանել է "Firebase"-ի DB-ն
+// - 'method:post' - պահում է տվյալները  "Firebase"-ի DB-ում
+// - data.name - գեներացված ունիկալ 'id'
+// - vlad84
+////////////////////////////////////////////////////////////////////////////////
 import React, { Component } from 'react'
 import classes from './QuizCreator.module.css'
 import Button from '../Auth/Button/Button'
 import Select from '../UI/Select/Select'
-import { createControl } from "./form/myFramework";
+import { createControl, validate, validateForm} from "./form/myFramework";
 import Input from '../Auth/input/Input';
+import axios from 'axios';
 
 //նույն կոդը "state"-ում չգրելու համար
 //ստեղծված է այս ֆունկցիան
@@ -12,7 +23,7 @@ function createOptionControl(number) {
 		label: `Вариант ${number}`,
 		errorMessage: "Некерректный ответ",
 		id:number,
-	}, { reqiured: true });
+	}, { required: true });
 }
 
 // "formControls"-ը զրոյացնելու ֆունկցիա
@@ -29,26 +40,79 @@ function createformControls() {
 		option4: createOptionControl(4)
 	}
 }
-
+//--------------------------------------------------------------
 export default class QuizCreator extends Component {
 	state={
 		quiz:[],
 		formControls: createformControls(),
-		rightAnswerId: 1
+		rightAnswerId: 1,
+		isFormValid: false 
 	}
-	addQuestionhandler = () => {
-		
-	}
-	createQuizHandler = () => {
 
+	// այս ֆունկցիան հարց է ավելացնում
+	addQuestionhandler = (event) => {
+		// կլոնավորման ևս մեկ տարբերակ
+		const quiz = this.state.quiz.concat();
+		const index = quiz.length +1;
+		const { question, option1, option2, option3, option4 } = this.state.formControls
+		const questionItem = {
+			question: question.value,
+			id:index,
+			rightAnswerId: this.state.rightAnswerId,
+			answers:[
+				{ text: option1.value, id: option1.id},
+				{ text: option2.value, id: option2.id},
+				{ text: option3.value, id: option3.id},
+				{ text: option4.value, id: option4.id}
+			]
+		}
+		//Ստեղծած հարցը ավելացնում ենք ՛quiz՛ կլոնի մեջ, հետո փոխում ենք ՛state՛ում
+		quiz.push(questionItem);
+		this.setState({ 
+			quiz,
+			formControls: createformControls(),
+			rightAnswerId: 1,
+			isFormValid: false 
+		 });
 	}
+	createQuizHandler = async(event) => {
+		//տարբերակ 1
+		// axios.post("https://react-project-n1.firebaseio.com/quiz.json", this.state.quiz)
+		// 	.then(response => {
+		// 		console.log('response', response)
+		// 	}).catch(err => console.log(err))
+		try {
+			await axios.post("https://react-project-n1.firebaseio.com/quiz.json", this.state.quiz);
+			//ամեն անգամ երբ սերվերը պատաասխան ուղարկի 
+			// զրոյացնում ենք ՛state՛-ը,որպեսզի վերադառնանք նախքին վիճակ
+			this.setState({
+				quiz:[],
+				formControls: createformControls(),
+				rightAnswerId: 1,
+				isFormValid: false });
+		} catch (error) {
+			console.log('error', error)
+		}
+	}
+
 	changeHandler = (value, controlName)  =>{
-
+		//formControls local copy
+		const formControls = { ...this.state.formControls };
+		const control = { ...formControls[controlName] } 
+		// քանի որ մի բան փոխել ենք եթե ֆունկցիան աշխատելա ապա՝
+		control.touched = true;
+		control.value = value;
+		//  ստուգման համար դրսի ֆունկցիայի օգտագործում
+		//control.value = input-ի մեջի գրածը
+		control.valid = validate(control.value, control.validation);
+		formControls[controlName]= control;
+		this.setState({ 
+			formControls,
+			isFormValid: validateForm(formControls) });
 	}
 	crateInputs = () =>{
 		return Object.keys(this.state.formControls)
 		.map((controlName, index)=>{
-
 			const control = this.state.formControls[controlName];
 			return (
 				<React.Fragment key={index}>
@@ -91,17 +155,19 @@ export default class QuizCreator extends Component {
 			<div className={classes.QuizCreator}>
 			<div>
 				<h1>Создание Теста</h1>
-					<form onSubmit={this.submitHandler} 
-					className={classes.quizForm}>
+					<form onSubmit={this.submitHandler}>
 					{this.crateInputs()}
 						{select}
 						<Button
 							type='primary'
 							onClick={this.addQuestionhandler}
+							disabled={!this.state.isFormValid}
 						>Добавить вопрос</Button>
 						<Button
 							type='success'
 							onClick={this.createQuizHandler}
+							// եթե հարցեր չկան կոճակը disabled-ա
+							disabled={this.state.quiz.length === 0}
 						>Создатаь тест</Button>
 					</form>
 			</div>
