@@ -1,23 +1,29 @@
-import React, {
-	Component
-} from 'react';
+// /////////////////////////////////////////////////////////////////////////////
+// HOC - (Բարձրագույն կարգի կոմպոնենտ) տրամաբանությունը բազմակի օգտագործելու
+// առաջադեմ ձևերից մեկն է: HOC-ը React API- ի մաս չեն կազմում, բայց դրանք
+// հաճախ օգտագործվում են React կոմպոնենտրի համար:
+
+// - Պարզ ասած, գործառույթ է, ֆունկցիա է
+// որը ստանալով  է կոմպոնենտ և վերադարձնում է նոր կոմպոնենտ:
+
+// Եթե սովորական կոմպոնենտը props-ը վերածում է UI- ի,
+//  ապա HOC վերածում է այլ կոմպոնենտի:
+// //////////////////////////////////////////////////////////////////////////////
+import React, {Component} from 'react';
 import ClickButton from './ClickButton';
 import Copy from './copy';
 
-
-
-
 class App extends Component {
 
-	render() {
-	
-		return ( 
-		<div className = "App" >
-			<ClickButton/>
-			<Copy/>
-		</div>
-		);
-	}
+    render() {
+
+        return (
+            <div className="App">
+                <ClickButton/>
+                <Copy/>
+            </div>
+        );
+    }
 }
 
 export default App;

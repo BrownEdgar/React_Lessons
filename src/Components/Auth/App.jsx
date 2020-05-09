@@ -25,7 +25,7 @@ export class App extends Component {
 					email:true
 				}
 			},
-			password:{
+			password:{ 
 				value:"",
 				type:"password",
 				label:"Пароль",

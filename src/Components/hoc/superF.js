@@ -5,8 +5,7 @@ function superF(Component) {
 		constructor(props){
 			super(props);
 			this.handleChange = this.handleChange.bind(this);
-			this.state={
-			}
+			this.state = {}
 		}
 		handleChange() {
 			console.log("handleChange");	
