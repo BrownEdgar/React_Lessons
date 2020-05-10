@@ -11,8 +11,8 @@ import ReactDOM from 'react-dom';
 // import App from "./Components/React_Fragment/App"
 // import App from "./Components/LifeCycle/Example2/ErrorMethods/App"
 // import App from "./Components/Exersizes/Das8-9/App"
- import App from "./Components/SITE/App";
- import data from "./Components/SITE/data"
+//import App from "./Components/SITE/App";
+//import data from "./Components/SITE/data"
 //  import App from "./Components/Context/App"
  //import App from "./Components/Auth/App"
 // import App from "./Components/Quiz/QuizCreator"
@@ -20,11 +20,12 @@ import ReactDOM from 'react-dom';
 // import App from "./Components/hoc/Without_HOC/App"
 //import App from "./Components/MyContext/App"
 //import App from "./Components/HOC_test/App"
+import App from "./Components/Timer/start/App";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
 //<React.StrictMode>
-	<App data={data}/>,
+	<App/>,
 //</React.StrictMode>,
  document.getElementById('root'));
 
