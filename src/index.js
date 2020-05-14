@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css'; 
 // import App from "./App" 
-import App from "./Components/Animacia_v_React/App"
+import App from "./Components/Cars/App"
 
 import * as serviceWorker from './serviceWorker';
 
