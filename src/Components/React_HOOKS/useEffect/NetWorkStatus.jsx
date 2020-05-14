@@ -61,6 +61,7 @@ let mounted = true
 			<p>Longitude: {location.longitude}</p>
 			<p>Speed: {location.speed ? location.speed : "0" }</p>
 		</div>
+		
 	)
 }
 
