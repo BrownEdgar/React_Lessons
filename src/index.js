@@ -20,8 +20,14 @@ import ReactDOM from 'react-dom';
 // import App from "./Components/hoc/Without_HOC/App"
 //import App from "./Components/MyContext/App"
 //import App from "./Components/HOC_test/App"
+<<<<<<< HEAD
 //import App from "./Components/LifeCycle/LifeCycle"
 //import App from "./Components/Timer/finished/App";
+=======
+//import App from "./Components/Timer/start/App";
+import App from "./Components/React_HOOKS/useRef/functionalRef";
+//import App from "./Components/React_HOOKS/useEffect/NetWorkStatus";
+>>>>>>> c508a694a9e5aa5a1a206fdabce37f8dc56081f8
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
