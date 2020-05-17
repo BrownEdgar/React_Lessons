@@ -11,22 +11,29 @@
 ////////////////////////////////////////////////////////////////////////////////
 import React, { useState }  from 'react'
 import "../index.css"
+let obj = {
+	name:"vazgen",
+	Surname:"Y",
+	
+}
 export default function FinctionalApp() {
-	const myState = useState(0);
-	let count = myState[0];
-	let setCount = myState[1];
-	// const [count, setCount] = useState(0);
-
+	// const myState = useState(0);
+	// let count = myState[0];
+	// let setCount = myState[1];
+	 const [count, setCount] = useState(obj);
+	console.log(count)
 	const inctementHandler = () => {
-		//setCount(count + 1 );
-		//prevState == prevCount
-		setCount(prevCount => prevCount + 1 );
+		setCount({
+			Surname:"vazgen Y" 
+		});
+	
+		// setCount(prevCount => prevCount + 1 );
 	}
 	return (
 		<div className="main">
 			<h1>With Hooks!</h1>
 			<h2>useState()</h2>
-			<button onClick={inctementHandler}>Increment Me {count}</button>
+			<button onClick={inctementHandler}>Increment Me {count.Surname}</button>
 		</div>
 	)
 }
