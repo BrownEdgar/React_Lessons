@@ -21,7 +21,8 @@ import ReactDOM from 'react-dom';
 //import App from "./Components/MyContext/App"
 //import App from "./Components/HOC_test/App"
 //import App from "./Components/Timer/start/App";
-import App from "./Components/React_HOOKS/useRef/functionalRef";
+import App from "./Components/paper-rock-scissors/finished/App";
+//import App from "./Components/React_HOOKS/useRef/functionalRef";
 //import App from "./Components/React_HOOKS/useEffect/NetWorkStatus";
 import * as serviceWorker from './serviceWorker';
 
