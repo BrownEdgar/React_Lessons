@@ -28,7 +28,8 @@ export default class LifeCycle extends Component {
 					CDU1: "shouldComponentUpdate",
 					CDU2: "shouldComponentUpdate",
 					CDU3: "shouldComponentUpdate",
-					CDU4: "shouldComponentUpdate"
+                    CDU4: "shouldComponentUpdate",
+                    value:"new Params"
                 }
             ],
             name: "LifeCycle Methods",
@@ -57,6 +58,8 @@ export default class LifeCycle extends Component {
         )
     }
     changeStateValue = () => {
+       
+
         this.setState(prevState => {
             return {
                 constructorValue: "change",

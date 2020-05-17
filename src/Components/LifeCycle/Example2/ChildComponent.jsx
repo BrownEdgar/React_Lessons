@@ -54,4 +54,4 @@ export default class ChildComponent extends Component {
 }
 
 
-console.log("%cMy name","color:red;background:white");
+console.log("%cReact", "color:green");
