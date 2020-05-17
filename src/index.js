@@ -14,7 +14,7 @@ import ReactDOM from 'react-dom';
 //import App from "./Components/SITE/App";
 //import data from "./Components/SITE/data"
 //  import App from "./Components/Context/App"
- import App from "./Components/Auth/App"
+//import App from "./Components/App"
 // import App from "./Components/Quiz/QuizCreator"
 // import App from "./Components/hoc/App"
 // import App from "./Components/hoc/Without_HOC/App"
@@ -23,7 +23,7 @@ import ReactDOM from 'react-dom';
 //import App from "./Components/LifeCycle/LifeCycle"
 //import App from "./Components/Timer/finished/App";
 //import App from "./Components/Timer/start/App";
-//import App from "./Components/React_HOOKS/useRef/functionalRef";
+import App from "./Components/React_HOOKS/useEffect/FinctionalApp";
 //import App from "./Components/React_HOOKS/useEffect/NetWorkStatus";
 import * as serviceWorker from './serviceWorker';
 
