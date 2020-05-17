@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import classes from './App.module.css'
 import Button from './Button/Button'
 import Input from './input/Input'
+import axios from "axios";
 //email validation RegExp
 function validateEmail(email) {
 	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -40,13 +41,37 @@ export class App extends Component {
 		}
 	}
 
-	loginHandler = ()=>{
+	loginHandler = async()=>{
 	// Form Validation Etap 4
-
+		let data = {
+			email:this.state.formControls.email.value,
+			password:this.state.formControls.password.value,
+			returnSecureToken:true
+		}
+		try {
+			
+		const response = await axios.post("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDDgXhQCNqtZhxe78UoHEBZFPm97kky2KU",data)
+		console.log(response.data)
+		} catch (error) {
+			console.log(error)
+		}
 	}
-
-	reginterHandler = ()=>{
-
+//reginterHandler ֆունկցիան գրանցումից հետո տվյալները պահում է ՛firebase՛-ում
+// պահանջվող պարամերներ -->https://firebase.google.com/docs/reference/rest/auth#section-create-email-password
+//պահանջվող պարամերներ--> API-KEY ՛firebase՛-ի պրոյեկտից
+	reginterHandler = async()=>{
+		let data = {
+			email:this.state.formControls.email.value,
+			password:this.state.formControls.password.value,
+			returnSecureToken:true
+		}
+		try {
+			
+		const response = await axios.post("https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDDgXhQCNqtZhxe78UoHEBZFPm97kky2KU",data)
+		console.log(response.data)
+		} catch (error) {
+			console.log(error)
+		}
 	}
 	submitHandler = (e) => {
 		e.preventDefault();
@@ -72,7 +97,6 @@ export class App extends Component {
 		return isValid;
 	}
 	onChangeHandler = (event, controlName) =>{
-		console.log('controlName', event.target.value);
 		// սարքում ենք կրկնորինակներ
 		const formControls = {...this.state.formControls};
 		const control = { ...formControls[controlName] } 
