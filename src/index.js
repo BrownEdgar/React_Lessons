@@ -1,36 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css'; 
-//import App from "./App" 
+// import App from "./App" 
 // import App from './Components/Exersizes/Part_4/App';
 // import App from"./Components/Simple_form/App" 
 // import App from "./Components/Navbar/App"
 // import App from "./Components/Site/App" 
-//import App from "./Components/Route_site/App"
+// import App from "./Components/Route_site/App"
 // import App from "./Components/Error/App" 
 // import App from "./Components/React_Fragment/App"
 // import App from "./Components/LifeCycle/Example2/ErrorMethods/App"
 // import App from "./Components/Exersizes/Das8-9/App"
-//import App from "./Components/SITE/App";
-//import data from "./Components/SITE/data"
-//  import App from "./Components/Context/App"
- //import App from "./Components/Auth/App"
+// import App from "./Components/SITE/App";
+// import data from "./Components/SITE/data"
+// import App from "./Components/Context/App"
+// import App from "./Components/Auth/App"
 // import App from "./Components/Quiz/QuizCreator"
 // import App from "./Components/hoc/App"
 // import App from "./Components/hoc/Without_HOC/App"
 //import App from "./Components/MyContext/App"
 //import App from "./Components/HOC_test/App"
 //import App from "./Components/Timer/start/App";
-import App from "./Components/paper-rock-scissors/finished/App";
+import App from "./Components/React_HOOKS/useRef/functionalRef";
 //import App from "./Components/React_HOOKS/useRef/functionalRef";
 //import App from "./Components/React_HOOKS/useEffect/NetWorkStatus";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-//<React.StrictMode>
-	<App/>,
-//</React.StrictMode>,
- document.getElementById('root'));
+	//<React.StrictMode>
+	<App />,
+	//</React.StrictMode>,
+	document.getElementById('root'));
 
 serviceWorker.unregister();
 // <React.StrictMode> ռեժիմում React--ը աշխատում է 2 փուլով/Էտապով :
