@@ -17,7 +17,7 @@ import ReactDOM from 'react-dom';
 // import App from "./Components/Auth/App"
 // import App from "./Components/Quiz/QuizCreator"
 // import App from "./Components/Quiz/QuizList/QuizList"
-import App from "./Components/React_HOOKS/useRef/Example_2/App"
+import App from "./Components/10_React_app/image-gallery/start/App"
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
