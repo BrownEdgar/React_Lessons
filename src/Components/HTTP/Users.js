@@ -31,7 +31,7 @@ class Users extends Component {
 		// 	.catch(err => console.log(err));
 		axios({
 			  method: 'get',
-			  url: 'https://jsonplaceholder.typicode.cm/users'
+			  url: 'https://jsonplaceholder.typicode.com/users'
 			})
 			  .then(res => {
 				this.setState({
@@ -58,7 +58,7 @@ class Users extends Component {
 				<h3 style={{textAlign: "center"}}>Источник - {this.state.axbyur}</h3>
 					<ul style={divStyle}>
 						{this.state.users.map((item, index)=>{
-							return <li key={index}>{item.name}</li>
+							return <li key={index}>{item.title}</li>
 						})}
 					</ul>
 			</div>
