@@ -50,7 +50,7 @@ export class App extends Component {
 		}
 		try {
 			
-		const response = await axios.post("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDDgXhQCNqtZhxe78UoHEBZFPm97kky2KU",data)
+		const response = await axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`,data)
 		console.log(response.data)
 		} catch (error) {
 			console.log(error)
@@ -167,3 +167,5 @@ export class App extends Component {
 	}
 }
 export default App;
+
+

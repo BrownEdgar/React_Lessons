@@ -24,3 +24,17 @@ serviceWorker.unregister();
 // Դրա համար ՝կյանքի ցիկլի՝ որոշ մեթոդներ կանչվում են 2 անգամ
 
 //font-family: 'Montserrat', sans-serif;
+
+
+
+const a = {
+    nation: "Aremenian",
+    person: { age: 20, name: "Ani" },
+    gender: "famle",
+    hobies: ["music", "dance", "singing"],
+  };
+  console.log(a);
+  let b = { ...a, person: { ...a.person }, hobies: [...a.hobies] };
+  b.gendr = "mjashjahjshajs";
+  b.person.age = 30;
+  b.hobies[0] = "Shoping";

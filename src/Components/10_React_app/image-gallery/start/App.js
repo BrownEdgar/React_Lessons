@@ -48,7 +48,7 @@ export default function App() {
 				//ի տարբերություն նախորդ օրինակի
 				//Ցույց ենք տալիս միայն որոնման արդյունքները
 				setImages(data.results)
-				//setImages((images) => [...images, ...data.results])
+				setImages((images) => [...images, ...data.results])
 			}).catch(err => alert(err))
 	}
 
