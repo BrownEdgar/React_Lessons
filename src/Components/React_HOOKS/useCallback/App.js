@@ -16,7 +16,7 @@ export default function App() {
 	// }, [clickHandler])
 	return (
 		<div className="box">
-			<h1>useColback hook</h1>
+			<h1>useCallback hook</h1>
 			<h3>count: {count}</h3>
 			
 			<Child increment={clickHandler}/>
