@@ -10,7 +10,7 @@ export default function App() {
 	const [count, setCount] = useState(0);
 
 	const clickHandler = useCallback((n) => {
-		setCount(count => count + n)
+		setCount(count => count+n)
 		},[setCount]);
 	// useEffect(() => {
 	// }, [clickHandler])

@@ -23,8 +23,9 @@ export default function App() {
     let apiUrl = `https://api.unsplash.com/photos?`;
     if (query) apiUrl = `https://api.unsplash.com/search/photos?query=${query}`;
     apiUrl += `&page=${page}`;
-    apiUrl += `&client_id=${accesKey}`;
-
+    apiUrl += `&client_id=${accessKey}`;
+    
+    console.log('apiUrl', apiUrl)
     fetch(apiUrl)
       .then((res) => res.json())
       .then((data) => {

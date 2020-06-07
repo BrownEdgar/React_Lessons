@@ -62,6 +62,7 @@ class App extends React.Component {
 					buttonStyle={this.state.buttonStyle}
 					_buttonColour={this._buttonColour.bind(this)}
 				/>
+			
 			</section>
 		);
 	}

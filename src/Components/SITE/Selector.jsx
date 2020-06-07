@@ -3,7 +3,7 @@ import React from 'react';
 class Selector extends React.Component {
 	render() {
 		let componentClass = 'selector';
-		if (this.props.activeID === this.props.id) {
+		if (this.props.activeID ===  this.props.id) {
 			componentClass = 'selector active';
 		}
 		return (

@@ -3,7 +3,7 @@ import InfiniteScroll from 'react-infinite-scroll-component'
 import './App.css';
 const accessKey = process.env.REACT_APP_UNSPLASH_ACCESS_KEY;
 export default function App2() {
-    const[images, setImages] = useState([]);
+    const[images, setImages] = useState(['']);
     const[page, setPage] = useState("");
     const[query, setQuery] = useState("");
 useEffect(()=>{
@@ -60,7 +60,6 @@ if(!accessKey){
       })}
   </div>
 </InfiniteScroll>
-            
-        </div>
+    </div>
     )
 }
