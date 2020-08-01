@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css'; 
 // import App from "./App" 
-import App from "./Components/React_HOOKS/useReducer/App"
+import App from "./Components/Children/App"
+
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
 	//<React.StrictMode>
-	<App />,
+	<App/>,
 	//</React.StrictMode>,
 	document.getElementById('root'));
 
@@ -27,14 +28,3 @@ serviceWorker.unregister();
 
 
 
-const a = {
-    nation: "Aremenian",
-    person: { age: 20, name: "Ani" },
-    gender: "famle",
-    hobies: ["music", "dance", "singing"],
-  };
-  console.log(a);
-  let b = { ...a, person: { ...a.person }, hobies: [...a.hobies] };
-  b.gendr = "mjashjahjshajs";
-  b.person.age = 30;
-  b.hobies[0] = "Shoping";

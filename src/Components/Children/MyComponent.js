@@ -10,11 +10,7 @@ export default function MyComponent(props) {
     return (
         <div className={divStyle}>
             <p>{props.name}</p>
-            <p>{props.surname}</p>
-            <p>{props.age}</p>
-            <p>{props.gender}</p>
-            <p>{props.phone}</p>
-
+            {props.children}
         </div>
     )
 }
