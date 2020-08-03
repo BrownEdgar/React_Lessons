@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import BetterDevelopers from './Components/Developer/BetterDevelopers';
-
 class App extends Component {
     state = {
         developers: [
