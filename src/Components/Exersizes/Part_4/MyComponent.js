@@ -1,7 +1,6 @@
 import React from 'react'
 function MyComponent({ faq, index, toggleFAQ }) {
 	return (
-		
 		<div
 			className={"faq " + (faq.isOpen ? 'open' : '')}
 			onClick={() => toggleFAQ(index)}

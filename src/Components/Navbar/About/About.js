@@ -13,7 +13,7 @@ function About(props) {
     const goToHomePage = () => {
         return (props.history.push({pathname: "/"}));
     }
-    console.log('props', props);
+    console.log('props About', props);
     console.log('props', props.history);
     const id = props.match.params.id;
     const name = props.match.params.name;

@@ -27,8 +27,7 @@ class App extends Component {
 
     changeCount = () => {
         // this.setState({ count: this.state.count + 1   }); այս օրինակով մենք
-        // պաշտպանված ենք state-ի ասինխռոն փոփողուտյուններից այս օրինակը շատ դեպքերում
-        // ավելի ճիշտ է, և անվտանգ
+        // պաշտպանված ենք state-ի ասինխռոն փոփողուտյուններից այս օրինակը շատ դեպքերում ավելի ճիշտ է, և անվտանգ
         this.setState((prevState) => {
             return {
                 count: prevState.count + 1

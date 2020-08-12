@@ -11,12 +11,12 @@ import React from 'react'
 export default function Children(props) {
 	//  props.children -->[{…}, {…}]
 
-	let r = 0;
-	while(r<10){
-		console.log('r', r)
-		r++;
-	}
-	debugger
+	// let r = 0;
+	// while(r<10){
+	// 	console.log('r', r)
+	// 	r++;
+	// }
+	// debugger
 	console.log('props.children', props.children)
 	return (
 		<div>
