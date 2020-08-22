@@ -28,7 +28,7 @@
 // /
 
 import React, {Component} from 'react';
-import {NavLink} from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
 import style from './Navbar.module.css'
 class Nav extends Component {
     render() {
@@ -43,13 +43,19 @@ class Nav extends Component {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink exact to='/about' activeClassName={style.curent}>
+                        <NavLink  to={{
+							pathname: "/about",
+							state: {
+								name:"asdasdsad"
+							}
+						}} >
                             About
                         </NavLink>
                     </li>
                     <li>
                         <NavLink
                             to={{
+
                             pathname: "/blog",
                             search: "?a=1&b=3",
                             hash: "scroll-path"

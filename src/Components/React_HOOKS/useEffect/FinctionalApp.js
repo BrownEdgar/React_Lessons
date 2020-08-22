@@ -15,7 +15,7 @@ useEffect(()=>{
 		window.removeEventListener("mousemove", getMouseposition);
 	}
 },[mousePosition])
-
+ 
  const getMouseposition = ( event ) =>{
 
 

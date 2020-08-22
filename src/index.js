@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css'; 
-import App from "./Components/LifeCycle/Example2/ErrorMethods/App" 
-// import App from "./Components/Form/App"
+// import App from "./App" 
+import App from "./Components/ChangeState/App"
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
 	//<React.StrictMode>
-	<App  name="Robert"/>,
+	<App/>,
 	//</React.StrictMode>,
 	document.getElementById('root'));
 
