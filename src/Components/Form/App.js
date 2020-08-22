@@ -16,16 +16,20 @@ export class App extends Component {
     }
 
     handleSubmit = (event) => {
-        alert(`Login : ${this.state.login}
-password : ${this.state.password}`)
+        alert(` Login : ${this.state.loginValue}
+                password : ${this.state.password}`)
         event.preventDefault();
     }
     render() {
         return (
             <div>
                 <h1>{this.state.title}</h1>
-                <Form value1 ={this.state.value1} value2 ={this.state.value2} // func={this.changeInputValue
-            }} func={(e) => this.changeInputValue(e)} func2={(e) => this.changeInputValue(e)} handleSubmit={(e) => this.handleSubmit(e)}/>
+                <Form 
+                value1 ={this.state.value1} 
+                value2 ={this.state.value2} // func={this.changeInputValue
+                func={(e) => this.changeInputValue(e)} 
+                func2={(e) => this.changeInputValue(e)} 
+                handleSubmit={(e) => this.handleSubmit(e)}/>
 
             </div>
         )

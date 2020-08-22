@@ -14,6 +14,7 @@ class Person extends Component {
 
 Person.propTypes = {
 	// check Here
+	name: PropTypes.string.isRequired
 };
 export default Person;
 
@@ -34,17 +35,17 @@ export default Person;
 // --------------------------------------------------------------
 
 // Ցանկացած տիպի արժեք
-//  requiredAny: PropTypes.any.isRequired,
+// requiredAny: PropTypes.any.isRequired,
 
 // --------------------------------------------------------------
 
 //  React-элемент
-  //PropTypes.element,
+//  PropTypes.element,
 
 // --------------------------------------------------------------
 
 // Կոնկրետ նշվածներից մեկը
-//  PropTypes.oneOf(['male', 'female']),
+//PropTypes.oneOf(['male', 'female']),
 
 // --------------------------------------------------------------
 
@@ -57,12 +58,12 @@ export default Person;
 // --------------------------------------------------------------
 
 // Կոնկրետ տիպով օբյեկտների զանգված
-//  optionalArrayOf: PropTypes.arrayOf(PropTypes.number),
+//optionalArrayOf: PropTypes.arrayOf(PropTypes.number),
 
 // --------------------------------------------------------------
 
 // Օբյեկտ, որի հատկությունները ունեն կոնկրետ տիպ
-//  optionalObjectOf: PropTypes.objectOf(PropTypes.number),
+//optionalObjectOf: PropTypes.objectOf(PropTypes.number),
 
 // --------------------------------------------------------------
 

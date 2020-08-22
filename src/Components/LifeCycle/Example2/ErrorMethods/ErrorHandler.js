@@ -10,7 +10,8 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { 
-			error: false };
+			error: false 
+		};
 	}
 	//այս մեթոդի աշխատանքի ժամանակ դեռ 'state' չկա՝ դրա համար ուղակի { error: true }
 	static getDerivedStateFromError(e) {
@@ -20,14 +21,14 @@ class App extends React.Component {
 	 }
 	
 
-	// componentDidCatch(error, info) {
-	// 	console.log('componentDidCatch');
-	// 	console.log('info', info.componentStack)
-	// 	console.log(info);
-	// 	this.setState({
-	// 		error: true,	
-	// 	})
-	// }
+	componentDidCatch(error, info) {
+		console.log('componentDidCatch');
+		console.log('info', info.componentStack)
+		console.log(info);
+		this.setState({
+			error: true,	
+		})
+	}
 	render() {
 		if (this.state.error) { 
 			return <h1 style={{ color: 'red' }}>Someting is wrong :(</h1>; // Այլընտրանքային UI

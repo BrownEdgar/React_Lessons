@@ -6,10 +6,12 @@ class App extends Component {
             {
                 name: "Sebastian",
                 skilss: "Html, css"
-            }, {
+            }, 
+            {
                 name: "Baghdaser",
                 skilss: "Html, css, js"
-            }, {
+            }, 
+            {
                 name: "Mix",
                 skilss: "Html, css, js, React.js, Node.js"
             }

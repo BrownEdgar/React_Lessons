@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css'; 
-// import App from "./App" 
-//import App from "./Components/SITE/App"
-import App from './Tets'
+import App from "./Components/LifeCycle/Example2/ErrorMethods/App" 
+// import App from "./Components/Form/App"
+
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
 	//<React.StrictMode>
-	<App/>,
+	<App  name="Robert"/>,
 	//</React.StrictMode>,
 	document.getElementById('root'));
 
@@ -25,3 +25,6 @@ serviceWorker.unregister();
 // Դրա համար ՝կյանքի ցիկլի՝ որոշ մեթոդներ կանչվում են 2 անգամ
 
 //font-family: 'Montserrat', sans-serif;
+
+
+

@@ -1,37 +1,31 @@
 import React, { Component } from 'react'
+import Navbar from './Navbar'
+import Users from './Users'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import About from './About'
+import Blog from './Blog'
+import Contact from './Contact'
+import Home from './Home'
+
+
 
 export default class App extends Component {
-	state ={
-		formControls:{
-				email:{
-					type:"email",
-					value:''
-				}
-		}
-		
-	}
-	submitHandler = (e) => {
-		e.preventDefault();
-	}
-	handleChange = (e) => {
-		this.setState({
-			formControls: {
-				email: {
-					type: "email",
-					value: e.target.value
-				}
-			} });
-	}
 	render() {
 		return (
+			<Router>
 			<div>
-				<form onSubmit={this.submitHandler}>
-					<input type="text"
-					 value={this.state.formControls.email.value}
-						 onChange={this.handleChange}
-					 />
-				</form>
+				<Navbar/>
+			
+				<Route exact path="/" component={()=><Home name="HOme page"/>}/>
+				<Route exact path="/users" render={()=> <Users pageName="users Page"/>}/>
+				<Route  path="/about" component={About}/>
+				<Route exact path="/blog" component={Blog}/>
+				<Route exact path="/contact" component={Contact}/>
+				<Redirect  to={'/'}/>
+			
+				
 			</div>
+			</Router>
 		)
 	}
 }

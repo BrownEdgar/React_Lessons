@@ -2,7 +2,7 @@
 // BrowserRouter & HashRouter:
 //
 // - BrowserRouter — հարկ է օգտագործել երբ սերվերում մշակում ենք դինամիկ փոփողվող տվյալներ 
-// - HashRouter — հարկ է օգտագործելերբ ունենք "static" կայք.
+// - HashRouter — հարկ է օգտագործել երբ ունենք "static" կայք.
 ////////////////////////////////////////////////////////////////////////////////
 import React, {Component} from 'react';
 import {HashRouter} from 'react-router-dom'
