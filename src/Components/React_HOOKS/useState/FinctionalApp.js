@@ -17,23 +17,23 @@ let obj = {
 	
 }
 export default function FinctionalApp() {
-	// const myState = useState(0);
-	// let count = myState[0];
-	// let setCount = myState[1];
-	 const [count, setCount] = useState(obj);
-	console.log(count)
+	const myState = useState(0);
+	let count = myState[0];
+	let setCount = myState[1];
+	//  const [count, setCount] = useState(obj);
+	// console.log(count)
 	const inctementHandler = () => {
-		setCount({
-			Surname:"vazgen Y" 
-		});
+		// setCount({
+		// 	Surname:"vazgen Y" 
+		// });
 	
-		// setCount(prevCount => prevCount + 1 );
+		setCount(prevCount => prevCount + 1 );
 	}
 	return (
 		<div className="main">
 			<h1>With Hooks!</h1>
 			<h2>useState()</h2>
-			<button onClick={inctementHandler}>Increment Me {count.Surname}</button>
+			<button onClick={inctementHandler}>Increment Me {count}</button>
 		</div>
 	)
 }

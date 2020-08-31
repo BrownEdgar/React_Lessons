@@ -1,0 +1,26 @@
+.photo{
+    height: 400px;
+    width: 300px;
+}
+.return_div, .price_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.price_div{
+    flex-direction: row; 
+}
+.h2_count{
+    margin-left: 25px;
+}
+button{
+    width: 80px;
+    height: 40px;
+    margin-left: 20px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em ;
+}

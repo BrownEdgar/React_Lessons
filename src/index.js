@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css'; 
 // import App from "./App" 
-import App from "./Components/ChangeState/App"
+import App from "./Components/React-7-Tnain-useContext/myApp"
 
 import * as serviceWorker from './serviceWorker';
 
