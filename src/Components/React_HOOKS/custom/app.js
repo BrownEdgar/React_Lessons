@@ -13,7 +13,7 @@ export default function App() {
             <button onClick={dec}>-</button>
             {value}
             <button onClick={inc}>+</button>
-            <button onClick={reset}>Reset</button>
+            <button onClick={reset}>x</button>
         </div>
     )
 }

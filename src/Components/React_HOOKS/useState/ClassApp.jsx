@@ -3,7 +3,9 @@ import "../index.css"
 
 export default class ClassApp extends Component {
 	state = {
-		count: 0
+		count: 0,
+		name:"React"
+		
 	}
 	inctementHandler = ()=>{
 		this.setState({ count: this.state.count + 1  });
@@ -12,7 +14,10 @@ export default class ClassApp extends Component {
 		return (
 			<div className="main">
 			<h1>With Classes</h1>
-				<button onClick={this.inctementHandler}>Increment Me {this.state.count}</button>
+				<button onClick={this.inctementHandler}>
+					Increment Me {this.state.count}
+					</button>
+					<p>{this.state.name}</p>
 			</div>
 		)
 	}

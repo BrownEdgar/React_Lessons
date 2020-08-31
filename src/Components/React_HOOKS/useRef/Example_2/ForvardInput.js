@@ -1,10 +1,10 @@
 import React from 'react'
-function ForvardInput({ type, onKeyDown, plaseholder},ref) {
+function ForvardInput({ type, onKeyDown, placeholder}, ref) {
 	return (
 		<input
 			type={type}
 			ref={ref}
-			placeholder={plaseholder}
+			placeholder={placeholder}
 			onKeyDown={onKeyDown}
 		/>
 	)

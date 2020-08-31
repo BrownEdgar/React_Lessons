@@ -1,6 +1,6 @@
 import React, { useContext, useRef, useEffect} from 'react'
 import { MyContext } from './Context'
-// import Input  from './ForvardInput'
+ import Input  from './ForvardInput'
 import './App.css'
 export default function App() {
 	const context = useContext(MyContext);
@@ -29,7 +29,7 @@ export default function App() {
 	return (
 		<div className={context}>
 			<from onSubmit= {handleSubmit} className='myForm'>	
-			<input
+			<Input
 				type='text'
 				ref={inputEl_1}
 				placeholder='first name'

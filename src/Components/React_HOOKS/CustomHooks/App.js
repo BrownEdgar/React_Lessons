@@ -7,7 +7,7 @@ export default function App() {
     min: -5,
     initial: 0,
     max: 12,
-    step: 3
+    step: 5
     })
     return (
         <div className="box">
