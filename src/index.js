@@ -2,14 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css'; 
 // import App from "./App" 
-import App from "./Components/SITE/copy/App"
-import data from './Components/SITE/data';
+import App from "./Components/test/GetData/App"
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
 	//<React.StrictMode>
-	<App data={data}/>,
+	<App/>,
 	//</React.StrictMode>,
 	document.getElementById('root'));
 
