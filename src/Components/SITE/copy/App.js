@@ -1,71 +1,73 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import Selectors from "./Selectors"
+import Panel from "./Panel"
 import '../App.css'
-import Panel from './Panel'
-import Selector from './Selector'
 
-export default class App extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            activeId: 0,
-            wrapperStyle:{
-                backgroundImage: `url(${this.props.data[0].img})`
-            },
-            panelStyle:{
-                backgroundColor: `${this.props.data[0].colour}`
-            },
-            buttonHover:false,
-            buttonStyle:{
-                color:"#fff"
-            }
-        }
+export default function App(props) {
+	const [options, setoptions] = useState({
+		activeID: 0,
+		wraperStyle: {
+			backgroundImage: `url('${props.data[0].img}')`
+		},
+		buttonHover: false,
+		buttonStyle: {
+			color: '#fff'
+		},
+		panelStyle: {
+			background: props.data[0].colour
+		}
+	})
 
-    }
-    changeActiveId(id) {
-        this.setState({  
-            activeId: id,
-            wrapperStyle:{
-                backgroundImage: `url(${this.props.data[id].img})`
-            },
-            panelStyle:{
-                backgroundColor: `${this.props.data[IDBRequest].colour}`
-            },});
-    }
-    changeButtonStyle(){
-        if(!this.state.buttonHover){
-            this.setState({
-                buttonHover:true,
-                buttonStyle:{
-                    color:`${this.props.data[this.state.activeId].colour}`
-                } });
-        }else{
-            this.setState({
-                buttonHover:false,
-                buttonStyle:{
-                    color:"#fff"
-                } });
-        }
-    }
-    render() {
-        return (
-            <section className="wrapper" style={this.state.wrapperStyle}>
-                <Selector
-                    activeId={this.state.activeId}
-                    data={this.props.data}
-                    change={this.changeActiveId.bind(this)}
-                />
+	function _changeActive(id) {
 
-               
-                <Panel
-                data={this.props.data[this.state.activeId]}
-                panelStyle={this.state.panelStyle}
-                buttonStyle={this.state.buttonStyle}
-                changeButton={this.changeButtonStyle.bind(this)}
-                />
-
-            </section>
-        )
-    }
-}
-
-
+		setoptions({
+			activeID: 0,
+			wraperStyle: {
+				backgroundImage: `url('${props.data[0].img}')`
+			},
+			buttonHover: false,
+			buttonStyle: {
+				color: '#fff'
+			},
+			panelStyle: {
+				background: props.data[0].colour
+			}
+		})
+	}
+	function _buttonColour() {
+		if (!options._buttonColour) {
+	
+				setoptions(prev => {
+					return {
+						...prev, buttonHover: true, buttonStyle: {
+							color: props.data[options.activeID].colour
+						}
+					}
+				})
+	
+		} else {
+			setoptions(prev => {
+				return { ...prev, buttonHover:false,
+					buttonStyle:{
+						color:"#fff"
+					}}
+			});
+		}
+	}
+		return (
+			<section
+				className="wrapper"
+				style={options.wrapperStyle}
+			>
+				<Selectors
+					data={props.data}
+					activeID={options.activeID}
+					_changeActive={(id) => _changeActive(id)} />
+				<Panel
+					data={props.data[options.activeID]}
+					panelStyle={options.panelStyle}
+					buttonStyle={options.buttonStyle}
+					_buttonColour={_buttonColour} />
+			</section>
+		)
+	}

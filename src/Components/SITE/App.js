@@ -4,8 +4,10 @@ import Panel from "./Panel";
 import "./App.css"
 
 class App extends React.Component {
+	
 	constructor(props) {
 		super(props);
+
 		this.state = {
 			activeID: 0,
 			wrapperStyle: {
@@ -49,6 +51,7 @@ class App extends React.Component {
 		}
 	}
 	render() {
+
 		return (
 			<section className="wrapper" style={this.state.wrapperStyle}>
 				<Selectors

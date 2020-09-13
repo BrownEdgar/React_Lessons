@@ -3,6 +3,7 @@ import classes from './App.module.css'
 import Button from './Button/Button'
 import Input from './input/Input'
 import axios from "axios";
+const API_KEY = process.env.REACT_APP_API_KEY;
 //email validation RegExp
 function validateEmail(email) {
 	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -59,16 +60,18 @@ export class App extends Component {
 //reginterHandler ֆունկցիան գրանցումից հետո տվյալները պահում է ՛firebase՛-ում
 // պահանջվող պարամերներ -->https://firebase.google.com/docs/reference/rest/auth#section-create-email-password
 //պահանջվող պարամերներ--> API-KEY ՛firebase՛-ի պրոյեկտից
+// link => https://console.firebase.google.com/u/0/project/react-project-n1/settings/general
 	reginterHandler = async()=>{
 		let data = {
 			email:this.state.formControls.email.value,
 			password:this.state.formControls.password.value,
+			//Независимо от того, чтобы вернуть идентификатор и обновить токен. Всегда должно быть правдой.
 			returnSecureToken:true
 		}
 		try {
 			
 		const response = await axios.post("https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDDgXhQCNqtZhxe78UoHEBZFPm97kky2KU",data)
-		console.log(response.data)
+		console.log(response)
 		} catch (error) {
 			console.log(error)
 		}
@@ -167,5 +170,4 @@ export class App extends Component {
 	}
 }
 export default App;
-
 

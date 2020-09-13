@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Antic+Didone|Montserrat:700';
+
 #root {
 	margin: 0;
 	padding: 0;
@@ -48,7 +49,9 @@
 	}
 }
 
-html, body, #root {
+html,
+body,
+#root {
 	width: 100%;
 	height: 100%;
 	margin: 0;
@@ -86,7 +89,8 @@ html, body, #root {
 	transition: background .3s ease-in-out, opacity .3s ease-in-out;
 }
 
-.selectors .selector:hover, .selectors .selector.active {
+.selectors .selector:hover,
+.selectors .selector.active {
 	background: white;
 	opacity: 0.9;
 }
@@ -107,12 +111,14 @@ aside.panel {
 	transition: background 500ms ease-in-out;
 }
 
-h2.panel-header, p.panel-info {
+h2.panel-header,
+p.panel-info {
 	margin: 0;
 	padding: 1.3rem 3.5rem;
 }
 
-h2.panel-header, p.panel-info {
+h2.panel-header,
+p.panel-info {
 	margin: 0;
 	padding: 1.3rem 3.5rem;
 }
@@ -156,6 +162,7 @@ button.panel-button:focus {
 	0% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 	}
