@@ -1,6 +1,7 @@
 import React from 'react';
 
 class Panel extends React.Component {
+	
 	render() {
 		return (
 			<aside className="panel" style={this.props.panelStyle}>

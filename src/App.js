@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
 import BetterDevelopers from './Components/Developer/BetterDevelopers';
-
 class App extends Component {
     state = {
         developers: [
             {
                 name: "Sebastian",
                 skilss: "Html, css"
-            }, {
+            }, 
+            {
                 name: "Baghdaser",
                 skilss: "Html, css, js"
-            }, {
+            }, 
+            {
                 name: "Mix",
                 skilss: "Html, css, js, React.js, Node.js"
             }

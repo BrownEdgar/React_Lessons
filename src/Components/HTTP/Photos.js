@@ -8,7 +8,7 @@ const [photos, setPhotos] = useState({
     useEffect(() => {
         axios({
             method:'get',
-            url:'https://jsonplaceholder.typicode.com/photos'
+            url:'https://jsonplaceholder.typicode.com/photos?_limit=10'
         }).then(res => {
             console.log('res', res)
     setPhotos({

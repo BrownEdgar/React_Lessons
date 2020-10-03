@@ -26,7 +26,7 @@ class LifeComponent extends React.Component {
     shouldComponentUpdate(nextProps, nextState) {
         console.log('nextProps', nextProps);
         console.log('nextState', nextState);
-        return true;
+        return false;
 
     }
     //WARNING! To be deprecated in React v17. Use componentDidUpdate instead.
@@ -34,11 +34,19 @@ class LifeComponent extends React.Component {
         console.log('nextProps', nextProps);
         console.log('nextState', nextState)
     }
+    
+  
+    componentWillUnmount(){
+        
+        console.log("good bay component");
+    }
+   
     render() {
-        console.log('LifeComponent render')
+        console.log(this.props.name)
         return (
             <div>
                 <h1>{this.props.name}</h1>
+                
             </div>
         )
     }

@@ -1,7 +1,9 @@
 import React from 'react';
 import Selector from "./Selector";
 class Selectors extends React.Component {
+
 	_handleClick(e) {
+		console.log('this.props.id', this.props)
 		if (this.props.id !== this.props.activeID) {
 			this.props._changeActive(this.props.id);
 		} else {

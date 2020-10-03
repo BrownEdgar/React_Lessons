@@ -17,7 +17,7 @@
 // //////////////////////////////////////////////////////////////////////////////
 
 import React from "react";
-// import LifeComponent from "./LifeComponent";
+import LifeComponent from "./LifeComponent";
 import photo from "../../img/lifeCycle.jpeg";
 import "./LifeCycle.module.css";
 
@@ -78,10 +78,10 @@ class Life extends React.Component {
 		console.log('UNSAFE_componentWillUpdate');
 		console.log(`------------------------`);
 	}
-//     UNSAFE_componentWillUnmount() {
-//		console.log("componentWillUnmount");
-//		console.log(`------------------------`);
-//     }
+    componentWillUnmount() {
+		console.log("componentWillUnmount");
+		console.log(`------------------------`);
+    }
 
     handleClick() {
         this.setState({name: "changed name!"})
@@ -99,7 +99,7 @@ class Life extends React.Component {
         return (
             <div>
                 <h1>{this.state.name}</h1>
-                {/* <LifeComponent name={this.state.name} age="25"/> */}
+                <LifeComponent name={this.state.name} age="25"/>
                 <button
                     onClick={this
                     .handleClick
