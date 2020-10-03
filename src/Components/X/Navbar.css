@@ -1,0 +1,22 @@
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 100%;
+    background-color: orange;
+    color: skyblue;
+    font-size: large;
+}
+ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+ a{
+     text-decoration: none;
+     font-size: 1.5em;
+     color: white;
+ }
+ h1{
+     text-align: center;
+ }

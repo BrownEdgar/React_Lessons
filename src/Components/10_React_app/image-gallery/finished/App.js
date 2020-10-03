@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import './App.css';
-
+import helper from "../../Helpers/help"
 // NOTE: make sure to add your unsplash api key
 // https://unsplash.com/developers
 // copy .env.example to .env
 const accessKey = process.env.REACT_APP_UNSPLASH_ACCESS_KEY;
-
+helper()
 export default function App() {
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
@@ -23,8 +23,9 @@ export default function App() {
     let apiUrl = `https://api.unsplash.com/photos?`;
     if (query) apiUrl = `https://api.unsplash.com/search/photos?query=${query}`;
     apiUrl += `&page=${page}`;
-    apiUrl += `&client_id=${accesKey}`;
-
+    apiUrl += `&client_id=${accessKey}`;
+    
+    console.log('apiUrl', apiUrl)
     fetch(apiUrl)
       .then((res) => res.json())
       .then((data) => {
@@ -95,3 +96,5 @@ export default function App() {
     </div>
   );
 }
+
+

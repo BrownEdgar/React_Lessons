@@ -10,6 +10,7 @@ import { MyContext, AnotherContext } from './Context'
 export default function App() {
 	const context = useContext(MyContext);
 	const context2 = useContext(AnotherContext);
+
 	return (
 		<div className={context2}>
 			<h1>{context}</h1>

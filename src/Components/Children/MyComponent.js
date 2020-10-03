@@ -19,6 +19,16 @@ MyComponent.defaultProps = {
     name: "default name"
 }
 
+
+
+
+
+
+
+
+
+
+
 MyComponent.propTypes = {
     // check Here
 };

@@ -42,7 +42,7 @@ export default class App extends Component {
 
 	handleSubmit2(event) {
 		alert(`Login:${this.state.valueForLogin} 
-password:${this.state.valueForPassword}`);
+				password:${this.state.valueForPassword}`);
 		event.preventDefault();
 	}
 	handleSubmit(event) {

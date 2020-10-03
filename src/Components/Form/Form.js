@@ -6,7 +6,7 @@ export default function Form(props) {
             <form onSubmit={props.handleSubmit}>
                 <input
                     type="text"
-                    name="login"
+                    name="loginValue"
                     placeholder={props.value1}
                     onChange={props.func}></input>
                 <input
