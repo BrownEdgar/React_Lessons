@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World</title>
-    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    
-    <!-- Don't use this in production: -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
-  <body>
-    <div id="root">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Hello World</title>
+	<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+	<!-- Don't use this in production: -->
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+	<div id="root">
 	</div>
 	<script type="text/babel">// type-ը անպայման նշել!
 	/////////////////////////////////////Mas 2///////////////////////////////////////////////////
@@ -24,12 +26,12 @@
 	
 	// const div = <div> //jsx
 	// debugger
-	const contact = [
-			{ id: 1, name: "Bruce Lee" },
-			{ id: 2, name: "Michael Jackson" },
-			{ id: 3, name: "Michael Jordan" },
-			{ id: 4, name: "Remark" },
-		]
+	// const contact = [
+	// 		{ id: 1, name: "Bruce Lee" },
+	// 		{ id: 2, name: "Michael Jackson" },
+	// 		{ id: 3, name: "Michael Jordan" },
+	// 		{ id: 4, name: "Remark" },
+	// 	]
 	//old way
 	// const element = React.createElement(
 	// 		"div", null,
@@ -40,39 +42,61 @@
 	// 	)
 
 	//jsx way 
-	const element = (
-			<div>
-			<h1>Contacts</h1>
-			{contact.map((elem) => {
-				return  <div key={elem.id}>
-							{elem.name} //.toUpperCase()
-						</div>
-				}
-			)}
-			</div>
-	);
+	// const element = (
+	// 		<div>
+	// 		<h1>Contacts</h1>
+	// 		{contact.map((elem) => {
+	// 		return <div key={elem.id}>
+	// 			{elem.name.toUpperCase()} 
+	// 		</div>
+	// 		}
+	// 		)}
+	// 		</div>
+	// );
 	
 	//jsx with functions 
 	// --> H:\React.js_SMART\Lesson_2\Maximilean\Lesson_1\js
 		
 
-			function App(){
-				return (
-					<div>
-						<Header/>
-						<Footer/>
-						<Content/>
-						<Galery/>
-						<Header/>
-					</div>
-				)
-			}
-		 ReactDOM.render(<App/>, document.getElementById('root'));
+		// 	function App(){
+		// 		return (
+		// 			<div>
+		// 				<Header/>
+		// 				<Footer/>
+		// 				<Content/>
+		// 				<Galery/>
+		// 				<Header/>
+		// 			</div>
+		// 		)
+		// 	}
+		//  ReactDOM.render(<App/>, document.getElementById('root'));
+const arr = [
+{ id: 1, name: "Narek" },
+{ id: 2, name: "Narek2" },
+{ id: 3, name: "Narek3" },
+{ id: 4, name: "Narek4" },
+{ id: 5, }
+];
+function MyComponent(){
+
+return(
+<ul>
+	{arr.map(elem =>{
+	return (
+	<li key={elem.id}>{elem.name ? elem.name : "unknown" }</li>
+	)
+	})}
+</ul>
+
+);
+}
+ReactDOM.render(<MyComponent />, document.getElementById('root'))
 
 		// <ContactLists/>-ի փոխարեն միշտ կարելի է գրել․՝ 
 		// React.createElement(ContactLists), բայց ընդունված է առաջին տարբերակը
 		// ReactDOM.render(<ContactLists />, document.getElementById('root'));
 			//--> Lesson 3 Components
     </script>
-  </body>
+</body>
+
 </html>

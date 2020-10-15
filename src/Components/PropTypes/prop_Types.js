@@ -14,6 +14,7 @@ class Person extends Component {
 
 Person.propTypes = {
 	// check Here
+	name: PropTypes.array.isRequired
 };
 export default Person;
 
@@ -44,7 +45,7 @@ export default Person;
 // --------------------------------------------------------------
 
 // Կոնկրետ նշվածներից մեկը
-//  PropTypes.oneOf(['male', 'female']),
+  // PropTypes.oneOf(['male', 'female']),
 
 // --------------------------------------------------------------
 
@@ -62,7 +63,7 @@ export default Person;
 // --------------------------------------------------------------
 
 // Օբյեկտ, որի հատկությունները ունեն կոնկրետ տիպ
-//  optionalObjectOf: PropTypes.objectOf(PropTypes.number),
+// optionalObjectOf: PropTypes.objectOf(PropTypes.number),
 
 // --------------------------------------------------------------
 

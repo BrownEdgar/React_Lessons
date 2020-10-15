@@ -17,39 +17,39 @@
 //- <Route>, <Switch> թեգերը պետք է դրված լինի <Router>/<BrowserRouter>-ի մեջ
 //- Կոմպոնենտը, որտեղ օգտագործված է <NavLink>-ը նույնպես
 // -  exact կվալիֆիկատորը  մատնանշում է, որ հարցման տողը պետք է "խիստ"
-// համապատասխանի "path" արգումենտին /about և /about/
+// համապատասխանի "path"  արգումենտին /about և /about/
 // -  strict "/about/" -միայն "/about/" ոչ /about
 // - Redirect կոռեկտ չի աշխատում Switch-ի հետ, օգտագործել առանց Switch-ի
 // - ?-ը նշանակում է, որ տվյալ պառամետրը պարտադիր չե 
 // //////////////////////////////////////////////////////////////////////////////
 
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Navbar from './Navbar'
-import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import About from './About/About'
 import Developers from '../Developer/Developers';
 import Blog from './Blog';
 
 export class App extends Component {
-    render() {
-        return (
-            <Router>
-                <div>
-                    <Navbar/> 
+	render() {
+		return (
+			<Router>
+				<div>
+					<Navbar />
 					{/* exact եթե չգրենք '/header' էջ չի գնա '/' կտեսնի և կկանգնի*/}
-                    <Switch>
-                        <Route exact path='/' render={() =><h1> Home page </h1>}/> 
+					<Switch>
+						<Route exact path='/' render={() => <h1> Home page </h1>} />
 						{/* <Route exact path='/about' render={(props) => <About {...props} name="part2"/>} /> */}
-                        <Route
-                            path='/about/:id?/:name?'
-                            render={(props) => <About {...props} name="part2"/>}/> {/* <Route path='/developers' component={Developers}/> */}
-                        <Route exact path='/blog' render={() => <Blog title="Blog Page"/>}/> {/* <Redirect to={'/'} /> */}
-						<Redirect from={"/about"} to={'/'}/>
-                    </Switch>
-                </div>
-            </Router>
-        )
-    }
+						<Route
+							path='/about/:id?/:name?'
+							render={(props) => <About {...props} name="part2" />} /> {/* <Route path='/developers' component={Developers}/> */}
+						<Route exact path='/blog' render={() => <Blog title="Blog Page" />} /> {/* <Redirect to={'/'} /> */}
+						<Redirect from={"/about"} to={'/'} />
+					</Switch>
+				</div>
+			</Router>
+		)
+	}
 }
 
 export default App

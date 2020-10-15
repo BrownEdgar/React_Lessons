@@ -31,7 +31,7 @@ export default function Input(props) {
 				value={props.value}
 				onChange={props.onChange}
 			/>
-			{/* Սղալների դեպքում */}
+			{/* Սխալների դեպքում */}
 			{isInvalid(props) 
 			? <span>{props.errorMessage || "Введите верное значение"}</span>
 			: null}

@@ -10,7 +10,7 @@ export default function MyComponent(props) {
     return (
         <div className={divStyle}>
             <p>{props.name}</p>
-            {props.children}
+            {props.children[1]}
         </div>
     )
 }
