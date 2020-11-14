@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import './App.css';
-import helper from "../../Helpers/help"
+
 // NOTE: make sure to add your unsplash api key
 // https://unsplash.com/developers
 // copy .env.example to .env
 const accessKey = process.env.REACT_APP_UNSPLASH_ACCESS_KEY;
-helper()
+
 export default function App() {
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
@@ -73,7 +73,7 @@ export default function App() {
         <button>Search</button>
       </form>
 
-      <InfiniteScroll
+			<InfiniteScroll
         dataLength={images.length}
         next={() => setPage((page) => page + 1)}
         hasMore={true}

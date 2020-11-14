@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css'; 
 // import App from "./App" 
-import App from "./Components/Navbar/App"
+import App from "./Components/SITE/App"
+import data from "./Components/SITE/data.js"
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-	//<React.StrictMode>
-	<App/>,
-	//</React.StrictMode>,
+	// <React.StrictMode>
+	<App data={data}/>,
+	// </React.StrictMode>,
 	document.getElementById('root'));
 
 serviceWorker.unregister();

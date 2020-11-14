@@ -1,0 +1,37 @@
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.main{
+	width: 80%;
+	height: auto;
+	min-height: 400px;
+	margin: 120px auto;
+	text-align: center;
+	padding: 20px;
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+}
+h1{
+	text-align: center;
+}
+.btn {
+		font-weight: 800;
+		font-size: 16px;
+		color: rgb(88, 81, 81);
+		border: none;
+		text-decoration: underline;
+		padding: 5px;
+		padding-bottom: 10px;
+		background: transparent;
+		cursor: pointer;
+		text-align: center;
+		width: 150px;
+		margin: 0px auto;
+		display: block;
+		position: fixed;
+		top: 25px;
+		right: 100px;
+}

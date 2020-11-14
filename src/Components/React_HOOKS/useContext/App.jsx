@@ -13,7 +13,7 @@ export default function App() {
 
 	return (
 		<div className={context2}>
-			<h1>{}</h1>
+			<h1>{context}</h1>
 			
 		</div>
 	)

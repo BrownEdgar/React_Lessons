@@ -69,8 +69,8 @@ export class App extends Component {
 			returnSecureToken: true
 		}
 		try {
-			const response = await axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`, data)
-			console.log(response)
+		const response = await axios.post("https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDDgXhQCNqtZhxe78UoHEBZFPm97kky2KU",data)
+		console.log(response)
 		} catch (error) {
 			console.log(error)
 		}

@@ -1,25 +1,29 @@
 import React, {Component} from 'react';
 import BetterDevelopers from './Components/Developer/BetterDevelopers';
 class App extends Component {
-    state = {
-        developers: [
-            {
-                name: "Sebastian",
-                skilss: "Html, css"
-            }, 
-            {
-                name: "Baghdaser",
-                skilss: "Html, css, js"
-            }, 
-            {
-                name: "Mix",
-                skilss: "Html, css, js, React.js, Node.js"
-            }
-        ],
-        title: "Our Developers",
-        count: 0,
-        showDiv: false
-    }
+	constructor(props){
+		super(props);
+		this.state = {
+			developers: [
+				{
+					name: "Sebastian",
+					skilss: "Html, css"
+				},
+				{
+					name: "Baghdaser",
+					skilss: "Html, css, js"
+				},
+				{
+					name: "Mix",
+					skilss: "Html, css, js, React.js, Node.js"
+				}
+			],
+			title: "Our Developers",
+			count: 0,
+			showDiv: false
+		}
+	}
+   
 
     changeTitleHandler = (arg) => {
         //this.state.title = "new Title"

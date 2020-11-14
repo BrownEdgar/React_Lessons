@@ -1,0 +1,38 @@
+.infobox {
+border: 1px solid grey;
+box-shadow: 0 0 4px 4px rgba(0,0,0,0.3);
+margin: 5px 10px;
+padding: 15px;
+min-width: 250px;
+}
+.infobox h1{
+	font-size: 22px;
+}
+span{
+	font-size: 20px;
+	font-weight: 700;
+	color: grey;
+	letter-spacing: 1px;
+}
+.infobox p{
+	padding: 10px 35px;
+}
+
+.infobox button {
+	font-weight: 800;
+	font-size: 16px;
+	color: rgb(88, 81, 81);
+	border: none;
+	text-decoration: underline;
+	padding: 5px;
+	padding-bottom: 10px;
+	background: transparent;
+	cursor: pointer;
+	
+}
+.infobox button:focus{
+	outline: none;
+	transform: translateY(3px);
+	transition: 0.3s;
+	color: rgb(19, 30, 32);
+}

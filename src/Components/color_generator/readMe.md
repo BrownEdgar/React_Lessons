@@ -1,0 +1,1 @@
+https://github.com/NikolaiChirkov/react_projects/tree/master/9-color-generator/setup

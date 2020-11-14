@@ -35,12 +35,12 @@ export default Person;
 // --------------------------------------------------------------
 
 // Ցանկացած տիպի արժեք
-//  requiredAny: PropTypes.any.isRequired,
+//requiredAny: PropTypes.any.isRequired,
 
 // --------------------------------------------------------------
 
 //  React-элемент
-  //PropTypes.element,
+ //PropTypes.element,
 
 // --------------------------------------------------------------
 
@@ -50,10 +50,10 @@ export default Person;
 // --------------------------------------------------------------
 
 // Օբյեկտ, նշված տիպերի ինչ-որ մեկը
-// optionalUnion: PropTypes.oneOfType([
-// 	PropTypes.oneOf(['male', 'female']),
-// 	PropTypes.React.element
-// ]),
+optionalUnion: PropTypes.oneOfType([
+	PropTypes.number,
+	PropTypes.React.string
+]),
 
 // --------------------------------------------------------------
 
@@ -68,19 +68,19 @@ export default Person;
 // --------------------------------------------------------------
 
 // Օբյեկտ նախորոք որոշված կառուցվածքով
-// optionalObjectWithShape: PropTypes.shape({
-// 	color: PropTypes.string,
-// 	fontSize: PropTypes.number
-// }),
+optionalObjectWithShape: PropTypes.shape({
+	color: PropTypes.string,
+	fontSize: PropTypes.number
+}),
 
 // --------------------------------------------------------------
 
 // Օբյեկտ ԽԻՍՏ  կառուցվածքով
 // Չհայտարարված հատկություններ դեպքում կգեներացվեն warning-ներ
-// optionalObjectWithStrictShape: PropTypes.exact({
-// 	name: PropTypes.string,
-// 	quantity: PropTypes.number
-// }), 
+optionalObjectWithStrictShape: PropTypes.exact({
+	name: PropTypes.string,
+	quantity: PropTypes.number
+}), 
 
 // --------------------------------------------------------------
 

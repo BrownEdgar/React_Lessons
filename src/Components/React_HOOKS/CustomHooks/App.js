@@ -5,9 +5,9 @@ import { CustomHook } from './CustomHook'
 export default function App() {
     const [value, {inc, dec, reset}] = CustomHook({
     min: -5,
-    initial: 0,
+    initial: 6,
     max: 12,
-    step: 5
+    step: 4
     })
     return (
         <div className="box">

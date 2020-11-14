@@ -9,7 +9,7 @@ export default function App() {
 
 	let content = boll 
 	? <h1>{headding}</h1> 
-	: <input type="text" value={headding} onChange={changeTitle} onBlur={() => setBoll(!boll)} />
+	: <input type="text" defaultValue={"dsa"} onChange={changeTitle} onBlur={() => setBoll(!boll)} />
 	return (
 		<div onDoubleClick={() => setBoll(!boll)}>
 			{content}
