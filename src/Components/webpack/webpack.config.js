@@ -15,7 +15,7 @@ module.exports = {
 	//watch:true,
 	watchOptions: {
 		aggregateTimeout: 200, //սպասման միլիվարկյաններ "զբոռկից" առաջ
-		poll: 1000 // check for ghanges
+		poll: 1000 // check for changes
 	},
 	//devtool: 'source-map'
 	devtool: NODE_ENV == "development" ? 'source-map' : null,

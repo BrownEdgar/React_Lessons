@@ -22,7 +22,7 @@ export default function FinctionalApp() {
 	 });
 
 	const inctementHandler = () => {
-		setCount(count +1);
+		setCount(count + 1);
 		setCount(prevCount => prevCount + 1 );
 	
 	

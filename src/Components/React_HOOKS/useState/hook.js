@@ -1,30 +1,24 @@
-import React, { useState } from 'react'
-// X  this
-// X  componen....
-// X  this.setState
-// X  bind()
+import React, {useState} from 'react'
+
 export default function Hook() {
 
-    const [data, setData] = useState({
-        count:0,
-        name:"react.js"
-    })
-    
-    const inctementHandler = () =>{
-        setData({
-            count:data.count+1,
-            name:"react.js"
-        })  
-        
-    }
-   
-    return (
-        <div>
-            <button onClick={inctementHandler}>
-                Increment Me {data.count} 
-			</button>
-        <p>{data.name}</p>
-          
-        </div>
-    )
+	const [value, setValue] = useState({
+		name:"React",
+		age: 8,
+		companyL:"facebook"
+	});
+	const [name, setname] = useState("default name")
+	const handleChange = () => {
+		setValue(hinObj => {
+			return { ...hinObj, age: hinObj.age + 2}
+		})
+	}
+	return (
+		<div>
+			<h1>{value.name}</h1>
+			<h1>{value.age}</h1>
+			<button onClick={handleChange}>{value.age > 20 ? "off" : "on"}</button>
+			<h1></h1>
+		</div>
+	)
 }

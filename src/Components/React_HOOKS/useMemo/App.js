@@ -11,23 +11,29 @@ import Child from './Child';
 
 export default function App() {
 	const [count, setCount] = useState(0);
+	const [name, setname] = useState("name");
 
-const memo = useMemo(() => {
+	const child = useMemo(() => {
 	return <Child/>
-}, [])
+	}, [count])
 
 	function clickHandler(){
 		setCount(count +1)
+	}
+	function nameHandler() {
+		setname(name + "1")
 	}
 	return (
 		<div className="box">
 			<h1>useMemo hook</h1>
 			<h3>count: {count}</h3>
+			<h3>count: {name}</h3>
 			<button onClick={clickHandler}>Increment</button>
+			<button onClick={nameHandler}>Increment</button>
 			<h3>Normal render</h3>
-			<Child></Child>
+			<Child/>
 			<h3>Memo Render</h3>
-			{memo}
+			{child}
 		</div>
 	)
 }

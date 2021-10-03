@@ -2,7 +2,7 @@ import React, {Fragment} from 'react'
 
 export default function FragmentOne() {
 	return (
-		<Fragment>
+		<Fragment >
 			<h1>I am a FragmentOne</h1>
 		</Fragment>
 	)

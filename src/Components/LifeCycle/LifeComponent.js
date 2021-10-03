@@ -5,7 +5,7 @@
 // 	-->https://www.youtube.com/watch?v=auAtFC5nfTs&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&index=55
 // 
 // 
-// - componentWillUnmount()- ը ներկաըացված է ՛./Components/Developer/Developers՛ ֆայլում
+// - componentWillUnmount()- ը ներկայացված է ՛./Components/Developer/Developers՛ ֆայլում
 // - React 17,0-ից : Կջնջվեն componentWillMount, componentWillReceiveProps և
 // componentWillUpdate. (Կաշխատեն միայն կյանքի փուլերի նոր անուները  «UNSAFE_».)
 // - UNSAFE_-ը նպատակ ունի բոլոր React ծրագրավորողներին դրդել,որպեսզի նրանք սկսեն
@@ -37,7 +37,6 @@ class LifeComponent extends React.Component {
     
   
     componentWillUnmount(){
-        
         console.log("good bay component");
     }
    

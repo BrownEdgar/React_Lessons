@@ -46,7 +46,7 @@ class Nav extends Component {
                         <NavLink  to={{
 							pathname: "/about",
 							state: {
-								name:"asdasdsad"
+								name:"Levon Abrahamyan"
 							}
 						}} >
                             About
@@ -55,7 +55,6 @@ class Nav extends Component {
                     <li>
                         <NavLink
                             to={{
-
                             pathname: "/blog",
                             search: "?a=1&b=3",
                             hash: "scroll-path"

@@ -6,6 +6,7 @@ import './App.css';
 // https://unsplash.com/developers
 // copy .env.example to .env
 const accessKey = process.env.REACT_APP_UNSPLASH_ACCESS_KEY;
+console.log('accessKey', accessKey)
 
 export default function App() {
   const [images, setImages] = useState([]);

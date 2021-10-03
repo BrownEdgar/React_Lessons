@@ -24,7 +24,7 @@ export default class MyForm extends Component {
             nameError = "invalid name, aranc tiv";
         }
 
-        if(!this.state.email.endsWith('com')){
+        if(!this.state.email.endsWith('.com')){
             emailError = "invalid email"
         }
 

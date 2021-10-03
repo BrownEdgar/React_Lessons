@@ -20,7 +20,7 @@ export default class ChildComponent extends Component {
     render() {
         console.log('%cchild render method', color);
 		const copy = this.props.allParams;
-		let btn =  Boolean(this.props.count >= 2);
+		let btn =  Boolean(this.props.count >= 5);
         return (
 
             <div>

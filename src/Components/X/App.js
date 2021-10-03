@@ -1,45 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
+import Form from './Form'
+import "./App.css"
 
-function App() {
-	const [state, setState] = useState({
-		name: "sda",
-		surname: "",
-		email: ""
-	})
-	const handleChange = (e) =>{
-		//События SyntheticEvent содержатся в пуле. Это означает, что объект SyntheticEvent будет повторно использован, а все его свойства будут очищены после вызова обработчика события. Это необходимо из соображений производительности. Именно поэтому нельзя использовать синтетические события асинхронно.
-		e.persist()
-		setState(prevState =>({
-			
-				...prevState,
-				[e.target.name]:e.target.value	
-			
-		}))
-	}
+export default function App() {
 	return (
-		<div>
-			<form action="">
-				<input
-					type="text"
-					name="name"
-					value={state.name}
-					onChange={handleChange}
-				/>
-				<input
-					type="text"
-					name="surname"
-					value={state.surname}
-					onChange={handleChange}
-				/>
-				<input
-					type="email"
-					name="email"
-					value={state.email}
-					onChange={handleChange}
-				/>
-			</form>
+		<div className="main">
+			<div className="main_form">
+				<Form/>
+			</div>
 		</div>
 	)
 }
 
-export default App

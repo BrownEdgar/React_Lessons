@@ -18,7 +18,7 @@
 
 import React from "react";
 import LifeComponent from "./LifeComponent";
-import photo from "../../img/lifeCycle.jpeg";
+
 import "./LifeCycle.module.css";
 
 class Life extends React.Component {
@@ -84,7 +84,7 @@ class Life extends React.Component {
     }
 
     handleClick() {
-        this.setState({name: "changed name!"})
+        this.setState({name: "changed name2!"})
 	}
 	// Կանչվում է Կոմպոնենտի թարմացումից անմիջապես հետո։ 
 	componentDidUpdate(prevProps, prevState, prevContext) {
@@ -104,7 +104,7 @@ class Life extends React.Component {
                     onClick={this
                     .handleClick
                     .bind(this)}>Click me</button>
-                <p><img src={photo} alt="LifeCycle Methods view"/></p>
+                {/* <p><img src={} alt="LifeCycle Methods view"/></p> */}
             </div>
         )
     }

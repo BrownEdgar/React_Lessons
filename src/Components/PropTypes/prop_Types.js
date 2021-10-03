@@ -45,25 +45,25 @@ export default Person;
 // --------------------------------------------------------------
 
 // Կոնկրետ նշվածներից մեկը
-  // PropTypes.oneOf(['male', 'female']),
+PropTypes.oneOf(['male', 'female']),
 
 // --------------------------------------------------------------
 
 // Օբյեկտ, նշված տիպերի ինչ-որ մեկը
-optionalUnion: PropTypes.oneOfType([
+data: PropTypes.oneOfType([
 	PropTypes.number,
-	PropTypes.React.string
+	PropTypes.string
 ]),
 
 // --------------------------------------------------------------
 
 // Կոնկրետ տիպով օբյեկտների զանգված
-//  optionalArrayOf: PropTypes.arrayOf(PropTypes.number),
+  optionalArrayOf: PropTypes.arrayOf(PropTypes.number),
 
 // --------------------------------------------------------------
 
 // Օբյեկտ, որի հատկությունները ունեն կոնկրետ տիպ
-// optionalObjectOf: PropTypes.objectOf(PropTypes.number),
+ optionalObjectOf: PropTypes.objectOf(PropTypes.number),
 
 // --------------------------------------------------------------
 

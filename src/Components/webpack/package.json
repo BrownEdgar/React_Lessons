@@ -1,7 +1,7 @@
 {
   "name": "Webpack",
   "version": "1.0.0",
-  "description": "npm i -g webpack\r npm i  webpack\r npm install -D babel-loader @babel/core @babel/preset-env webpack\r npm install --save-dev css-loader\r npm install --save-dev mini-css-extract-plugin",
+  "description": "webpack tutorial",
   "main": "home.js",
   "dependencies": {
     "webpack": "^4.43.0"

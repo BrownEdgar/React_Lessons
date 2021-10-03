@@ -54,7 +54,7 @@ class Users extends Component {
 			fontSize: "24px"
 		  };
 		return (
-			<div >
+			<div style={divStyle}>
 				<h3 style={{textAlign: "center"}}>Источник - {this.state.axbyur}</h3>
 					<ul style={divStyle}>
 						{this.state.users.map((item, index)=>{

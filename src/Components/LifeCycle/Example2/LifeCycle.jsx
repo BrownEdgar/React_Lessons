@@ -58,8 +58,6 @@ export default class LifeCycle extends Component {
         )
     }
     changeStateValue = () => {
-       
-
         this.setState(prevState => {
             return {
                 constructorValue: "change",
@@ -92,7 +90,7 @@ export default class LifeCycle extends Component {
             console.log("%cshouldComponentUpdate --> OK render", color);
             return true;
         } else {
-            console.log("%cshouldComponentUpdate --> Stop RENDER", `background:red;padding:5px; color:white`);
+            console.log("%cshouldComponentUpdate --> Stop RENDER 😥", `background:red;padding:5px; color:white`);
             return false;
         }
 

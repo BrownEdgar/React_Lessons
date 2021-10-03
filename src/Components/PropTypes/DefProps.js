@@ -12,6 +12,8 @@ import './style.css'
 // բայց ոչ null-ի դեպքում
 //եթե props.data չի փողանցվել կվերցրվի այս արժեքը
 DefProps.defaultProps = {
-	data: 'defaultProps value'
+	data: 'defaultProps value',
+	cars: [1,2,3,4,5]
 };
 export default DefProps;
+

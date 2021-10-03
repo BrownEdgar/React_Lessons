@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import Users from "./Users";
+import Users from "./Users";
 import Photos from './Photos';
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
 	render() { 
 		return ( 
 			<div>
-				{/* <Users/> */}
+				<Users/>
 				<Photos/>
 			</div>
 		 );

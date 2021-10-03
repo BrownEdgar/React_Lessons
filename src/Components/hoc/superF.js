@@ -4,8 +4,8 @@ function superF(Component) {
 	return class SuperF extends React.Component{
 		constructor(props){
 			super(props);
-			this.handleChange = this.handleChange.bind(this);
 			this.state = {}
+			this.handleChange = this.handleChange.bind(this);
 		}
 		handleChange() {
 			console.log("handleChange");	

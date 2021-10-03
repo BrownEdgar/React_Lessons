@@ -7,7 +7,7 @@ export default class ClassApp extends Component {
 		name:"React"
 		
 	}
-	inctementHandler = ()=>{
+	inctementHandler = () => {
 		this.setState({ count: this.state.count + 1  });
 	}
 	render() {

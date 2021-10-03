@@ -1,0 +1,21 @@
+
+input{
+	box-sizing: border-box !important;
+	padding: 10px !important;
+	width: 95% !important;
+	background-color: #f3f3f3 !important;
+	color: rgb(52, 52, 52) !important;
+}
+label {
+	display: block;
+	margin-bottom: 6px;
+	color: white;
+}
+
+span {
+	position: relative;
+	top: -10px;
+	color: rgb(255, 38, 0);
+	background-color: rgba(255, 255, 255, 0.1);
+	font-weight: 600;
+}
