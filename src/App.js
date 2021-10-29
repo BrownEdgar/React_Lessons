@@ -10,7 +10,7 @@
 
 import React from 'react'
 import "./App.css"
-import { Formik, Form, Field, ErrorMessage, FieldArray } from 'formik'
+import { Formik, Form, Field, ErrorMessage, FieldArray,FastField } from 'formik'
 import * as yup from 'yup'
 
 const validationSchema = yup.object({
@@ -19,6 +19,7 @@ const validationSchema = yup.object({
 		.email("Invalid Email format")
 		.required("Required"),
 	lesson: yup.string().required("Required"),
+	comments: yup.string().required("Required"),
 })
 const initialValues = {
 	name: "Edgar",
@@ -43,6 +44,8 @@ export default function App() {
 			initialValues={initialValues}
 			validationSchema={validationSchema}
 			onSubmit={onSubmit}
+			validateOnChange={false}
+			validateOnBlur={true}
 		>
 			<Form >
 				<div className="form-control">
@@ -76,8 +79,9 @@ export default function App() {
 				{/* address */}
 				<div className="form-control">
 					<label htmlFor="address">Address</label>
-					<Field name="address" >
+					<FastField name="address" >
 						{(props) => {
+							console.log("Input render")
 							const { field, meta } = props;
 							return (
 								<div className="form-control" {...field}>
@@ -86,7 +90,7 @@ export default function App() {
 								</div>
 							)
 						}}
-					</Field>
+					</FastField>
 				</div>
 
 				{/* social */}
@@ -106,11 +110,10 @@ export default function App() {
 					<FieldArray name="phNumbers">
 						{
 							(fieldArrayProps) => {
-								
 								const { push, remove, form } = fieldArrayProps;
 								const { values } = form;
 								const { phNumbers } = values;
-								console.log(form);
+								console.log(form)
 								return (
 									<div>
 										{
