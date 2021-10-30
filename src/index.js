@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './MyFormik';
+import App from './Test';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router} from 'react-router-dom'
 
