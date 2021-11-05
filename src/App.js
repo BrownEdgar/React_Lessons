@@ -1,9 +1,20 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
+
+// import MuiTypography from './Components/Typography/MuiTypography';
+// import WithCss from './Components/makeCss/WithCss';
+// import Buttons from './Components/Buttons/Buttons';
+import Breakpoints from './Components/Breakpoints/Breakpoints';
 
 
 function App() {
-	return <Button variant="contained">Hello World</Button>;
+	return (
+		<div>
+			{/* <MuiTypography/> */}
+			{/* <WithCss/> */}
+			{/* <Buttons/> */}
+			<Breakpoints/>
+		</div>
+	)
 }
 
 export default App
