@@ -42,7 +42,8 @@
 	left: 0;
 	right: 0;
 	font-size: 4.5em;
-	top: -78%;
+	top: -58%;
 	z-index: -1;
-	opacity: .25
+	opacity: .25;
+	font-family: var(--ff-body);
 }
