@@ -55,7 +55,7 @@ class Users extends Component {
 		  };
 		return (
 			<div style={divStyle}>
-				<h3 style={{textAlign: "center"}}>Источник - {this.state.axbyur}</h3>
+				<h3 style={{textAlign: "center"}}>Линк - {this.state.axbyur}</h3>
 					<ul style={divStyle}>
 						{this.state.users.map((item, index)=>{
 							return <li key={index}>{item.title}</li>

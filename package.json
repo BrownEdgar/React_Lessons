@@ -10,13 +10,11 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.21.2",
     "firebase": "^7.20.0",
-    "jquery": "^3.5.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-infinite-scroll-component": "^5.0.5",
     "react-router-dom": "^6.0.2",
-    "react-scripts": "^3.4.1",
-    "values.js": "^2.0.0"
+    "react-scripts": "^3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
