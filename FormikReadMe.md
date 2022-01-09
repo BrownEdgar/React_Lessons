@@ -65,7 +65,7 @@ yup.object({
 Այս օրինակով "ErrorMessage"-ը կտեղադրվի "p" թեգի մեջ։ Գործողությունը կատարվում է ավոմատ "formik"-ի կողմից։
 "component" արգումենտի կարելի է փոխանցել նաև կոմպենենտ(այլ js ֆայլ)։ `Օր․՝`
 # <ErrorMessage component={<ComponentName>}> | կամ ՝
-# 	<ErrorMessage name="email">
+# <ErrorMessage name="email">
 # 		{errMsg => <div className="error">{errMsg}</div>}
 # </ErrorMessage>
 
@@ -92,3 +92,21 @@ yup.object({
 # validateOnChange={false}
 # validateOnBlur={true}
 -  2. Ցանկացած "input" դաշտ կարող է ունենալ սեպական `"validate"` ֆունկցիան, բավական են նման անունով ատրիբուտ փոխանցել նրան և նրա արժեքը հավասարեցնել ֆունկցիայի անունին։ Այդ ֆունկցիայում էլ գրել դաշտի արժեքի ստուգման լոգիկան։
+
+ # --------------------- -- -- ՄԱՍ 8 -- -- ---------------------
+ # ------------------- -- -- Field level validation  -- -- --------------------
+`formik`-ի վալիդացիան կարելի է կազմակերպել նաև առանց `yup`-ի։Գրելով հեեվյալ ֆունկցիան 
+	const valideteComents = (value) => { 
+		let error;
+		if (!value) {
+			error = "Coments is Required!"
+		}
+		return error;
+	}
+	և հետո այն որպես արգումենտ փոխանցել `validate` ատրիբուտին։
+ -	<Field as="textarea" id="coments" name="coments" validate={valideteComents} />
+
+  # --------------------- -- -- ՄԱՍ 9 -- -- ---------------------
+ # ------------------- -- -- Spesial Field validation or all -- -- --------------------
+- <button type="button" onClick={formik.validadeField("coments")}>check comments</button>
+- <button type="button" onClick={formik.validadeForm()}>check all forms</button>
