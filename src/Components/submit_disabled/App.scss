@@ -7,26 +7,14 @@
 body {
 	background-color: #1e272e;
 }
-.achq{
-	width: 20px;
-	height: 20px;
-	background-color: gray;
-	position: absolute;
-	top: 50%;
-	transform: translateY(50%);
-	border-radius: 50%;
-	right:10px;
-}
 
 .container {
-	
 	max-width: 600px;
 	margin: 180px auto;
 	padding: 1rem 2rem;
 	border: 2px dashed #05c46b;
 	form {
 		.form-group {
-			position: relative;
 			width: 90%;
 			margin: 10px auto;
 			label {
@@ -45,11 +33,6 @@ body {
 			p {
 				color: orangered;
 			}
-			textarea{
-				resize: none;
-				width: 100%;
-				display: block;
-			}
 		}
 		button {
 			width: 100%;
@@ -61,6 +44,11 @@ body {
 			display: block;
 			border-radius: 6px;
 			margin: 40px auto;
+			cursor:pointer;
+			&:disabled{
+				background-color: rgb(122, 122, 122);
+				cursor: not-allowed;
+			}
 		}
 	}
 }
