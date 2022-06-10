@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css'; 
-import App from "./Components/UseForm/App"
+import App from "./Components/UseForm/varian2/App"
 import { BrowserRouter as Router } from 'react-router-dom'
 
 // import App from "./Components/10_React_app/image-gallery/finished/App"
