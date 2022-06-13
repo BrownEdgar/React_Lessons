@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css'; 
-import App from "./Components/Auth/App"
+import App from "./Components/Navbar_ROUTE_6/route6/App"
 import { BrowserRouter as Router } from 'react-router-dom'
 
 // import App from "./Components/10_React_app/image-gallery/finished/App"
@@ -9,14 +9,14 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-	<React.StrictMode>
-	
-		<Router>
-			<App />
-		</Router>
+  <React.StrictMode>
 
-	</React.StrictMode>,
-	document.getElementById('root'));
+    <Router>
+      <App />
+    </Router>
+
+  </React.StrictMode>,
+  document.getElementById('root'));
 
 serviceWorker.unregister();
 

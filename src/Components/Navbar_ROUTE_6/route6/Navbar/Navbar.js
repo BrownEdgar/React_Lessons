@@ -27,52 +27,31 @@
 // /////////////////////////////////////////////////////////////////////////////
 // /
 
-import React, {Component} from 'react';
-import {NavLink, Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import './Navbar.css'
 
 class Nav extends Component {
-    render() {
-        return (
-            <nav className="flex">
-                <h1>Logo</h1>
-                <ul className="myMenu">
-                    <li>
-                        {/* exact ունի նաև NavLink, որպեսզի activeClassName լինկերը կոռեկտ փոխեն իրենց գույները։ՋՆջել ստուգելու համար */}
-						<NavLink to='/' >
-                            Home
-                        </NavLink>
-                    </li>
-					<li>
-					
-						<NavLink to='/friends' >
-							Friends
-						</NavLink>
-					</li>
-                    {/* <li>
-                        <NavLink  to={{
-							pathname: "/about",
-							state: {
-								name:"Levon Abrahamyan"
-							}
-						}} >
-                            About
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to={{
-                            pathname: "/blog",
-                            search: "?a=1&b=3",
-                            hash: "scroll-path"
-                        }}
-                           >
-                            Blog
-                        </NavLink>
-                    </li> */}
-                </ul>
-            </nav>
-        );
-    }
+  render() {
+    return (
+      <nav className="flex">
+        <h1>Logo</h1>
+        <ul className="myMenu">
+          <li>
+            {/* exact ունի նաև NavLink, որպեսզի activeClassName լինկերը կոռեկտ փոխեն իրենց գույները։ՋՆջել ստուգելու համար */}
+            <NavLink to='/' >
+              Home
+            </NavLink>
+          </li>
+          <li>
+
+            <NavLink to='/friends' >
+              Friends
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    );
+  }
 }
 export default Nav;
