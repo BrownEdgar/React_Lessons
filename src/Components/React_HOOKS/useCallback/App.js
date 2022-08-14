@@ -16,14 +16,16 @@ export default function App() {
  const handleChange =  () => {
 	 setName("vardan")
  }
+
 	useEffect(() => {
-		console.log("as");
+		console.log("count updated!");
 	}, [count])
+
 	return (
 		<div className="box">
 			<h1>useCallback hook</h1>
 			<h3>count: {count}</h3>
-			<h3>count: {name}</h3>
+			<h3>Name: {name}</h3>
 			
 			<Child increment={clickHandler} name={name}/>
 			<button onClick={handleChange}>Gnage name</button>
