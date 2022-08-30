@@ -14,7 +14,7 @@ class Person extends Component {
 
 Person.propTypes = {
 	// check Here
-	name: PropTypes.array.isRequired
+	name: PropTypes.string.isRequired
 };
 export default Person;
 
@@ -35,52 +35,52 @@ export default Person;
 // --------------------------------------------------------------
 
 // Ցանկացած տիպի արժեք
-//requiredAny: PropTypes.any.isRequired,
+// requiredAny: PropTypes.any.isRequired,
 
 // --------------------------------------------------------------
 
 //  React-элемент
- //PropTypes.element,
+//  PropTypes.element,
 
 // --------------------------------------------------------------
 
 // Կոնկրետ նշվածներից մեկը
-PropTypes.oneOf(['male', 'female']),
+//PropTypes.oneOf(['male', 'female']),
 
 // --------------------------------------------------------------
 
 // Օբյեկտ, նշված տիպերի ինչ-որ մեկը
-data: PropTypes.oneOfType([
-	PropTypes.number,
-	PropTypes.string
-]),
+// optionalUnion: PropTypes.oneOfType([
+// 	PropTypes.oneOf(['male', 'female']),
+// 	PropTypes.React.element
+// ]),
 
 // --------------------------------------------------------------
 
 // Կոնկրետ տիպով օբյեկտների զանգված
-  optionalArrayOf: PropTypes.arrayOf(PropTypes.number),
+//optionalArrayOf: PropTypes.arrayOf(PropTypes.number),
 
 // --------------------------------------------------------------
 
 // Օբյեկտ, որի հատկությունները ունեն կոնկրետ տիպ
- optionalObjectOf: PropTypes.objectOf(PropTypes.number),
+//optionalObjectOf: PropTypes.objectOf(PropTypes.number),
 
 // --------------------------------------------------------------
 
 // Օբյեկտ նախորոք որոշված կառուցվածքով
-optionalObjectWithShape: PropTypes.shape({
-	color: PropTypes.string,
-	fontSize: PropTypes.number
-}),
+// optionalObjectWithShape: PropTypes.shape({
+// 	color: PropTypes.string,
+// 	fontSize: PropTypes.number
+// }),
 
 // --------------------------------------------------------------
 
 // Օբյեկտ ԽԻՍՏ  կառուցվածքով
 // Չհայտարարված հատկություններ դեպքում կգեներացվեն warning-ներ
-optionalObjectWithStrictShape: PropTypes.exact({
-	name: PropTypes.string,
-	quantity: PropTypes.number
-}), 
+// optionalObjectWithStrictShape: PropTypes.exact({
+// 	name: PropTypes.string,
+// 	quantity: PropTypes.number
+// }), 
 
 // --------------------------------------------------------------
 
