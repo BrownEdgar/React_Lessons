@@ -1,81 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-	<!-- թարգմանիչ try it https://babeljs.io/ -->
-	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-	<style>
-		.main div{
-			width: 200px;
-			height: 200px;
-			box-shadow: 1px 1px 2px 5px black;
-			padding: 10px;
-			display: inline-block;
-			margin: 20px;
-			text-align: center;
-			font-size: 22px;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>Document</title>
 </head>
+
 <body>
+  <div id="root">
 
-	<div id="root"></div>
+  </div>
 
-	
+  <script>
 
+    let r = React.createElement("h1", null, "Hello React.js")
+    ReactDOM.render(r, document.getElementById('root'));
 
-
-	<!-- նշել անպայման type="text/babel" -->
-	 <script type="text/babel">
-
-
-			const contact = [
-			{ id: 1, name: "Bruce Lee" },
-			{ id: 2, name: "Michael Jackson" },
-			{ id: 3, name: "Michael Jordan" }
-			]
-			// const element = React.createElement(
-			// "ul",null,
-			// null,
-			// contact.map((elem)=>{
-			// return React.createElement("li", {key:elem.id}, elem.name)
-			// })
-			// )
-			// ReactDOM.render(element,document.getElementById('root'))
-			function Element(props){
-			return (
-			<div className={props.cl}>
-				<p> Name: {props.name}</p>
-				<p> age: {props.age}</p>
-			</div>
-			)
-			}
-
-			function App(){
-			const contact = [
-			{name:"Karen", age:32,cl:"wrapper"},
-			{name:"Liana", age:25,cl:"wrapper2"},
-			{name:"Anahit", age:42,cl:"wrapper3"},
-			]
-			return (
-			<div className="main">
-				{contact.map((elem,index) =>{
-				return (
-				<Element key={index} name={elem.name} age={elem.age} cl={elem.cl} />
-				)
-				})}
-				<Component name={arr[0].name} />
-			</div>
-			)
-			}
-			ReactDOM.render(
-			<App />,document.getElementById('root'))
-	</script>
-
+    //   //React 18 new API
+    // const container = document.getElementById("root");
+    // const root = ReactDOM.createRoot(container);
+    // root.render(r);
+  </script>
 </body>
-</html>
 
+</html>

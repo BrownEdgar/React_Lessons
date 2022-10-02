@@ -2,6 +2,7 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 import Headers from "./Header";
 import "./style.css"
+
 export default function App() {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => alert(JSON.stringify(data));

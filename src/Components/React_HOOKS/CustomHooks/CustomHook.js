@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 
 export const CustomHook = ({
-    min = -5000,
-    max = 12000,
+    min = -5,
+    max = 12,
     initial = 0,
     step = 1
 }) => {

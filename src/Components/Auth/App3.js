@@ -1,150 +1,93 @@
-import React from 'react';
-import s from './App.module.css'
-import Button from './Button/Button';
-import Input from './input/Input';
-import axios from "axios";
-function validateEmail(email) {
-	const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return re.test(String(email).toLowerCase());
-}
-const API = process.env.REACT_APP_API_KEY;
-export default class App3 extends React.Component {
-	state ={
-		isFormValid: false,
-		formControls: {
-			email:{
-				value: '',
-				type: 'email',
-				label: "your Email",
-				errorMessage: "invalid Email",
-				valid:false,
-				touched:false,
-				validation:{
-					required:true,
-					email:true,
-				}
-			},
-			password: {
-				value: '',
-				type: 'password',
-				label: "your password",
-				errorMessage: "invalid password",
-				valid: false,
-				touched: false,
-				validation: {
-					required: true,
-					minLength: 10,
-					hasNumber: true
-				}
-			}
-		}
-	}
-validateControl = (value,validation) =>{
-	if (!validation) return true;
-	let isValid = true;
-	if (validation.required){
-		isValid = value.trim() !== '' && isValid;
-	}
-	if (validation.email) {
-		isValid = validateEmail(value) && isValid;
-	}
-	if (validation.minLength) {
-		isValid = value.length >= validation.minLength && isValid;
-	}
-	if (validation.hasNumber) {
-		isValid = !!value.match(/[0-9]/g) && isValid;
-	}
-	return isValid;
-}
-	handlerSubmit = (e) =>{
-		e.preventDefault()
-	}
-	changeHandler = (event, controlName) => {
-	
-		const formControls = { ...this.state.formControls };
-		const control = { ...formControls[controlName] }
-		// վրշերանշանակում ենք
-		control.value = event.target.value;
-		control.touched = true;
-		control.valid = this.validateControl(control.value, control.validation);
-		// փոփոխություններից հետո օրիգինալը փոխում ենք մեր սարքածով
-		formControls[controlName] = control;
+import React, { useState } from 'react'
+import "../../assets/scss/App.scss"
+import * as yup from 'yup'
 
-		// etap 4
-		let isFormValid = true;
-		Object.keys(formControls).forEach(name => {
-			isFormValid = formControls[name].valid && isFormValid
-		})
-		this.setState({
-			formControls,
-			isFormValid
-		});
-	}
-	renderInputs = () => {
-		return Object.keys(this.state.formControls).map((InputName, index)=>{
-			let control = this.state.formControls[InputName];
-			return (
-				<Input 
-					key={index}
-					type={control.type}
-					value={control.value}
-					label={control.label}
-					valid={control.valid}
-					touched={control.touched}
-					errorMessage={control.errorMessage}
-					shoulValidate={!!control.validation}
-					onChange ={(event) => this.changeHandler(event,InputName )}
-				/>
-			)
-		})
-	}
-	registerHandler = async () =>{
-		const data = {
-			email: this.state.formControls.email.value,
-			password: this.state.formControls.password.value,
-			returnSecureToken:true
-		}
-		try {
-			let response = await axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API}`);
-			console.log(response);
-		} catch (error) {
-			console.log(error);
-		}
-		
-	}
-	loginHandler =() =>{
-		const data = {
-			email: this.state.formControls.email.value,
-			password: this.state.formControls.password.value,
-			returnSecureToken:true
-		}
-		try {
-			let response = await axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API}`,data);
-			console.log(response);
-		} catch (error) {
-			console.log(error);
-		}
-	}
-render(){
-	return (
-		<div className={s.main} >
-			<h1>Register</h1>
-			<form onSubmit={this.handlerSubmit} className={s.authForm}>
-					{this.renderInputs()}
-					<Button
-					type='success'
-					disabled={!this.state.isFormValid}
-					onClick={this.loginHandler}>
-							Sigh in
-					</Button>
-					<Button
-					type="primary"
-					disabled={!this.state.isFormValid}
-					onClick={this.registerHandler}>
-								regster
-					</Button>
-			</form>
-		</div>
-	)
-}
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+
+const API_KEY = process.env.REACT_APP_API_KEY;
+console.log(API_KEY);
+
+export default function App() {
+  const [state, setstate] = useState({});
+
+  const onSubmit = values => {
+    console.log("onSUbmit");
+    registerHandler(values);
+    setstate(values)
+  }
+  const initialValues = {
+    email: "nikogosjanedgar@gmail.com",
+    password: "",
+  }
+  const validationSchema = yup.object({
+    email: yup.string().email().required("Required"),
+    password: yup.string().required("Required"),
+
+  })
+
+  function registerHandler(values) {
+    const data = { ...values, returnSecureToken: true };
+    console.log(data);
+    fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`, {
+      method: "POST",
+      body: JSON.stringify(data)
+    })
+      .then(response => console.log(response))
+      .catch(err => console.log(err))
+
+  }
+  function loginHandler() {
+    const data = { ...state, returnSecureToken: true };
+    fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`, {
+      method: "POST",
+      body: JSON.stringify(data)
+    })
+      .then(response => console.log(response))
+      .catch(err => console.log(err))
+  }
+  return (
+    <div className='container'>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={onSubmit}
+      >
+        {formik => {
+          console.log(formik);
+          return (
+            <Form >
+              <div className="form-group">
+                <label htmlFor="email">Name</label>
+                <Field type="text" id="email" name="email" />
+                <ErrorMessage name="email">
+                  {(errMsg) => <div>
+                    <p>{errMsg}</p>
+                  </div>}
+                </ErrorMessage>
+              </div>
+              <div className="form-group">
+                <label htmlFor="password">password</label>
+                <Field type="password" id="password" name="password" />
+                <ErrorMessage name="password" component="p" />
+              </div>
+              <button
+                type="submit"
+                id="login"
+                disabled={!formik.isValid}
+                onClick={() => {
+                  setstate(formik.values);
+                  loginHandler()
+                }}
+              >Login</button>
+              <button
+                type="submit"
+                id="Register"
+                disabled={!formik.isValid}
+              >Register</button>
+            </Form>
+          )
+        }}
+      </Formik>
+    </div>
+  )
 }

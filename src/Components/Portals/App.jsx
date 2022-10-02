@@ -17,6 +17,7 @@ class MyPortal extends Component {
 		return ReactDOM.createPortal(this.props.children, this.el);
 	}
 }
+
 export default class App extends Component {
 	state = {
 		count: 0
