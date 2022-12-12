@@ -1,0 +1,14 @@
+@import "./variables";
+
+@mixin formFlex {
+  display: flex;
+  align-items: center;
+  gap: 0 12px;
+}
+
+@mixin formGroupRools() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 12px;
+}
