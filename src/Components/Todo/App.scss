@@ -1,0 +1,92 @@
+@import "./sass/variables";
+@import "./sass/mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//custom scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgb(245, 245, 245);
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.Container {
+  font-family: $main-font;
+  color: $black;
+  width: 400px;
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px 0px, rgba(0, 0, 0, 0.23) 0px 6px 6px 0px;
+  border-radius: 12px;
+  margin: 120px auto;
+  text-align: center;
+  position: relative;
+  display: flex;
+  gap: 10px 0;
+
+  align-items: flex-start;
+  flex-direction: column;
+
+  &-Title {
+    line-height: 2;
+    padding: 0.5rem;
+    font-weight: 700;
+    box-shadow: rgba(68, 88, 108, 0.646) 3px 15px 15px -15px;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    &_md {
+      font-size: 22px;
+    }
+  }
+  .Form {
+    width: 100%;
+    padding: 0.5rem;
+    flex-basis: 20%;
+    @include formFlex();
+
+    .FormGroup {
+      @include formGroupRools();
+
+      &-Message {
+        flex-grow: 4;
+        input {
+          &::placeholder {
+            color: #cac8c8;
+          }
+        }
+      }
+      &-Submit {
+        flex-grow: 1;
+        input {
+          cursor: pointer;
+        }
+      }
+      input {
+        border: $input-border-rools;
+        padding: 0.6rem;
+        font-size: 1.1em;
+        border-radius: 4px;
+        flex-basis: 100%;
+        color: inherit;
+        background-color: #fff;
+        &:focus {
+          outline: none;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+      }
+    }
+  }
+}
