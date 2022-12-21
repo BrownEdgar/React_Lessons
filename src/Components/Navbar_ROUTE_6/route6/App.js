@@ -8,7 +8,7 @@
 import React, { useState } from 'react'
 
 
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Friends from './Friends'
 import HomePage from './HomePage'
 import Layouts from './Layouts'
@@ -16,6 +16,7 @@ import WithParams from './WithParams'
 import WithFetch from './WithFetch'
 
 import './App.css'
+import Post from './Post'
 
 export default function App() {
   const [friends, setfriends] = useState(['Rachel Green', 'Monica Geller', 'Phoebe Buffay', 'Joey Tribbiani', 'Chandler Bing', 'Ross Geller']);
@@ -31,10 +32,10 @@ export default function App() {
           <Route path="old-friends" element={<Navigate to='/friends' replace />} />
           <Route path="withparams/:id/:model" element={<WithParams />} />
           <Route path="posts" element={<WithFetch />} />
+          <Route path="posts/:id" element={<Post />} />
           {/* <Route path="*" element={}/> */}
         </Route>
       </Routes>
-
     </div>
   )
 }

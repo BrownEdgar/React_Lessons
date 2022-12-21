@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from "./Components/UseForm/varian2/App"
+import App from "./Components/React_HOOKS/useReducer/solution/Post"
 import { BrowserRouter as Router } from 'react-router-dom'
 
 ReactDOM

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Post {
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  width: 500px;
+  height: 340px;
+  border-radius: 10%;
+  overflow: hidden;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 80px 1fr 50px 60px;
+  grid-auto-rows: 30px;
+  grid-gap: 20px;
+}
+
+.Post-Header {
+  background-color: rgb(227, 26, 53);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+}
+
+.Post-Content,
+.Post-Footer,
+.Post-Error {
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.Post-Title {
+  line-height: 1.6;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.Post-Error {
+  align-self: center;
+  justify-self: center;
+  color: rgb(227, 26, 53);
+  font-weight: 600;
+}
+
+.Post-Footer {
+  background-color: rgb(227, 26, 53);
+  text-align: center;
+}
+
+.Post-Footer>button {
+  padding: 0.5rem 1rem;
+  border: 0;
+  padding: 0.6rem;
+  font-size: 16px;
+  border-radius: 8px;
+  font-family: inherit;
+  cursor: pointer;
+}

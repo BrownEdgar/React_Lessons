@@ -7,27 +7,30 @@
 // /////////////////////////////////////////////////////////////////////////////
 
 import React from 'react'
-import { Link, Outlet, NavLink } from 'react-router-dom'
+import { Outlet, NavLink } from 'react-router-dom'
 import './Navbar/Navbar.css'
 export default function Layouts() {
-	return (
-		<>
-			<header>
-				<nav className="flex">
-					<ul>
-						<li>
-							<NavLink to="/" className={(isActive)=> isActive && "active-link"}>Home</NavLink>
-						</li>
-						<li>
-							<NavLink to="/friends" className={(isActive) => isActive && "active-link"}>friends</NavLink>
-						</li>
-					</ul>
-				</nav>
-			</header>
+  return (
+    <>
+      <header>
+        <nav className="flex">
+          <ul>
+            <li>
+              <NavLink to="/" className={(isActive) => isActive && "active-link"}>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/friends" className={(isActive) => isActive && "active-link"}>friends</NavLink>
+            </li>
+            <li>
+              <NavLink to="/posts" className={(isActive) => isActive && "active-link"}>Posts</NavLink>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-			<Outlet />
+      <Outlet />
 
-			<footer>copyRight 2021 ABM</footer>
-		</>
-	)
+      <footer>copyRight 2022 SmartCode</footer>
+    </>
+  )
 }
