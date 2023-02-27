@@ -1,0 +1,37 @@
+.Form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px auto;
+  width: 90%;
+  background-color: #006266;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 30px 10px;
+  border-radius: 12px;
+}
+
+.Form p {
+  font-weight: 700;
+  color: #EE5A24;
+
+}
+
+input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  accent-color: #EE5A24;
+  transition: 0.3s;
+}
+
+input:checked {
+  width: 20px;
+  height: 20px;
+  transition: 0.3s;
+}
