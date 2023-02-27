@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.Title {
+  text-align: center;
+  margin: 20px auto;
+  letter-spacing: 1px;
+  span {
+    border-radius: 6px;
+    padding: 6px;
+    background-color: crimson;
+    font-weight: 700;
+    font-size: 46px;
+    color: #fff;
+  }
+}

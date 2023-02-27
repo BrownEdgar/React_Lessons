@@ -3,18 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.10.1",
-    "@material-ui/icons": "^4.11.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.27.2",
+    "off": "^0.0.10",
+    "progress": "^2.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.27.0",
     "react-infinite-scroll-component": "^6.1.0",
     "react-router-dom": "^6.4.1",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "react-simple-star-rating": "^5.1.7",
+    "sass": "^1.58.3"
   },
   "scripts": {
     "start": "react-scripts start",

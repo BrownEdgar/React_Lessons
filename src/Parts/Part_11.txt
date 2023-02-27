@@ -1,2 +1,0 @@
-1. React.Context <Provider> | <Consumer>
-2. Higher-Order Components(HOC)
