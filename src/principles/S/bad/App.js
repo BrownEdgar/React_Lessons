@@ -42,7 +42,6 @@ export function App() {
       </div>
       <div className="container">
         {filteredProducts.length > 0 ? (
-
           <>
             {
               filteredProducts.map(product => {
@@ -54,9 +53,7 @@ export function App() {
                     <div className="container__text">
                       <h3 className='container__title'>{product.title}</h3>
                       <p className='container__info container__info-price' >price: <span>${product.price}</span></p>
-
                       <div className="container__info container__info-rating">
-
                         {Array(parseInt(product.rating.rate))
                           .fill("")
                           .map((_, idx) => (

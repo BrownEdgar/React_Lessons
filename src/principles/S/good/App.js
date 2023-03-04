@@ -4,20 +4,19 @@ import { Product } from "./product";
 import { Rating } from "react-simple-star-rating";
 import { Filter, filterProducts } from "./filter";
 import { useProducts } from "./hooks/useProducts";
-import { useRateFilter } from "./hooks/useRateFilter";
+import { useRateFilter } from "./hooks/useRateFilter.jsx";
 
 export function App() {
   const { products } = useProducts();
-
   const { filterRate, handleRating } = useRateFilter();
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="">
       <Filter
         filterRate={filterRate}
         handleRating={handleRating}
       />
-      <div className="h-full flex flex-wrap justify-center">
+      <div className="">
         {filterProducts(products, filterRate).map((product) => (
           <Product product={product} />
         ))}

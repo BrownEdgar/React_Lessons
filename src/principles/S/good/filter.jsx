@@ -3,7 +3,7 @@ import { Rating } from "react-simple-star-rating";
 
 export function filterProducts(products, rate) {
   return products.filter(
-    (product: any) => product.rating.rate > rate
+    (product) => product.rating.rate > rate
   );
 }
 
