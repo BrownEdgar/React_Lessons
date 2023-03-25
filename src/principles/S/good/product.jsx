@@ -1,8 +1,4 @@
 import React from 'react'
-import axios from "axios";
-
-
-
 
 export function Product(props) {
   const { product } = props;

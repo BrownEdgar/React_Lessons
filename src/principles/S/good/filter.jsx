@@ -7,8 +7,6 @@ export function filterProducts(products, rate) {
   );
 }
 
-
-
 export function Filter(props) {
   const { filterRate, handleRating } = props;
 

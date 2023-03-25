@@ -1,7 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
-import axios from "axios";
 import { Product } from "./product";
-import { Rating } from "react-simple-star-rating";
 import { Filter, filterProducts } from "./filter";
 import { useProducts } from "./hooks/useProducts";
 import { useRateFilter } from "./hooks/useRateFilter.jsx";
