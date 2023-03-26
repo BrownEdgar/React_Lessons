@@ -8,14 +8,16 @@ body {
   min-height: 100vh;
   width: 100%;
   font-family: 'Outfit', sans-serif;
+  background-color: rgb(14, 20, 49);
 }
 
 .container {
   max-width: 1140px;
   padding-left: -15px;
   padding-right: -15px;
-  margin: 0 auto 160px;
+  margin: 140px auto 160px;
   text-align: center;
+  color: #fff;
 }
 
 footer {
@@ -29,7 +31,7 @@ footer {
   font-weight: 800;
   font-variant: small-caps;
   font-size: 1.3em;
-  background-image: linear-gradient(130deg, rgb(12, 11, 11), rgb(187, 9, 54) 41.07%, rgb(18, 20, 20)76.05%);
+  background-image: linear-gradient(130deg, rgb(92, 126, 126), rgb(31, 99, 216) 47.07%, rgb(92, 126, 126)76.05%);
 
 }
 
@@ -49,12 +51,14 @@ footer {
   font-size: 1.2em;
   text-align: left;
   line-height: 1.4;
-  background-color: #ccc;
+  color: #fff;
   padding: 1rem;
   border-radius: 12px;
   cursor: pointer;
   transition: 0.3s;
   position: relative;
+  box-shadow: rgba(224, 224, 231, 0.25) 0px 6px 12px -2px, rgba(199, 192, 192, 0.3) 0px 3px 7px -3px;
+  background: linear-gradient(90deg, #0a74bb, #03306b);
 }
 
 .PostList>a::before {
@@ -68,7 +72,7 @@ footer {
   font-size: 14px;
   color: #fff;
   font-weight: 700;
-  background-color: rgb(72, 4, 41);
+  background-color: rgb(10, 150, 84);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,4 +103,10 @@ a {
   background-color: rgb(45, 3, 122);
   color: #fff;
 
+}
+
+mark {
+  padding: 4px;
+  margin: 5px;
+  line-height: 1.8;
 }

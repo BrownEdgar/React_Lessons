@@ -18,11 +18,14 @@ export default function Layouts() {
             <li>
               <NavLink to="/" className={(isActive) => isActive && "active-link"}>Home</NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/friends" className={(isActive) => isActive && "active-link"}>friends</NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink to="/posts" className={(isActive) => isActive && "active-link"}>Posts</NavLink>
+            </li>
+            <li>
+              <NavLink to="/todos" className={(isActive) => isActive && "active-link"}>useLoaderData</NavLink>
             </li>
           </ul>
         </nav>
