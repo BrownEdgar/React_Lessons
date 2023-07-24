@@ -29,7 +29,15 @@ const router = createBrowserRouter(
       <Route path="posts/:id" element={<Post />} />
       {/* BrowserRouter-ից պետք է հրաժարվել այս նոր հնարավորությունը օգտագործելու համար */}
       <Route path="todos" element={<LoaderData />} loader={todoLoader} />
-      <Route path="todos/:id" element={<LoaderDataById />} loader={todoByIdLoader} />
+      {/* <Route path="todos/:id" element={<LoaderDataById />} loader={todoByIdLoader} /> */}
+			<Route
+				path="todos/:id"
+				element={<LoaderDataById />}
+				action={todoByIdLoader}
+				loader={({ params }) => {
+					return fakeGetSong(params.songId);
+				}}
+			/>
     </Route>
   )
 )

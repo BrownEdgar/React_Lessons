@@ -7,7 +7,7 @@ import Navbar from './Navbar'
 // import Home from './Home'
 
 
-// "lazy loading"- загрузка կանի էձի միայն այցելման պահին, մնացած էջերում այն չի իբեռնվի անիմասատ 
+// "lazy loading"- загрузка կանի էջի միայն այցելման պահին, մնացած էջերում այն չի ներբեռնվի անիմասատ 
 // check it: in thi console Sources -> static/js folder
 const Home = lazy(() => import("./Home"))
 

@@ -35,7 +35,7 @@ export default Person;
 // --------------------------------------------------------------
 
 // Ցանկացած տիպի արժեք
-// requiredAny: PropTypes.any.isRequired,
+//  requiredAny: PropTypes.any.isRequired,
 
 // --------------------------------------------------------------
 
@@ -45,15 +45,15 @@ export default Person;
 // --------------------------------------------------------------
 
 // Կոնկրետ նշվածներից մեկը
-//PropTypes.oneOf(['male', 'female']),
+// PropTypes.oneOf(['male', 'female']),
 
 // --------------------------------------------------------------
 
 // Օբյեկտ, նշված տիպերի ինչ-որ մեկը
-// optionalUnion: PropTypes.oneOfType([
-// 	PropTypes.oneOf(['male', 'female']),
-// 	PropTypes.React.element
-// ]),
+optionalUnion: PropTypes.oneOfType([
+	PropTypes.oneOf(['male', 'female']),
+	PropTypes.number
+]),
 
 // --------------------------------------------------------------
 
