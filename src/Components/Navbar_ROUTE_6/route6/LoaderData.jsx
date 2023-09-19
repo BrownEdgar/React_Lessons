@@ -9,7 +9,7 @@ export default function LoaderData() {
         These data are supplied with the new feature "react-router-dom"
         <mark> createBrowserRouter</mark>,  because BrowserRouter with outdated
       </h3>
-      <div className='PostList'>{todos.map(todo => (
+      <div className='PostList'>{todos.map((todo,index) => (
         <Link
           key={todo.id}
           to={`/todos/${todo.id}`}

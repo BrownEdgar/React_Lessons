@@ -30,20 +30,20 @@ const router = createBrowserRouter(
       {/* BrowserRouter-ից պետք է հրաժարվել այս նոր հնարավորությունը օգտագործելու համար */}
       <Route path="todos" element={<LoaderData />} loader={todoLoader} />
       {/* <Route path="todos/:id" element={<LoaderDataById />} loader={todoByIdLoader} /> */}
-			<Route
-				path="todos/:id"
-				element={<LoaderDataById />}
-				action={todoByIdLoader}
-				loader={({ params }) => {
-					return fakeGetSong(params.songId);
-				}}
-			/>
+      <Route
+        path="todos/:id"
+        element={<LoaderDataById />}
+        action={todoByIdLoader}
+        loader={({ params }) => {
+          // return fakeGetSong(params.songId);
+        }}
+      />
     </Route>
   )
 )
 
 export default function App() {
-  // const [friends, setfriends] = useState(['Rachel Green', 'Monica Geller', 'Phoebe Buffay', 'Joey Tribbiani', 'Chandler Bing', 'Ross Geller']);
+
   return (
     <div className="container">
       <RouterProvider router={router} />

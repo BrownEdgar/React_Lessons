@@ -7,14 +7,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Person extends Component {
-	render() {
-		return <h1>{this.props.name}</h1>
-	}
+  render() {
+    return <h1>{this.props.name}</h1>
+  }
 }
 
 Person.propTypes = {
-	// check Here
-	name: PropTypes.string.isRequired
+  // check Here
+  name: PropTypes.string.isRequired
 };
 export default Person;
 
@@ -51,8 +51,8 @@ export default Person;
 
 // Օբյեկտ, նշված տիպերի ինչ-որ մեկը
 optionalUnion: PropTypes.oneOfType([
-	PropTypes.oneOf(['male', 'female']),
-	PropTypes.number
+  PropTypes.oneOf(['male', 'female']),
+  PropTypes.number
 ]),
 
 // --------------------------------------------------------------
@@ -80,7 +80,7 @@ optionalUnion: PropTypes.oneOfType([
 // optionalObjectWithStrictShape: PropTypes.exact({
 // 	name: PropTypes.string,
 // 	quantity: PropTypes.number
-// }), 
+// }),
 
 // --------------------------------------------------------------
 

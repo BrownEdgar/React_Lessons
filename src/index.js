@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from "./Components/Navbar_ROUTE_6/route6/App"
+import App from "./Components/Axios_example/App"
 
 
 ReactDOM
