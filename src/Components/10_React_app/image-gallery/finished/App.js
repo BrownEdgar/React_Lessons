@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import './App.css';
 
-// NOTE: make sure to add your unsplash api key
+
 // https://unsplash.com/developers
 // copy .env.example to .env
-const accessKey = process.env.REACT_APP_UNSPLASH_ACCESS_KEY;
+const accessKey = 'T-Msyp6KkjapwTf1myyqPNCMd9ZkETBZMlUsNtUQsGQ';
 console.log('accessKey', accessKey)
 
 export default function App() {
@@ -19,19 +19,19 @@ export default function App() {
   }, [page]);
 
   function getPhotos() {
-	  //Որպեսզի օրոնման արդյունքի 10 նկարից հետո անկապ նկարներ չբերի․․․
-	  //
+    //Որպեսզի օրոնման արդյունքի 10 նկարից հետո անկապ նկարներ չբերի․․․
+    //
     let apiUrl = `https://api.unsplash.com/photos?`;
     if (query) apiUrl = `https://api.unsplash.com/search/photos?query=${query}`;
     apiUrl += `&page=${page}`;
     apiUrl += `&client_id=${accessKey}`;
-    
+
     console.log('apiUrl', apiUrl)
     fetch(apiUrl)
       .then((res) => res.json())
       .then((data) => {
-		  //կարևոր տող․․ եթե "search" տանք կգեներացվի "data.results"-ը
-		  //եթե չե ապա "data" որպեսզի error չտա
+        //կարևոր տող․․ եթե "search" տանք կգեներացվի "data.results"-ը
+        //եթե չե ապա "data" որպեսզի error չտա
         const imagesFromApi = data.results ?? data;
 
         // if page === 1, ապա մեզ պետք են նկարների լրիվ նոր զանգված
@@ -63,7 +63,6 @@ export default function App() {
   return (
     <div className="app">
       <h1>Unsplash Image Gallery!</h1>
-
       <form onSubmit={searchPhotos}>
         <input
           type="text"
@@ -74,7 +73,7 @@ export default function App() {
         <button>Search</button>
       </form>
 
-			<InfiniteScroll
+      <InfiniteScroll
         dataLength={images.length}
         next={() => setPage((page) => page + 1)}
         hasMore={true}

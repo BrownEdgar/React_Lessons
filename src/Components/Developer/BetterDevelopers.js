@@ -10,13 +10,16 @@ import Developers from './Developers'
 
 export default function BetterDevelopers(props) {
 
-    return (props.developers.map((elem, index) => {
-        return (<Developers
-            click={() => props.clicked(index)}
-            key={index}
-            name={elem.name}
-            skilss={elem.skilss}
-            changeTitle={(event) => props.changeTitleHandler(elem.name)}/>);
-
+  return (
+    props.developers.map((elem, index) => {
+      return (
+        <Developers
+          click={() => props.clicked(index)}
+          key={index}
+          name={elem.name}
+          skilss={elem.skilss}
+          changeTitle={(event) => props.changeTitleHandler(elem.name)}
+        />
+      );
     }))
 }

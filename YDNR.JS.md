@@ -1,3 +1,5 @@
+## React todo list
+
 1. use Custom hooks
 2. work with useContext hook,
 3. understand how work `useEffect, useMemo, useCalback hooks`
@@ -7,10 +9,6 @@
 7. Fluent understand `CRUD` rest API
 8. create multifunctional components (`buttons,inputs, div's`)
 9. be able to use `Routing`(router6)
-10. be able to use `axios | fetch` 
+10. be able to use `axios | fetch`
 11. be able work with forms in react(`save & send data`)
-12. npm 
-
-
-
-
+12. npm
