@@ -1,19 +1,15 @@
-### virtual DOM
+# virtual DOM
 
 Ինչի համար է React.js-ը ստեղծում ևս մեկ DOM, որովհետև `virtual DOM` -ը կարող ենք թարմացնել ավելի շատ քան իրական DOM-ը։Մենք դրա շնորհիվ կարող ենք կուտակել DOM փոփոխությունները հետո մեկ անգամ թարմացնել իրական DOM-ը։Օրինակ 500 անգամ կարող ենք  update անել `virtual DOM` -ը
 բայց իրական DOM-ը  update անել ընդամենը 60 անգամ։ Ինչի հենց 60?:Որվհետև մարդու աչքը դրանից ավել չի կարող նկատել ՝60fps՝
-
-### a link
 
 - Ошибка связанная с безопасностью.
 Если вы создаете ссылку с target='_blank' атрибутом не забудьте добавить к ней rel='noreferrer noopener'. Очень просто:
 <a href="https://example.com" target="_blank" rel="noreferrer noopener" />
 
-###
-
 В случае stateless компонента функцию можно вынести наружу, иначе она будет создаваться каждый раз заново при перерендере компонента.
 
-### componentDidMount()
+## componentDidMount()
 
 Как только вывод рендера Clock вставлен в DOM, React вызывает метод жизненного цикла componentDidMount(). Внутри него компонент Clock меняет "state".React реагирует на изменение состояния и снова запускает render(). На этот раз this.state.date в методе render() содержит новое значение, поэтому React заменит DOM.
 
@@ -40,17 +36,6 @@ React использует prop key как ссылку к DOM элементу,
 Очень распространенная и большая ошибка которую я видел в коде много раз. Не Используйте Bind. Никогда. Больше.
 Самое жаркое место в аду ждет того кто пишет .bind(this) в JSX в обработчике событий.
 Каждый раз когда компонент рендериться ваша функция будет создаваться заново, и это может сильно затормозить ваше приложение (это связано с тем, что garbage collector будет вынужден запускаться значительно чаще). Вместо .bind(this) вы можете использовать Arrow functions определенным образом:
-
-#
-
- const handleDivClick = (event) => event;
- const AndInPureComponent = () => {
-  return <div onClick={handleDivClick} />
- }
-
-- Պետք չէ կլասի անունը փոխանցել "props"-ով, այլընտրանքային կարելի է օգտագործել
-- "classnames" գրադարանը
-- <https://github.com/JedWatson/classnames>
 
 ### օրինակ
 
@@ -82,3 +67,8 @@ React использует prop key как ссылку к DOM элементу,
 полный запрет: робот ничего не может сканировать.
 
 read more => [(https://netpeak.net/ru/blog/chto-takoe-robots-txt-i-zachem-on-voobshche-nuzhen/)]
+
+### rename all *.js files containing React markup to*.jsx
+
+- in cli
+find ./src -type f -name '*.js' -not -name '*.jsx' -not -name '*.ejs' -exec bash -c 'grep -l -E "</|/>" "$0"' {} \; -exec bash -c 'mv "$0" "${0%.js}.jsx"' {} \;
