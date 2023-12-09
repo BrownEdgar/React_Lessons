@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import './App.css';
 
 function padTime(time) {
@@ -12,14 +12,14 @@ export default function App() {
   const intervalRef = useRef(null);
 
   function startTimer() {
-	  //որպեսզի վայրկյանները մեկ-մեկ իջնեն
+    //որպեսզի վայրկյանները մեկ-մեկ իջնեն
     if (intervalRef.current !== null) return;
 
     setTitle(`You're doing great!`);
     setIsRunning(true);
     intervalRef.current = setInterval(() => {
       setTimeLeft((timeLeft) => {
-		  //Որպեսզի 0-ից -1 չանցնի,այլ կանգնի 
+        //Որպեսզի 0-ից -1 չանցնի,այլ կանգնի 
         if (timeLeft >= 1) return timeLeft - 1;
         resetTimer();
         return 0;
@@ -30,8 +30,8 @@ export default function App() {
   function stopTimer() {
     if (intervalRef.current === null) return;
 
-	clearInterval(intervalRef.current);
-	 //որպեսզի "stop" տալուց հետո կրկին կարողանանք "start" տալ, պետք է մաքրել 'ref'- ը
+    clearInterval(intervalRef.current);
+    //որպեսզի "stop" տալուց հետո կրկին կարողանանք "start" տալ, պետք է մաքրել 'ref'- ը
     intervalRef.current = null;
     setTitle('Keep it up!');
     setIsRunning(false);

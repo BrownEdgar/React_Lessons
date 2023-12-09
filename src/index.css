@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'PressStart2P-Regular';
-  src: url('../public/fonts/PressStart2P-Regular.ttf');
+  src: url('./fonts/PressStart2P-Regular.ttf');
 }
 
 body {
@@ -23,4 +23,13 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

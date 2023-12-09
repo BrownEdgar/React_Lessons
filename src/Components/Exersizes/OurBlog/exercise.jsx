@@ -7,27 +7,27 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-import React, { Component } from 'react'
+import { Component } from 'react'
 
 export class Exercise extends Component {
-	state = {
-		title: "Menu",
-		items: [
-			{ id: 1, name: "tacos", type: "mexican" },
-			{ id: 2, name: "burrito", type: "mexican" },
-			{ id: 3, name: "tostada", type: "mexican" },
-			{ id: 4, name: "mushy peas", type: "english" },
-			{ id: 5, name: "fish and chips", type: "english" },
-			{ id: 6, name: "black pudding", type: "english" }
-		]
-	};
-	render() {
-		return (
-			<div>
-				
-			</div>
-		)
-	}
+  state = {
+    title: "Menu",
+    items: [
+      { id: 1, name: "tacos", type: "mexican" },
+      { id: 2, name: "burrito", type: "mexican" },
+      { id: 3, name: "tostada", type: "mexican" },
+      { id: 4, name: "mushy peas", type: "english" },
+      { id: 5, name: "fish and chips", type: "english" },
+      { id: 6, name: "black pudding", type: "english" }
+    ]
+  };
+  render() {
+    return (
+      <div>
+
+      </div>
+    )
+  }
 }
 
 export default Exercise

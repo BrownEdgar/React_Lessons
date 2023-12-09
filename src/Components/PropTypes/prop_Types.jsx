@@ -1,9 +1,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 // PropTypes: Ծառայում է Տիպային ստուգումներ անցկացնելու համար։
 // - Գտնվում է առանձին 'prop-types' գրադարանի մեջ!
+// - link https://legacy.reactjs.org/docs/typechecking-with-proptypes.html
 ////////////////////////////////////////////////////////////////////////////////
 
-import React, { Component } from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Person extends Component {
@@ -19,7 +20,7 @@ Person.propTypes = {
 export default Person;
 
 // Տիպերի ստուգման Օրինակներ
-// value: PropTypes.array, 
+// value: PropTypes.array,
 // value: PropTypes.bool,
 // value: PropTypes.func,
 // value: PropTypes.number,
@@ -50,10 +51,10 @@ export default Person;
 // --------------------------------------------------------------
 
 // Օբյեկտ, նշված տիպերի ինչ-որ մեկը
-optionalUnion: PropTypes.oneOfType([
-  PropTypes.oneOf(['male', 'female']),
-  PropTypes.number
-]),
+// optionalUnion: PropTypes.oneOfType([
+//   PropTypes.oneOf(['male', 'female']),
+//   PropTypes.number
+// ]),
 
 // --------------------------------------------------------------
 
@@ -83,6 +84,11 @@ optionalUnion: PropTypes.oneOfType([
 // }),
 
 // --------------------------------------------------------------
-
-
+// props.children validation
+// MyComponent.propTypes = {
+//   children: PropTypes.oneOfType([
+//     PropTypes.arrayOf(PropTypes.node),
+//     PropTypes.element
+//   ]).isRequired
+// };
 

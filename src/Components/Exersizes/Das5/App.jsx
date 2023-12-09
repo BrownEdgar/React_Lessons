@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import MyComponent from '../Part_4/MyComponent'
 
 export class App extends Component {

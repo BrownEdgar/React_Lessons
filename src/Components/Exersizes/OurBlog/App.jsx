@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import BlogComponent from './BlogComponent'
 import s from './BlogComponent.module.css'
 export class App extends Component {

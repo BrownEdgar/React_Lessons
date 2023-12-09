@@ -51,7 +51,7 @@
   display: inline-block;
   position: absolute;
   left: 0;
-  right: 0;
+  right: 90px;
   font-size: 3.5em;
   top: -15%;
   z-index: -1;

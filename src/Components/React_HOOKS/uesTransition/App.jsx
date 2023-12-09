@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useTransition } from 'react'
+import { useEffect, useState, useTransition } from 'react'
 import Coments from './Coments'
 import './App.css'
 

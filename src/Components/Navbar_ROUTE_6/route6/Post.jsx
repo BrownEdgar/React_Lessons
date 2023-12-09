@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useParams, useNavigate, useLocation, redirect } from 'react-router-dom'
 
 export default function Post() {
