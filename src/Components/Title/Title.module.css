@@ -1,40 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 :root {
   --clr-primary: #60cf16;
   --clr-secondary: #d16e8d;
   --clr-accent: #F7F7FF;
-  --clr-gradient: linear-gradient(-90deg, var(--clr-primary), var(--clr-secondary));
+  --clr-gradient: linear-gradient(to right, #00b09b, #96c93d);
   --ff-title: 'Outfit', sans-serif;
-
-  --fw-body: 300;
   --fw-bold: 800;
   --fw-title: 400;
   --fw-number: 800;
+  --title-font: 'PressStart2P-Regular';
 }
 
+
+.wrapper {
+  position: fixed;
+  clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 90%);
+  background: var(--clr-gradient);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .title {
   text-align: center;
   text-transform: uppercase;
   padding: 0.6em 0 2em;
   margin: 0;
-  background: var(--clr-gradient);
   position: relative;
   z-index: 1000;
-  font-size: calc(1rem + 3vw);
-  font-family: var(--ff-title);
+  font-size: calc(1rem + 2vw);
+  font-family: var(--title-font);
   font-weight: var(--fw-title);
-  color: white;
+  color: #111;
   text-shadow: 3px 5px 10px rgba(0, 0, 0, .2);
-  clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 90%);
 }
+
+
+
 
 .title span {
   font-weight: var(--fw-number);
@@ -44,8 +53,8 @@
   left: 0;
   right: 0;
   font-size: 3.5em;
-  top: -58%;
+  top: -15%;
   z-index: -1;
-  opacity: .25;
-  font-family: var(--ff-body);
+  opacity: .35;
+
 }

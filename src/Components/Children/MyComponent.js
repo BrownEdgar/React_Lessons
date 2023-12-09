@@ -1,34 +1,33 @@
+/////////////////////////////////////////////////////////////
+
+
+// link => https://ru.legacy.reactjs.org/docs/composition-vs-inheritance.html
+/////////////////////////////////////////////////////////////
+
+
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function MyComponent(props) {
-    const divStyle = {
-        display: "block",
-        width: '250px',
-        height: 'auto'
-    }
-    return (
-        <div className={divStyle}>
-            <p>{props.name}</p>
-            {props.children[1]}
-        </div>
-    )
+export default function MyComponent({ children }) {
+  const divStyle = {
+    width: '250px',
+    height: 'auto'
+  }
+
+  return (
+    <div className={divStyle}>
+      {children}
+    </div>
+  )
 }
 
 MyComponent.defaultProps = {
-    name: "default name"
+  name: "default name"
 }
 
-
-
-
-
-
-
-
-
-
-
 MyComponent.propTypes = {
-    // check Here
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.element
+  ]).isRequired
 };
