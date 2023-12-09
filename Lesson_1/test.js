@@ -2,12 +2,12 @@
 
 
 
-const myName = 985623
+const myName = "Sebastian"
 
 function App() {
-	return <div>
-		<h1>{myName}</h1>
-	</div>
+  return <div>
+    <h1>{myName}</h1>
+  </div>
 }
 
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import s from "./Title.module.css"
 
 export default function Title(porps) {
