@@ -13,6 +13,8 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   background-color: #EEE;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 /* open only with title lessons */

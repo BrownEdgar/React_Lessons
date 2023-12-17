@@ -9,10 +9,10 @@ export const CustomHook = ({
 
   const [count, setcount] = useState(initial)
   const inc = () => {
-    setcount(prevCount => count + step > max ? max : count + step)
+    setcount(prevCount => prevCount + step > max ? max : prevCount + step)
   }
   const dec = () => {
-    setcount(prevCount => count - step < min ? min : count - step)
+    setcount(prevCount => prevCount - step < min ? min : prevCount - step)
   }
   const reset = () => {
     setcount(initial)

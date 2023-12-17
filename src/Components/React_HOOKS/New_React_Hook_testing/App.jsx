@@ -1,4 +1,4 @@
-import { Suspense, useState } from 'react'
+import React, { Suspense, useState } from 'react'
 import Form from './Form'
 import s from "./App.module.css"
 
