@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react'
+import { useState, useMemo } from 'react'
 
 export default function App() {
   const [value, setValue] = useState('')
@@ -12,7 +12,7 @@ export default function App() {
 
   const sum = boom()
   // const sum = useMemo(() => boom(), []) 
-  
+
   console.log(`Componenr Render: `)
 
   return (

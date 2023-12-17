@@ -1,4 +1,4 @@
-import React, { lazy } from 'react'
+import { lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import About from './About'
 import Navbar from './Navbar'

@@ -1,10 +1,10 @@
-import React, { useContext } from 'react'
-import {MyContext} from './Context';
+import { useContext } from 'react'
+import { MyContext } from './Context';
 export default function App() {
-    const x = useContext(MyContext)
-    return (
-        <div>
-            <p>{x}</p>
-        </div>
-    )
+  const x = useContext(MyContext)
+  return (
+    <div>
+      <p>{x}</p>
+    </div>
+  )
 }

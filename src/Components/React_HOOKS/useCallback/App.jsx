@@ -4,7 +4,7 @@
 //// link --> https://youtu.be/-Ls48dd-vJE
 ////////////////////////////////////////////////////////////////////////////////
 
-import React, { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import "./App.css"
 import { Child } from './Child';
 export default function App() {

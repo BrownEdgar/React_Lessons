@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import "../../assets/scss/App.scss"
 import * as yup from 'yup'
 
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = import.meta.env.REACT_APP_API_KEY;
 console.log(API_KEY);
 
 export default function App() {

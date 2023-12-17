@@ -1,24 +1,9 @@
-import React, { Component } from 'react';
-import ErrorCycle from "./ErrorCycle";
-import Forma from "./Form";
-import Bomb from "./Bomb";
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    }
-  }
+import Title from '../Title/Title'
 
-  render() {
-    return (
-      <>
-        <ErrorCycle>
-          <Forma />
-          <Bomb />
-        </ErrorCycle>
-      </>
-    );
-  }
+export default function App() {
+  return (
+    <div>
+      <Title title="Error boundry" />
+    </div>
+  )
 }
-
-export default App;

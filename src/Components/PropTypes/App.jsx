@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import Person from './prop_Types'
 
 class App extends Component {

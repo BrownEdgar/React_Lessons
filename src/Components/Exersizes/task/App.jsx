@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import data from "./data/data.json"
 import "./App.css"
 import Favorit from './Favorit';

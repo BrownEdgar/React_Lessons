@@ -1,16 +1,18 @@
-import React, { useReducer } from 'react';
+import { useReducer } from 'react';
 import reduser from './useReducer'
-const initialState = {count: 0};
+import Title from '../../Title/Title'
+const initialState = { count: 0 };
 
 
 function Counter() {
-	const [state, dispatch] = useReducer(reduser, initialState);
+  const [state, dispatch] = useReducer(reduser, initialState, () => ({ count: 5 }));
   return (
     <>
-		Count: {state.count}
-      <button onClick={() => dispatch({type: 'decrement'})}>-</button>
-      <button onClick={() => dispatch({type: 'increment'})}>+</button>
-      <button onClick={() => dispatch({type: 'add', number:10})}>add 10</button>
+      <Title title='useReducer' lesson={7} />
+      Count: {state.count}
+      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+      <button onClick={() => dispatch({ type: 'increment' })}>+</button>
+      <button onClick={() => dispatch({ type: 'add', number: 10 })}>add 10</button>
     </>
   );
 }

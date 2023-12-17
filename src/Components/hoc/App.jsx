@@ -9,7 +9,7 @@
 // Եթե սովորական կոմպոնենտը props-ը վերածում է UI-ի,
 //  ապա HOC վերածում է այլ կոմպոնենտի:
 // //////////////////////////////////////////////////////////////////////////////
-import React, { Component } from 'react';
+import { Component } from 'react';
 import ClickButton from './ClickButton';
 import Copy from './copy';
 

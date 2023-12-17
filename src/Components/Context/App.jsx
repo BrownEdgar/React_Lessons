@@ -11,34 +11,34 @@
 // /////////////////////////////////////////////////////////////////////////////
 
 
-import React, {Component} from 'react';
+import { Component } from 'react';
 import RContext from './R_Context';
 
 export const MyContext = React.createContext("Default value");
 export const MyContext2 = React.createContext("Default value2");
 MyContext.displayName = 'MyDisplayName';
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            stateValue: "Context"
-        }
+  constructor(props) {
+    super(props);
+    this.state = {
+      stateValue: "Context"
     }
-    render() {
-        return (
-            <div>
-				{/* Provider թույլ է տալիս օգտագործոլ այստեղ "context"-ը
+  }
+  render() {
+    return (
+      <div>
+        {/* Provider թույլ է տալիս օգտագործոլ այստեղ "context"-ը
 				և հետևել նրա թարմացումներին։Իր մեջ ստանում է 'prop':value
 				որը փոխանցվում է բոլոր զավակներին 
 				Եթե օգտագործում ենք "MyContext.Provider" -ը ապա այն առանց "value" չենք կարող թողնել, հակառակ դեպքում պետք է այն ամբողյությամբ ջնջել*/}
-                <MyContext.Provider >
-                    
-                        <RContext/>
-                 
-                </MyContext.Provider>
-            </div>
-        );
-    }
+        <MyContext.Provider >
+
+          <RContext />
+
+        </MyContext.Provider>
+      </div>
+    );
+  }
 }
 
 export default App;

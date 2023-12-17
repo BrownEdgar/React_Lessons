@@ -4,7 +4,7 @@
 // 	առանց <Consumer>
 //  
 ////////////////////////////////////////////////////////////////////////////////
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { MyContext, AnotherContext, Zangvac } from './Context'
 
 export default function App() {
