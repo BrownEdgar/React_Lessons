@@ -19,7 +19,9 @@ export default function FetchData({ url }) {
     return <div>Loading...</div>
   }
   return (
-    <pre>{JSON.stringify(data, null, 1)}</pre>
+    <div>
+      <pre>{JSON.stringify(data, null, 1)}</pre>
+    </div>
   )
 }
 

@@ -18,7 +18,7 @@ body {
 }
 
 /* open only with title lessons */
-#root {
+#root:has(.title__wrapper) {
   margin-top: 270px !important;
 }
 

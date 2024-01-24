@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import s from "./Title.module.css"
+import './Title.css'
 
 
 export default function Title({ title, lesson }) {
   return (
-    <div className={s.wrapper}>
-      <h1 className={s.title}>{title}<span>{lesson}</span></h1>
+    <div className='title__wrapper'>
+      <h1 className='title'>{title}<span>{lesson}</span></h1>
     </div>
   )
 }

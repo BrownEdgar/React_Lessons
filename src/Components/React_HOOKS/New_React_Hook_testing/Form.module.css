@@ -13,12 +13,10 @@
 .Form p {
   font-weight: 700;
   color: #EE5A24;
-
 }
 
 input {
   margin-right: 10px;
-  cursor: pointer;
 }
 
 label {
@@ -31,7 +29,6 @@ input[type="radio"] {
 }
 
 input:checked {
-  width: 20px;
-  height: 20px;
-  transition: 0.3s;
+  width: 14px;
+  height: 14px;
 }

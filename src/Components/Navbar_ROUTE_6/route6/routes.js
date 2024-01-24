@@ -1,4 +1,5 @@
 const ROUTES = {
-	HOME: "/",
-	POSTS: '/posts'
+  HOME: "/",
+  POSTS: '/posts'
 }
+export default ROUTES
