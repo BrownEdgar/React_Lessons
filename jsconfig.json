@@ -7,7 +7,12 @@
     "strict": true,
     "baseUrl": "src",
     "paths": {
-      "@/*": ["Components/*"]
+      "@/*": [
+        "Components/*"
+      ],
+      "@f/*": [
+        "features/*"
+      ],
     }
   }
 }

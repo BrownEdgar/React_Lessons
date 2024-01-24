@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Alert from 'react-bootstrap/Alert';
 
 function AdditionalContentExample() {
@@ -19,3 +20,17 @@ function AdditionalContentExample() {
 }
 
 export default AdditionalContentExample;
+=======
+import Title from '@/Title/Title'
+import './App.css'
+
+function App() {
+  return (
+    <div>
+      <Title title="React lessons" />
+    </div>
+  )
+}
+
+export default App
+>>>>>>> 5b95138033556f732713ebd1dae07d1c7c0d329a

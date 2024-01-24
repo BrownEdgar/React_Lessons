@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { useForm } from 'react-hook-form';
 import Headers from './Header';
 import './style.css';
