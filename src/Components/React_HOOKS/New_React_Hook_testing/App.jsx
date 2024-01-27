@@ -5,8 +5,10 @@
 import { Suspense, useState } from 'react'
 import Form from './Form'
 import FetchData from './FetchData'
-import Title from '../../Title/Title'
+
 import s from "./App.module.css"
+import Title from '@/Title/Title'
+
 
 // required!
 // const FetchData = React.lazy(() => import('./FetchData'));

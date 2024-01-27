@@ -2,11 +2,11 @@ import { useContext, useRef, useEffect } from 'react'
 import { MyContext } from './Context'
 import Input from './ForvardInput'
 import './App.css'
+
 export default function App() {
   const context = useContext(MyContext);
   const inputEl_1 = useRef(null);
   const inputEl_2 = useRef(null);
-
 
   useEffect(() => {
     inputEl_1.current.focus();
@@ -14,12 +14,13 @@ export default function App() {
   const handleSubmit = (e) => {
     e.preventDefault()
   }
+
   const handleChangeName = (e) => {
     if (e.key === 'Enter') {
       inputEl_2.current.focus();
     }
-
   }
+
   const handleChangSurname = (e) => {
     if (e.key === 'Enter') {
       alert("Thanks for Registration!!!")
@@ -41,7 +42,6 @@ export default function App() {
           placeholder='last name'
           onKeyDown={handleChangSurname}
         />
-
       </from>
     </div>
   )

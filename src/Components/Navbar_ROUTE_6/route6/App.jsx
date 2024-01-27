@@ -15,7 +15,7 @@ import Layouts from './Layouts'
 import WithParams from './WithParams'
 import WithFetch from './WithFetch'
 import Post from './Post'
-import LoaderData, { todoLoader } from './LoaderData'
+import LoaderData, { TodoLoader } from './LoaderData'
 
 import './App.css'
 import LoaderDataById, { todoByIdLoader } from './LoaderDataById'
@@ -28,7 +28,7 @@ const router = createBrowserRouter(
       <Route path="posts" element={<WithFetch />} />
       <Route path="posts/:id" element={<Post />} />
       {/* BrowserRouter-ից պետք է հրաժարվել այս նոր հնարավորությունը օգտագործելու համար */}
-      <Route path="todos" element={<LoaderData />} loader={todoLoader} />
+      <Route path="todos" element={<LoaderData />} loader={TodoLoader} />
       {/* <Route path="todos/:id" element={<LoaderDataById />} loader={todoByIdLoader} /> */}
       <Route
         path="todos/:id"

@@ -4,15 +4,12 @@
 // useNavigate-ը աշխատում է թ պարամետրերի հետ
 // 1․ Այն է թե ուր ենք ուզում  "redirect" անել այցելուին (url)
 // 2․
-// {replace:true , state} Переодресация, եթե չենք ուսում "history"-ում ավելացնել:state-ը կարող է լինել կամայական տվյալ, որը կարող ենք կարդալ այն հասցեում որտեղ տեղապոխվենք
+// {replace:true , state} Переодресация, եթե չենք ուսում "history"-ում ավելացնել:state-ը կարող է լինել կամայական տվյալ, որը կարող ենք կարդալ այն հասցեում որտեղ տեղապոխվենք useLocation() հուկի միջոցով
 // /////////////////////////////////////////////////////////////////////////////
 
-
-import React from 'react'
-import { Link, useParams, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function UseNavigate() {
-  const { id } = useParams()
   const navigate = useNavigate()
 
   const goBack = () => { navigate(-1) } // մեկ քայլ հետ

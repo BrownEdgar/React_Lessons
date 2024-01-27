@@ -6,10 +6,10 @@ export default function LoaderData() {
   return (
     <>
       <h3>
-        These data are supplied with the new feature "react-router-dom"
+        These data are supplied with the new feature &quot;react-router-dom&quot;
         <mark> createBrowserRouter</mark>,  because BrowserRouter with outdated
       </h3>
-      <div className='PostList'>{todos.map((todo,index) => (
+      <div className='PostList'>{todos.map((todo) => (
         <Link
           key={todo.id}
           to={`/todos/${todo.id}`}
@@ -27,9 +27,10 @@ export default function LoaderData() {
 
 
 
-const todoLoader = async ({ request, params }) => {
+
+export const TodoLoader = async ({ request, params }) => {
   console.log({ request, params });
   const res = await fetch(`https://jsonplaceholder.typicode.com/todos`)
   return res.json()
 }
-export { LoaderData, todoLoader }
+

@@ -8,7 +8,7 @@ import React from 'react'
 import { useLoaderData } from 'react-router-dom';
 
 export default function LoaderDataById() {
-  const { todo, id } = useLoaderData()
+  const { todo } = useLoaderData()
   return (
     <div>
       <>
@@ -19,8 +19,7 @@ export default function LoaderDataById() {
   )
 }
 
-
-const todoByIdLoader = async ({ params }) => {
+const TodoByIdLoader = async ({ params }) => {
   const id = params.id;
   console.log({ params });
   const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
@@ -28,4 +27,4 @@ const todoByIdLoader = async ({ params }) => {
   return { todo, id }
 }
 
-export { LoaderDataById, todoByIdLoader }
+export { LoaderDataById, TodoByIdLoader }
