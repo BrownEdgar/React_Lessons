@@ -8,7 +8,7 @@ const comentsFilter = (coments, search) => coments.filter(item => item.name.conc
 export default function App() {
   const [coments, setComents] = useState([])
   const [search, setSearch] = useState([])
-  // const [isPending, startTransition] = useTransition() // 1
+  const [isPending, startTransition] = useTransition() // 1
 
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/comments?_limit=150`)
@@ -17,8 +17,8 @@ export default function App() {
   }, [])
   const handleSearch = (event) => {
     const { value } = event.target;
-    // startTransition(() => setSearch(value)) // 2
-    setSearch(value)
+    startTransition(() => setSearch(value)) // 2
+    // setSearch(value)
   }
 
   return (

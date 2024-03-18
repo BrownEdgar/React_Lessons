@@ -10,11 +10,8 @@ export default function App() {
     items: [],
   })
 
-
   const handleSubmit = (e) => {
-    e.preventDefault()
-
-
+    e.preventDefault();
     const newTodo = {
       text: data.text,
       id: Date.now()
@@ -35,6 +32,7 @@ export default function App() {
     const newItems = data.items.filter(todo => todo.id !== id)
     setData({ ...data, items: newItems });
   }
+
   return (
     <div className='Container'>
       <h1 className='Container-Title Container-Title_md' >You have {data.items.length} Todos</h1>

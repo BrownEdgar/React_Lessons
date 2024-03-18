@@ -13,7 +13,7 @@ export default function UseNavigate() {
   const navigate = useNavigate()
 
   const goBack = () => { navigate(-1) } // մեկ քայլ հետ
-  const goHome = () => { navigate('/', { replace: false }) } // {replace:false} by default
+  const goHome = () => { navigate('/', { replace: false, state: { status: 8 } }) } // {replace:false} by default
   return (
     <div>
       <button onClick={goBack}>go Back</button>

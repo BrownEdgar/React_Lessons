@@ -1,4 +1,4 @@
-import React from "react";
+
 let renderCount = 0;
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -60,8 +60,8 @@ export default () => {
         </svg>
         React Hook Form
       </h1>
-      <p style={{ fontSize: 14, lineHeight: 1.3 }}>
-        Performant, flexible and extensible forms with easy-to-use validation.
+      <p >
+        Performant, flexible and extensible forms ƒwith easy-to-use validation.
       </p>
     </div>
   );

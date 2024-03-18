@@ -1,5 +1,4 @@
-import Title from './Components/Title/Title'
-
+import Title from '@/Title/Title'
 import './App.css'
 
 function App() {

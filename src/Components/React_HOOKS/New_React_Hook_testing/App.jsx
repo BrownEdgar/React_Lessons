@@ -24,7 +24,7 @@ export default function App() {
     <div className={s.App}>
       <Title title='React suspense' lesson={21} />
       <Form handleChange={handleChange} />
-      <Suspense fallback={<h2>Loaging....</h2>}>
+      <Suspense fallback={<h2>Loading....</h2>}>
         <FetchData url={`https://jsonplaceholder.typicode.com/${value}`} />
       </Suspense>
     </div>

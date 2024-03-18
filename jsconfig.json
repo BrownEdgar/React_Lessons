@@ -9,7 +9,10 @@
     "paths": {
       "@/*": [
         "Components/*"
-      ]
+      ],
+      "@f/*": [
+        "features/*"
+      ],
     }
   }
 }
