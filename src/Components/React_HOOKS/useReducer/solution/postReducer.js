@@ -1,33 +1,31 @@
 export const initialState = {
   loading: false,
   post: {},
-  error: false
-}
+  error: false,
+};
 
 export const postReducer = (state, action) => {
   switch (action.type) {
-    case "FETCH_START":
+    case 'FETCH_START':
       return {
         loading: true,
         post: {},
-        error: false
-      }
-    case "FETCH_SUCCESS":
+        error: false,
+      };
+    case 'FETCH_SUCCESS':
       return {
         loading: false,
         post: action.payload,
-        error: false
-      }
-    case "FETCH_FAILURE":
+        error: false,
+      };
+    case 'FETCH_FAILURE':
       return {
         loading: false,
         post: {},
-        error: true
-      }
+        error: true,
+      };
 
-
-
-    default: return state
-
+    default:
+      return state;
   }
-}
+};

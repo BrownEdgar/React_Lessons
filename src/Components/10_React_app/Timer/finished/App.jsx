@@ -19,7 +19,7 @@ export default function App() {
     setIsRunning(true);
     intervalRef.current = setInterval(() => {
       setTimeLeft((timeLeft) => {
-        //Որպեսզի 0-ից -1 չանցնի,այլ կանգնի 
+        //Որպեսզի 0-ից -1 չանցնի,այլ կանգնի
         if (timeLeft >= 1) return timeLeft - 1;
         resetTimer();
         return 0;
@@ -49,16 +49,16 @@ export default function App() {
   const seconds = padTime(timeLeft - minutes * 60);
 
   return (
-    <div className="app">
+    <div className='app'>
       <h2>{title}</h2>
 
-      <div className="timer">
+      <div className='timer'>
         <span>{minutes}</span>
         <span>:</span>
         <span>{seconds}</span>
       </div>
 
-      <div className="buttons">
+      <div className='buttons'>
         {!isRunning && <button onClick={startTimer}>Start</button>}
         {isRunning && <button onClick={stopTimer}>Stop</button>}
         <button onClick={resetTimer}>Reset</button>

@@ -1,16 +1,14 @@
-import { Component } from 'react'
-import DefProps from './DefProps'
+import { Component } from 'react';
+import DefProps from './DefProps';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <DefProps
-          value2="dsa26dsa"
-        />
+        <DefProps value2='dsa26dsa' />
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;

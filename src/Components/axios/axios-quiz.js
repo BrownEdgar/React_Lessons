@@ -1,5 +1,5 @@
-import axios from 'axios'
+import axios from 'axios';
 
 export default axios.create({
-	baseURL: 'https://react-project-n1.firebaseio.com/'
-})
+  baseURL: 'https://react-project-n1.firebaseio.com/',
+});

@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export default function App() {
   const getInitialState = () => {
-    const value = "Orange";
+    const value = 'Orange';
     return value;
   };
 
@@ -15,9 +15,9 @@ export default function App() {
   return (
     <div>
       <select value={value} onChange={handleChange}>
-        <option value="Orange">Orange</option>
-        <option value="Radish">Radish</option>
-        <option value="Cherry">Cherry</option>
+        <option value='Orange'>Orange</option>
+        <option value='Radish'>Radish</option>
+        <option value='Cherry'>Cherry</option>
       </select>
       <p>{`You selected ${value}`}</p>
     </div>

@@ -1,2 +1,2 @@
-import React from 'react'
-export const MyContext = React.createContext("box");
+import React from 'react';
+export const MyContext = React.createContext('box');

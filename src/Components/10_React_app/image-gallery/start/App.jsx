@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import InfiniteScroll from 'react-infinite-scroll-component'
+import InfiniteScroll from 'react-infinite-scroll-component';
 import './App.css';
 
 const accessKey = import.meta.env.REACT_APP_UNSPLASH_ACCESS_KEY;
@@ -16,74 +16,81 @@ export default function App() {
     getPhotos();
     //InfiniteScroll/next-ի մեջից հանում ենք "getPhotos()" կանչը կախվածությունը նշելով այստեղ
     // eslint-disable-next-line
-  }, [page])
+  }, [page]);
 
   function getPhotos() {
     fetch(`https://api.unsplash.com/photos?client_id=${accessKey}&page=${page}`)
       .then((res) => res.json())
-      .then(data => {
+      .then((data) => {
         console.log('data', data);
         //Եղած նկարներին ավելացնում ենք նոր 10 նկարների օբյեկտը
         //տես քոնսոլում 'Components/App/State'-ի փոփոխվող արժեքը
-        setImages((images) => [...images, ...data])
-      })
+        setImages((images) => [...images, ...data]);
+      });
   }
 
-  // Վերադարձնում ենք error եթե access key չկա 
+  // Վերադարձնում ենք error եթե access key չկա
   if (!accessKey) {
     return (
-      <a href="https://unsplash.com/developers" className="error">
+      <a href='https://unsplash.com/developers' className='error'>
         Required: Get Your Unsplash API Key First
       </a>
     );
   }
 
   function searchPhoto(e) {
-    e.preventDefault()
-    fetch(`https://api.unsplash.com/search/photos?client_id=${accessKey}&page=${page}&query=${query}`)
+    e.preventDefault();
+    fetch(
+      `https://api.unsplash.com/search/photos?client_id=${accessKey}&page=${page}&query=${query}`
+    )
       .then((res) => res.json())
-      .then(data => {
+      .then((data) => {
         console.log('data', data);
         //data.results. որովհետև սերվերի կողմից ուղարկած տվյալը այդ օբյեկտի մեջ է
         //ի տարբերություն նախորդ օրինակի
         //Ցույց ենք տալիս միայն որոնման արդյունքները
-        setImages(data.results)
-        setImages((images) => [...images, ...data.results])
-      }).catch(err => alert(err))
+        setImages(data.results);
+        setImages((images) => [...images, ...data.results]);
+      })
+      .catch((err) => alert(err));
   }
 
   return (
-    <div className="app">
+    <div className='app'>
       <h1>Unsplash Image Gallery!</h1>
 
       <form onSubmit={searchPhoto}>
         <input
-          type="text"
-          placeholder="Search Unsplash..."
+          type='text'
+          placeholder='Search Unsplash...'
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
         <button>Search</button>
       </form>
 
-
-
       <InfiniteScroll
         dataLength={images.length}
-        next={() => setPage(page => page + 1)}
+        next={() => setPage((page) => page + 1)}
         hasMore={true}
         loader={<h4>Loading...</h4>}
       >
-        <div className="image-grid">
+        <div className='image-grid'>
           {images.map((image, index) => (
-            <a className="image" key={index} href={image.links.html} target="_blank" rel="noopener noreferrer">
+            <a
+              className='image'
+              key={index}
+              href={image.links.html}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <img
                 src={image.urls.regular}
                 alt={image.alt_description}
                 value={query}
                 onChange={(e) => {
-                  console.log(e)
-                  setQuery(e.target.value)
+                  console.log(e);
+                  setQuery(e.target.value);
                 }}
               />
             </a>
@@ -93,10 +100,6 @@ export default function App() {
     </div>
   );
 }
-
-
-
-
 
 // hasMore: он сообщает InfiniteScroll компоненту о необходимости вызова next функции при достижении дна и показывает endMessage пользователю
 //мы используем rel=»noreferrer noopener», чтобы заблокировать использование объекта window.opener JavaScript, потому что как только window.opener перестает работать, вкладка не сможет управлять другой вкладкой.

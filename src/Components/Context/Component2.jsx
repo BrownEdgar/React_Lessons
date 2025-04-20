@@ -1,6 +1,6 @@
 // /////////////////////////////////////////////////////////////////////////////
 //  - MyContext.Consumer-ը վերադարձնում է արժեք ֆունկցիայի միջոցով
-//  - value արգումենտի մեջ գտնվում է App.js-ում հայտարարված 
+//  - value արգումենտի մեջ գտնվում է App.js-ում հայտարարված
 //	՛Provider՛- ի փոխանցած արժեքը
 // /////////////////////////////////////////////////////////////////////////////
 
@@ -11,19 +11,18 @@ class Component2 extends Component {
     return (
       <div
         style={{
-          border: "2px solid brown",
+          border: '2px solid brown',
           width: '200px',
           margin: '50px auto',
-          padding: "10px",
-          textAlign: 'center'
-        }}>
+          padding: '10px',
+          textAlign: 'center',
+        }}
+      >
         {/*Consumer-ը ընդունում է ֆունկցիա որպես ՛child՛ կոմպոնենտ։
 				Այդ Ֆունկցիան վերցնում է ընթացիկ "context"-ը վերադարձնում է React-կոմպոնենտ։: */}
-        <MyContext.Consumer>
-          {value => <p>{value}</p>}
-        </MyContext.Consumer>
+        <MyContext.Consumer>{(value) => <p>{value}</p>}</MyContext.Consumer>
       </div>
-    )
+    );
   }
 }
 

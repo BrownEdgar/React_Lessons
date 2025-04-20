@@ -1,7 +1,7 @@
-import { useContext, useRef, useEffect } from 'react'
-import { MyContext } from './Context'
-import Input from './ForvardInput'
-import './App.css'
+import { useContext, useRef, useEffect } from 'react';
+import { MyContext } from './Context';
+import Input from './ForvardInput';
+import './App.css';
 
 export default function App() {
   const context = useContext(MyContext);
@@ -10,22 +10,22 @@ export default function App() {
 
   useEffect(() => {
     inputEl_1.current.focus();
-  }, [])
+  }, []);
   const handleSubmit = (e) => {
-    e.preventDefault()
-  }
+    e.preventDefault();
+  };
 
   const handleChangeName = (e) => {
     if (e.key === 'Enter') {
       inputEl_2.current.focus();
     }
-  }
+  };
 
   const handleChangSurname = (e) => {
     if (e.key === 'Enter') {
-      alert("Thanks for Registration!!!")
+      alert('Thanks for Registration!!!');
     }
-  }
+  };
 
   return (
     <div className={context}>
@@ -44,5 +44,5 @@ export default function App() {
         />
       </from>
     </div>
-  )
+  );
 }

@@ -1,6 +1,6 @@
-import { Component } from 'react'
-import MyForm from './MyForm'
-import './App.css'
+import { Component } from 'react';
+import MyForm from './MyForm';
+import './App.css';
 
 export default class App extends Component {
   render() {
@@ -8,6 +8,6 @@ export default class App extends Component {
       <div>
         <MyForm />
       </div>
-    )
+    );
   }
 }

@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import "./TodoList.scss"
+import './TodoList.scss';
 
 export default function TodoList({ data, handleDelete }) {
   return (
     <ul className='List'>
-      {data.map(elem => (
+      {data.map((elem) => (
         <li className='List-Item' key={elem.id}>
           <span>{elem.text}</span>
           <span
@@ -17,7 +17,6 @@ export default function TodoList({ data, handleDelete }) {
           </span>
         </li>
       ))}
-
     </ul>
-  )
+  );
 }

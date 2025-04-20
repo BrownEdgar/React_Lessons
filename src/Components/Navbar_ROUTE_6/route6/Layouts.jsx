@@ -3,18 +3,19 @@
 // * "Outlet"-ը մատնացույց է անում էջի այն հատվածը որտեղ պետք է նկարվի մնացաց բազադրությունը,
 // * Մեր օրինակում <header>-ի և <footer> -ի արանքւոմ
 // * "APP"-ում այս կոմպոնենտը պետք է գրել յուրահատուկ նոր ձևով  և այն իր մեջ պետք է վերցնի մեր մնացած <Route>-ը այն էլ արտահայտվելու է այստեղ 	<Outlet />-ի միջոցով
-// 
+//
 // /////////////////////////////////////////////////////////////////////////////
 
+import { Outlet } from 'react-router-dom';
+import './Navbar/Navbar.css';
+import Navbar from './Navbar/Navbar';
 
-import { Outlet, } from 'react-router-dom'
-import './Navbar/Navbar.css'
 export default function Layouts() {
   return (
     <>
-      <NavBar />
+      <Navbar />
       <Outlet />
       <footer>copyRight 2022 SmartCode</footer>
     </>
-  )
+  );
 }

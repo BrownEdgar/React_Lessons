@@ -1,5 +1,5 @@
-import { Component } from 'react'
-import Person from './prop_Types'
+import { Component } from 'react';
+import Person from './prop_Types';
 
 class App extends Component {
   render() {
@@ -7,9 +7,8 @@ class App extends Component {
       <div>
         <Person />
       </div>
-    )
+    );
   }
 }
 
-
-export default App
+export default App;

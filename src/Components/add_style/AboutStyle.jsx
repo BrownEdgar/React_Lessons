@@ -1,11 +1,9 @@
-import { Component } from 'react'
+import { Component } from 'react';
 //Տարբերակ 3 առանց from-ի!
-import './style.css'
+import './style.css';
 
 class AboutStyle extends Component {
-
   render() {
-
     //Տարբերակ 2
     // const  myStyles = {
     // 	color: "red",
@@ -29,9 +27,7 @@ class AboutStyle extends Component {
     //  };
     return (
       //Տարբերակ 1 inline
-      <div style={{ color: "red" }}>
-        Add css in my Code
-      </div>
+      <div style={{ color: 'red' }}>Add css in my Code</div>
       //Տարբերակ 2
       // <div style={myStyles}>
       // 	Add css in my Code
@@ -40,9 +36,8 @@ class AboutStyle extends Component {
       // <div className="box">
       // 	Add css in my Code
       // </div>
-    )
+    );
   }
 }
 
-
-export default AboutStyle
+export default AboutStyle;

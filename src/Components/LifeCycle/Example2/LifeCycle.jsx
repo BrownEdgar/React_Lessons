@@ -2,10 +2,10 @@
 // - կոմպոնենտում դիտարկվում են 1․ ՛կյանքի փուլերը ՛ 2․ console.log-ին css
 // կարգավորումներ տալու եղանակը 3․ Կոնպոնենտին `props`-ով զանգված փոխանցելը
 // //////////////////////////////////////////////////////////////////////////////
-import { Component } from 'react'
-import ChildComponent from './ChildComponent'
-import Error from './Error'
-import "./LifeCycle.css";
+import { Component } from 'react';
+import ChildComponent from './ChildComponent';
+import Error from './Error';
+import './LifeCycle.css';
 
 // styles for console.log
 const color = `
@@ -18,24 +18,24 @@ const color = `
 
 export default class LifeCycle extends Component {
   constructor(props) {
-    console.log("%c App constructor Run", color);
+    console.log('%c App constructor Run', color);
     console.log(`-------------------`);
     super(props);
     this.state = {
       params: [
         {
           constructorValue: `Parent Constructor`,
-          CDU1: "shouldComponentUpdate",
-          CDU2: "shouldComponentUpdate",
-          CDU3: "shouldComponentUpdate",
-          CDU4: "shouldComponentUpdate",
-          value: "new Params"
-        }
+          CDU1: 'shouldComponentUpdate',
+          CDU2: 'shouldComponentUpdate',
+          CDU3: 'shouldComponentUpdate',
+          CDU4: 'shouldComponentUpdate',
+          value: 'new Params',
+        },
       ],
-      name: "LifeCycle Methods",
+      name: 'LifeCycle Methods',
       renderCount: 0,
-      followDeleting: true
-    }
+      followDeleting: true,
+    };
   }
 
   render() {
@@ -45,33 +45,36 @@ export default class LifeCycle extends Component {
 
     const params = this.state.params;
     return (
-      <div className="main">
-        {followDeleting
-          ? (<ChildComponent
+      <div className='main'>
+        {followDeleting ? (
+          <ChildComponent
             name={name}
             allParams={params}
             f1={this.changeStateValue}
             f2={this.deleteComponent}
-            count={this.state.renderCount} />)
-          : <Error f2={this.deleteComponent} />}
+            count={this.state.renderCount}
+          />
+        ) : (
+          <Error f2={this.deleteComponent} />
+        )}
       </div>
-    )
+    );
   }
   changeStateValue = () => {
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return {
-        constructorValue: "change",
-        renderCount: prevState.renderCount + 1
-      }
-    });
-  }
-  deleteComponent = () => {
-    this.setState(prevState => {
-      return {
-        followDeleting: !prevState.followDeleting
+        constructorValue: 'change',
+        renderCount: prevState.renderCount + 1,
       };
     });
-  }
+  };
+  deleteComponent = () => {
+    this.setState((prevState) => {
+      return {
+        followDeleting: !prevState.followDeleting,
+      };
+    });
+  };
   // /////////////////////////////////////////////////////
   // եթե կան հայտարարված նոր մեթոդներ՝չի աշխատի!
   // UNSAFE_componentWillMount() {
@@ -87,31 +90,31 @@ export default class LifeCycle extends Component {
     console.log('nextState', nextState.renderCount);
     let result = nextState.renderCount < 4;
     if (result) {
-      console.log("%cshouldComponentUpdate --> OK render", color);
+      console.log('%cshouldComponentUpdate --> OK render', color);
       return true;
     } else {
-      console.log("%cshouldComponentUpdate --> Stop RENDER 😥", `background:red;padding:5px; color:white`);
+      console.log(
+        '%cshouldComponentUpdate --> Stop RENDER 😥',
+        `background:red;padding:5px; color:white`
+      );
       return false;
     }
-
   }
   // ///////////////////////////////////////////////////////
   componentDidMount() {
-    console.log("%cApp componentDidMount", color);
+    console.log('%cApp componentDidMount', color);
   }
 
   // ///////////////////////////////////////////////////////
-  //componentDidUpdate-ին, որպես 3 արգումենտ  
+  //componentDidUpdate-ին, որպես 3 արգումենտ
   //փոխանցվում է այս ֆունկցիայի վերադարձվող արժեքը։
   getSnapshotBeforeUpdate(prevProps, prevState) {
     console.log('%cgetSnapshotBeforeUpdate', color);
-    return "snapshot default value";
+    return 'snapshot default value';
   }
   // ///////////////////////////////////////////////////////
   componentDidUpdate(prevProps, prevState, snapshot) {
     console.log('%cApp componentDidUpdate', color);
     console.log('"snapshot"', snapshot);
-
   }
-
 }

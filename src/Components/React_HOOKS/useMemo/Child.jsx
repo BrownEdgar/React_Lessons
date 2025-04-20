@@ -1,14 +1,10 @@
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 
 let renderCount = 0;
 
-export default function Child(props) {
+export default function Child() {
   useEffect(() => {
-    renderCount++
-  }, [renderCount])
-  return (
-    <div>
-      renderCount:{renderCount}
-    </div>
-  )
+    renderCount++;
+  }, [renderCount]);
+  return <div>renderCount:{renderCount}</div>;
 }

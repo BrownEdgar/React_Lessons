@@ -1,13 +1,11 @@
 import React from 'react';
-import s from './Developers.module.css'
-
+import s from './Developers.module.css';
 
 class Developers extends React.Component {
-
   //Component-ը DOM-ից ջնջելու առաջ
-  //մյուս դասի թեմա 
+  //մյուս դասի թեմա
   componentWillUnmount() {
-    console.log("jnjvec");
+    console.log('jnjvec');
   }
 
   render() {

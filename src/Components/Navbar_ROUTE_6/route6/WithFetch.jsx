@@ -1,20 +1,19 @@
-import { useState, useEffect } from 'react'
-import { Link, Outlet } from 'react-router-dom'
-
+import { useState, useEffect } from 'react';
+import { Link, Outlet } from 'react-router-dom';
 
 export default function WithParams() {
-  const [posts, setposts] = useState([])
+  const [posts, setposts] = useState([]);
 
   useEffect(() => {
-    fetch(" https://jsonplaceholder.typicode.com/posts")
-      .then(response => response.json())
-      .then(json => {
-        setposts(json)
-      })
-  }, [])
+    fetch(' https://jsonplaceholder.typicode.com/posts')
+      .then((response) => response.json())
+      .then((json) => {
+        setposts(json);
+      });
+  }, []);
   return (
     <ol className='PostList'>
-      {posts.map(elem => (
+      {posts.map((elem) => (
         <Link
           key={elem.id}
           to={`/posts/${elem.id}`}
@@ -23,12 +22,10 @@ export default function WithParams() {
           // useLocation․state-ի մեջ փողանցվում է այս օբյեկտը
           state={{ post: elem }}
         >
-          <li>
-            {elem.title}
-          </li>
+          <li>{elem.title}</li>
         </Link>
       ))}
       <Outlet />
     </ol>
-  )
+  );
 }

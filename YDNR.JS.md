@@ -1,5 +1,6 @@
 ## React todo list
-0. works with state & props 
+
+0. works with state & props
 1. use Custom hooks
 2. work with useContext hook,
 3. understand how work `useEffect, useMemo, useCalback hooks`

@@ -25,9 +25,9 @@ yarn-debug.log*
 yarn-error.log*
 .md
 .env
-<<<<<<< HEAD
+
 .idea
-=======
+
 **/*._*.*
->>>>>>> 7ce130014b01dc1604bfd535e06e53a877954684
+
 

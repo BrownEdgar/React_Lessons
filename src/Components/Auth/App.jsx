@@ -1,12 +1,13 @@
-import { Component } from 'react'
-import classes from './App.module.css'
-import Button from './Button/Button'
-import Input from './input/Input'
-import axios from "axios";
+import { Component } from 'react';
+import classes from './App.module.css';
+import Button from './Button/Button';
+import Input from './input/Input';
+import axios from 'axios';
 const API_KEY = import.meta.env.REACT_APP_API_KEY;
 //email validation RegExp
 function validateEmail(email) {
-  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const re =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
 
@@ -16,47 +17,49 @@ export class App extends Component {
     isFormValid: false,
     formControls: {
       email: {
-        value: "",
-        type: "email",
-        label: "Email",
-        errorMessage: "Введите корректный email",
+        value: '',
+        type: 'email',
+        label: 'Email',
+        errorMessage: 'Введите корректный email',
         valid: false,
         touched: false,
         validation: {
           reqired: true,
-          email: true
-        }
+          email: true,
+        },
       },
       password: {
-        value: "",
-        type: "password",
-        label: "Пароль",
-        errorMessage: "Введите корректный пароль",
+        value: '',
+        type: 'password',
+        label: 'Пароль',
+        errorMessage: 'Введите корректный пароль',
         valid: false,
         touched: false,
         validation: {
           reqired: true,
-          minLength: 7
-        }
-      }
-    }
-  }
+          minLength: 7,
+        },
+      },
+    },
+  };
 
   loginHandler = async () => {
     // Form Validation Etap 4
     let data = {
       email: this.state.formControls.email.value,
       password: this.state.formControls.password.value,
-      returnSecureToken: true
-    }
+      returnSecureToken: true,
+    };
     try {
-
-      const response = await axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`, data)
-      console.log(response.data)
+      const response = await axios.post(
+        `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`,
+        data
+      );
+      console.log(response.data);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
   //reginterHandler ֆունկցիան գրանցումից հետո տվյալները պահում է ՛firebase՛-ում
   // պահանջվող պարամերներ -->https://firebase.google.com/docs/reference/rest/auth#section-create-email-password
   //պահանջվող պարամերներ--> API-KEY ՛firebase՛-ի պրոյեկտից
@@ -66,18 +69,21 @@ export class App extends Component {
       email: this.state.formControls.email.value,
       password: this.state.formControls.password.value,
       //Независимо от того, чтобы вернуть идентификатор и обновить токен. Всегда должно быть правдой.
-      returnSecureToken: true
-    }
+      returnSecureToken: true,
+    };
     try {
-      const response = await axios.post("https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDDgXhQCNqtZhxe78UoHEBZFPm97kky2KU", data)
-      console.log(response)
+      const response = await axios.post(
+        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDDgXhQCNqtZhxe78UoHEBZFPm97kky2KU',
+        data
+      );
+      console.log(response);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
   submitHandler = (e) => {
     e.preventDefault();
-  }
+  };
   validateControl = (value, validation) => {
     if (!validation) {
       // եթե չենք փոխանցել ՛validation՛ ուրեմն վալիդացիա պետք չէ
@@ -97,11 +103,11 @@ export class App extends Component {
       isValid = value.length >= validation.minLength && isValid;
     }
     return isValid;
-  }
+  };
   onChangeHandler = (event, controlName) => {
     // սարքում ենք կրկնորինակներ
     const formControls = { ...this.state.formControls };
-    const control = { ...formControls[controlName] }
+    const control = { ...formControls[controlName] };
     // վրշերանշանակում ենք
     control.value = event.target.value;
     control.touched = true;
@@ -111,14 +117,14 @@ export class App extends Component {
 
     // etap 4
     let isFormValid = true;
-    Object.keys(formControls).forEach(name => {
-      isFormValid = formControls[name].valid && isFormValid
-    })
+    Object.keys(formControls).forEach((name) => {
+      isFormValid = formControls[name].valid && isFormValid;
+    });
     this.setState({
       formControls,
-      isFormValid
+      isFormValid,
     });
-  }
+  };
 
   //Input Generator
   renderInputs = () => {
@@ -135,11 +141,11 @@ export class App extends Component {
           errorMessage={control.errorMessage}
           // !! սարքում է Boolean տիպի փոփոխական
           shoulValidate={!!control.validation}
-          onChange={event => this.onChangeHandler(event, controlName)}
+          onChange={(event) => this.onChangeHandler(event, controlName)}
         />
-      )
-    })
-  }
+      );
+    });
+  };
 
   render() {
     return (
@@ -157,15 +163,19 @@ export class App extends Component {
             type='success'
             onClick={this.loginHandler}
             disabled={!this.state.isFormValid}
-          >Войти</Button>
+          >
+            Войти
+          </Button>
           <Button
             type='primary'
             onClick={this.reginterHandler}
             disabled={!this.state.isFormValid}
-          >Зарегистрироваться</Button>
+          >
+            Зарегистрироваться
+          </Button>
         </form>
       </div>
-    )
+    );
   }
 }
 export default App;

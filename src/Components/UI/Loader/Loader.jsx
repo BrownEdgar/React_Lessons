@@ -1,12 +1,13 @@
-import React from 'react'
-import classes from './Loader.module.css'
+import React from 'react';
+import classes from './Loader.module.css';
 
-const Loader = props => (
+const Loader = (props) => (
   <div className={classes.center}>
     <div className={classes.Loader}>
-      <div /><div />
+      <div />
+      <div />
     </div>
   </div>
-)
+);
 
-export default Loader
+export default Loader;

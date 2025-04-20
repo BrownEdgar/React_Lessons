@@ -7,18 +7,22 @@
 // {replace:true , state} Переодресация, եթե չենք ուսում "history"-ում ավելացնել:state-ը կարող է լինել կամայական տվյալ, որը կարող ենք կարդալ այն հասցեում որտեղ տեղապոխվենք useLocation() հուկի միջոցով
 // /////////////////////////////////////////////////////////////////////////////
 
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 export default function UseNavigate() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const goBack = () => { navigate(-1) } // մեկ քայլ հետ
-  const goHome = () => { navigate('/', { replace: false }) } // {replace:false} by default
+  const goBack = () => {
+    navigate(-1);
+  }; // մեկ քայլ հետ
+  const goHome = () => {
+    navigate('/', { replace: false });
+  }; // {replace:false} by default
   return (
     <div>
       <button onClick={goBack}>go Back</button>
       {/* լավ չի! պետք է սովորական <Link to='/'>  */}
       <button onClick={goHome}>go Home</button>
     </div>
-  )
+  );
 }

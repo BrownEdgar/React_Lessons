@@ -1,9 +1,9 @@
-import Title from '../Title/Title'
+import Title from '../Title/Title';
 
 export default function App() {
   return (
     <div>
-      <Title title="Error boundry" />
+      <Title title='Error boundry' />
     </div>
-  )
+  );
 }

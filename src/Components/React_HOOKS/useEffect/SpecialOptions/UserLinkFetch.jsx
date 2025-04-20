@@ -1,21 +1,19 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function UserLinkFetch() {
   const [user, setUser] = useState({});
-  const id = useLocation().pathname.split("/")[2];
+  const id = useLocation().pathname.split('/')[2];
 
   // case 1 😦
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
-      .then(response => response.json())
-      .then(data => {
-        setUser(data)
-      })
-
-  }, [id])
+      .then((response) => response.json())
+      .then((data) => {
+        setUser(data);
+      });
+  }, [id]);
 
   // case 2 more better! 😊
   // useEffect(() => {
@@ -36,21 +34,22 @@ export default function UserLinkFetch() {
 
   // case 3 more better! 😊
   useEffect(() => {
-    let cancelToken = axios.CancelToken.source()
-    axios.get(`https://jsonplaceholder.typicode.com/users/${id}`, { cancelToken: cancelToken.token })
-      .then(response => setUser(response.data))
-      .catch(err => {
-        if (axios.isCancel(err)) {
-          console.log('canceled!')
-        }
+    let cancelToken = axios.CancelToken.source();
+    axios
+      .get(`https://jsonplaceholder.typicode.com/users/${id}`, {
+        cancelToken: cancelToken.token,
       })
-
+      .then((response) => setUser(response.data))
+      .catch((err) => {
+        if (axios.isCancel(err)) {
+          console.log('canceled!');
+        }
+      });
 
     return () => {
-      cancelToken.cancel()
-    }
-  }, [id])
-
+      cancelToken.cancel();
+    };
+  }, [id]);
 
   return (
     <div>
@@ -69,5 +68,5 @@ export default function UserLinkFetch() {
         </li>
       </ul>
     </div>
-  )
+  );
 }

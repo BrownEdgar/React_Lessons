@@ -1,18 +1,17 @@
-import React from 'react';
 import './App.css';
 
-export default function App() {
+function App() {
   return (
-    <div className="app">
+    <div className='app'>
       <h2>Pomodoro!</h2>
 
-      <div className="timer">
+      <div className='timer'>
         <span>00</span>
         <span>:</span>
         <span>00</span>
       </div>
 
-      <div className="buttons">
+      <div className='buttons'>
         <button>Start</button>
         <button>Stop</button>
         <button>Reset</button>
@@ -20,3 +19,4 @@ export default function App() {
     </div>
   );
 }
+export default App

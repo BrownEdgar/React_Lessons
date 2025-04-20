@@ -2,11 +2,10 @@ import { useEffect, useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import './App.css';
 
-
 // https://unsplash.com/developers
 // copy .env.example to .env
 const accessKey = 'T-Msyp6KkjapwTf1myyqPNCMd9ZkETBZMlUsNtUQsGQ';
-console.log('accessKey', accessKey)
+console.log('accessKey', accessKey);
 
 export default function App() {
   const [images, setImages] = useState([]);
@@ -26,7 +25,7 @@ export default function App() {
     apiUrl += `&page=${page}`;
     apiUrl += `&client_id=${accessKey}`;
 
-    console.log('apiUrl', apiUrl)
+    console.log('apiUrl', apiUrl);
     fetch(apiUrl)
       .then((res) => res.json())
       .then((data) => {
@@ -51,22 +50,22 @@ export default function App() {
     getPhotos();
   }
 
-  // Վերադարձնում ենք error եթե access key չկա 
+  // Վերադարձնում ենք error եթե access key չկա
   if (!accessKey) {
     return (
-      <a href="https://unsplash.com/developers" className="error">
+      <a href='https://unsplash.com/developers' className='error'>
         Required: Get Your Unsplash API Key First
       </a>
     );
   }
 
   return (
-    <div className="app">
+    <div className='app'>
       <h1>Unsplash Image Gallery!</h1>
       <form onSubmit={searchPhotos}>
         <input
-          type="text"
-          placeholder="Search Unsplash..."
+          type='text'
+          placeholder='Search Unsplash...'
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
@@ -79,14 +78,14 @@ export default function App() {
         hasMore={true}
         loader={<h4>Loading...</h4>}
       >
-        <div className="image-grid">
+        <div className='image-grid'>
           {images.map((image, index) => (
             <a
-              className="image"
+              className='image'
               key={index}
               href={image.links.html}
-              target="_blank"
-              rel="noopener noreferrer"
+              target='_blank'
+              rel='noopener noreferrer'
             >
               <img src={image.urls.regular} alt={image.alt_description} />
             </a>
@@ -96,5 +95,3 @@ export default function App() {
     </div>
   );
 }
-
-

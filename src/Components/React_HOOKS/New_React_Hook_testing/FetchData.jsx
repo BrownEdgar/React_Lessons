@@ -1,28 +1,25 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
 export default function FetchData({ url }) {
-  const [data, setData] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     fetch(url)
-      .then(res => res.json())
-      .then(json => {
-        setData(json)
-        setLoading(false)
-      })
-  }, [url])
-
+      .then((res) => res.json())
+      .then((json) => {
+        setData(json);
+        setLoading(false);
+      });
+  }, [url]);
 
   if (loading) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
   return (
     <div>
       <pre>{JSON.stringify(data, null, 1)}</pre>
     </div>
-  )
+  );
 }
-
-

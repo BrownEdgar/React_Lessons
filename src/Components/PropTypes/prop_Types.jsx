@@ -9,13 +9,13 @@ import PropTypes from 'prop-types';
 
 class Person extends Component {
   render() {
-    return <h1>{this.props.name}</h1>
+    return <h1>{this.props.name}</h1>;
   }
 }
 
 Person.propTypes = {
   // check Here
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 export default Person;
 
@@ -27,7 +27,6 @@ export default Person;
 // value: PropTypes.object,
 // value: PropTypes.string,
 // value: PropTypes.symbol,
-
 
 // Կարելի է ավելացնել `isRequired` ցանկացած տիպի համար,
 // որպեսզի հարուցվի զգուշացում, եթե այն փոխանցած չէ,
@@ -59,7 +58,7 @@ export default Person;
 // --------------------------------------------------------------
 
 // Կոնկրետ տիպով օբյեկտների զանգված
-//optionalArrayOf: PropTypes.arrayOf(PropTypes.number),
+//optionalArrayOf: PropTypes.arrayOf(PropTypes.string),
 
 // --------------------------------------------------------------
 
@@ -91,4 +90,3 @@ export default Person;
 //     PropTypes.element
 //   ]).isRequired
 // };
-

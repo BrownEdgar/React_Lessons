@@ -1,6 +1,6 @@
-import { Component } from 'react'
-import FragmentOne from './FragmentOne'
-import FragmentTwo from './FragmentTwo'
+import { Component } from 'react';
+import FragmentOne from './FragmentOne';
+import FragmentTwo from './FragmentTwo';
 
 export default class App extends Component {
   render() {
@@ -9,6 +9,6 @@ export default class App extends Component {
         <FragmentOne />
         <FragmentTwo />
       </div>
-    )
+    );
   }
 }

@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react';
 
 export default function FunctionalRef() {
   const inputEl = useRef(null);
@@ -7,11 +7,10 @@ export default function FunctionalRef() {
   };
   useEffect(() => {
     inputEl.current.focus();
-
-  }, [])
+  }, []);
   return (
     <>
-      <input ref={inputEl} type="text" />
+      <input ref={inputEl} type='text' />
       <button onClick={onButtonClick}>Focus</button>
     </>
   );

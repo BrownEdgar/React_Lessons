@@ -1,10 +1,10 @@
-import { Component } from 'react'
-import MyComponent from '../Part_4/MyComponent'
+import { Component } from 'react';
+import MyComponent from '../Part_4/MyComponent';
 
 export class App extends Component {
   state = {
-    isOpen: false
-  }
+    isOpen: false,
+  };
   render() {
     return (
       <div>
@@ -15,10 +15,9 @@ export class App extends Component {
           </div>
         )}
         <p>aranc heder</p>
-
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;

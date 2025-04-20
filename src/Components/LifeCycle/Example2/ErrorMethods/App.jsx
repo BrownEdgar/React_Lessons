@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { Component } from 'react';
 import Welcome from './Welcome';
 import ErrorHandler from './ErrorHandler';
 export default class App extends Component {
@@ -6,12 +6,12 @@ export default class App extends Component {
     return (
       <div>
         <ErrorHandler>
-          <Welcome name="warning name" />
+          <Welcome name='warning name' />
         </ErrorHandler>
         <ErrorHandler>
-          <Welcome name="warning name2" />
+          <Welcome name='warning name2' />
         </ErrorHandler>
       </div>
-    )
+    );
   }
 }

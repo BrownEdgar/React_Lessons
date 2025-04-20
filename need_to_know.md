@@ -1,11 +1,11 @@
 # virtual DOM
 
-Ինչի համար է React.js-ը ստեղծում ևս մեկ DOM, որովհետև `virtual DOM` -ը կարող ենք թարմացնել ավելի շատ քան իրական DOM-ը։Մենք դրա շնորհիվ կարող ենք կուտակել DOM փոփոխությունները հետո մեկ անգամ թարմացնել իրական DOM-ը։Օրինակ 500 անգամ կարող ենք  update անել `virtual DOM` -ը
-բայց իրական DOM-ը  update անել ընդամենը 60 անգամ։ Ինչի հենց 60?:Որվհետև մարդու աչքը դրանից ավել չի կարող նկատել ՝60fps՝
+Ինչի համար է React.js-ը ստեղծում ևս մեկ DOM, որովհետև `virtual DOM` -ը կարող ենք թարմացնել ավելի շատ քան իրական DOM-ը։Մենք դրա շնորհիվ կարող ենք կուտակել DOM փոփոխությունները հետո մեկ անգամ թարմացնել իրական DOM-ը։Օրինակ 500 անգամ կարող ենք update անել `virtual DOM` -ը
+բայց իրական DOM-ը update անել ընդամենը 60 անգամ։ Ինչի հենց 60?:Որվհետև մարդու աչքը դրանից ավել չի կարող նկատել ՝60fps՝
 
 - Ошибка связанная с безопасностью.
-Если вы создаете ссылку с target='_blank' атрибутом не забудьте добавить к ней rel='noreferrer noopener'. Очень просто:
-<a href="https://example.com" target="_blank" rel="noreferrer noopener" />
+  Если вы создаете ссылку с target='\_blank' атрибутом не забудьте добавить к ней rel='noreferrer noopener'. Очень просто:
+  <a href="https://example.com" target="_blank" rel="noreferrer noopener" />
 
 В случае stateless компонента функцию можно вынести наружу, иначе она будет создаваться каждый раз заново при перерендере компонента.
 
@@ -15,9 +15,9 @@
 
 ### new setState
 
- this.setState((state, props) => ({
- counter: state.counter + props.increment
- }));
+this.setState((state, props) => ({
+counter: state.counter + props.increment
+}));
 
 ### распространенная ошибка
 
@@ -27,9 +27,9 @@
 
 React использует prop key как ссылку к DOM элементу, и это помогает ему быстро найти и отрендерить нужный компонент.
 Что случиться если вы добавите нового юзера в середину массива? React будет вынужден перерендерить все UserComponents после добавленного нового, так как индекс будет изменен для большого кол-ва компонентов. Используйте уникальные ключи вместо этого. Очень простой выход это id, которые вы получаете из вашей базы данных:
- users.map((user) => (
- <UserComponent {...user} key={user.id}  />
- ));
+users.map((user) => (
+<UserComponent {...user} key={user.id} />
+));
 
 ### no bind.this
 
@@ -39,18 +39,18 @@ React использует prop key как ссылку к DOM элементу,
 
 ### օրինակ
 
- var classNames = require('classnames');
- class Button extends React.Component {
- // ...
- render () {
-  var btnClass = classNames({
-  btn: true,
-  'btn-pressed': this.state.isPressed,
-  'btn-over': !this.state.isPressed && this.state.isHovered
-  });
-  return <button className={btnClass}>{this.props.label}</button>;
- }
- }
+var classNames = require('classnames');
+class Button extends React.Component {
+// ...
+render () {
+var btnClass = classNames({
+btn: true,
+'btn-pressed': this.state.isPressed,
+'btn-over': !this.state.isPressed && this.state.isHovered
+});
+return <button className={btnClass}>{this.props.label}</button>;
+}
+}
 
 ### AJAX и обращение к API
 
@@ -62,13 +62,13 @@ React использует prop key как ссылку к DOM элементу,
 - Файл robots.txt вместе с xml-картой несёт, пожалуй, самую важную информацию о ресурсе: он показывает роботам поисковых систем, как именно «читать» сайт, какие страницы важны, а какие следует пропустить. Еще robots.txt — первая страница, на которую стоит смотреть, если на сайт внезапно упал трафик..
 - Файл robots.txt или индексный файл — обычный текстовый документ в кодировке UTF-8, действует для протоколов http, https, а также FTP. Файл дает поисковым роботам рекомендации: какие страницы/файлы стоит сканировать
 - При обработке правил в файле robots.txt поисковые роботы получают одну из трех инструкций:
-частичный доступ: доступно сканирование отдельных элементов сайта;
-полный доступ: сканировать можно все;
-полный запрет: робот ничего не может сканировать.
+  частичный доступ: доступно сканирование отдельных элементов сайта;
+  полный доступ: сканировать можно все;
+  полный запрет: робот ничего не может сканировать.
 
 read more => [(https://netpeak.net/ru/blog/chto-takoe-robots-txt-i-zachem-on-voobshche-nuzhen/)]
 
-### rename all *.js files containing React markup to*.jsx
+### rename all _.js files containing React markup to_.jsx
 
 - in cli
-find ./src -type f -name '*.js' -not -name '*.jsx' -not -name '*.ejs' -exec bash -c 'grep -l -E "</|/>" "$0"' {} \; -exec bash -c 'mv "$0" "${0%.js}.jsx"' {} \;
+  find ./src -type f -name '_.js' -not -name '_.jsx' -not -name '\*.ejs' -exec bash -c 'grep -l -E "</|/>" "$0"' {} \; -exec bash -c 'mv "$0" "${0%.js}.jsx"' {} \;

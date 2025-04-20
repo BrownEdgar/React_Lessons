@@ -1,5 +1,5 @@
 // error-ի մշակումը կատարվում է componentDidCatch մեթոդի օգնությամբ
-// որը 
+// որը
 
 import { Component } from 'react';
 
@@ -8,16 +8,16 @@ class ErrorClass extends Component {
     super(props);
     this.state = {
       myerror: false,
-      errorMessage: ""
-    }
+      errorMessage: '',
+    };
   }
   //Բռնում է սխալները և սիրուն մատուցում այն
   componentDidCatch(error, info) {
     console.log(info);
     this.setState({
       myerror: true,
-      errorMessage: error.message
-    })
+      errorMessage: error.message,
+    });
   }
   render() {
     const { myerror, errorMessage } = this.state;

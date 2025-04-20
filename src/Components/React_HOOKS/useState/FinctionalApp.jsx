@@ -9,8 +9,8 @@
 // ՄԵզ արդեն անհրաժեշտ չի լինի ստեղծել կողմնակի փոփոխականներ, նրանց մեջ "state"-ից արժեքներ պահելու համար
 // Ֆունկցիաների անունները պետք է լինեն մեծատառ
 ////////////////////////////////////////////////////////////////////////////////
-import { useState } from 'react'
-import "../index.css"
+import { useState } from 'react';
+import '../index.css';
 
 export default function FinctionalApp() {
   // const myState = useState(0);
@@ -18,23 +18,19 @@ export default function FinctionalApp() {
   // let setCount = myState[1];
   const [count, setCount] = useState(0);
   const [obj, setObj] = useState({
-    name: "React"
+    name: 'React',
   });
 
   const inctementHandler = () => {
     setCount(count + 1);
-    setCount(prevCount => prevCount + 1);
-
-
-
-  }
+    setCount((prevCount) => prevCount + 1);
+  };
   return (
-    <div className="main">
+    <div className='main'>
       <h1>With Hooks!</h1>
       <h2>useState()</h2>
       <button onClick={inctementHandler}>Increment Me {count}</button>
       <p>{obj.name}</p>
     </div>
-  )
+  );
 }
-

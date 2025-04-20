@@ -1,40 +1,38 @@
-import s from "./Form.module.css"
+import s from './Form.module.css';
 
 export default function Form({ handleChange }) {
-
-
   return (
     <form className={s.Form}>
       <p>
         <input
-          type="radio"
+          type='radio'
           id='users'
           value='users'
           name='json'
           onChange={handleChange}
         />
-        <label htmlFor="users">Users</label>
+        <label htmlFor='users'>Users</label>
       </p>
       <p>
         <input
-          type="radio"
+          type='radio'
           id='todos'
           value='todos'
           name='json'
           onChange={handleChange}
         />
-        <label htmlFor="todos">todos</label>
+        <label htmlFor='todos'>todos</label>
       </p>
       <p>
         <input
-          type="radio"
+          type='radio'
           id='posts'
           value='posts'
           name='json'
           onChange={handleChange}
         />
-        <label htmlFor="posts">posts</label>
+        <label htmlFor='posts'>posts</label>
       </p>
     </form>
-  )
+  );
 }

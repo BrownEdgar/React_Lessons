@@ -19,7 +19,7 @@ body {
 
 /* open only with title lessons */
 #root:has(.title__wrapper) {
-  margin-top: 270px !important;
+  padding-top: 270px !important;
 }
 
 
@@ -29,9 +29,33 @@ code {
 
 ul {
   list-style: none;
+  padding-left: 0;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 18px;
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+table {
+  border-collapse: collapse;
 }

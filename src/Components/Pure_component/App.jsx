@@ -4,13 +4,12 @@
 // PureComponent-ը փոփոխում է shouldComponentUpdate lifecycle - մեթոդը , ավտոմատ ստուգելով, պետք է արդյոք նորից "նկարել" կոմպոնենտը. PureComponent-ը կկանչւ  "render"մեթոդը միայն եթե հայտնաբերի  state կամ propsճում փոփոխություն
 ///////////////////////////////////////////////////////////////
 
-
-import { PureComponent, Component } from 'react'
-import Pure from './Pure'
+import { PureComponent, Component } from 'react';
+import Pure from './Pure';
 export default class App extends PureComponent {
   state = {
-    count: 1
-  }
+    count: 1,
+  };
   componentDidMount() {
     setInterval(() => {
       this.setState(() => {
@@ -18,14 +17,14 @@ export default class App extends PureComponent {
         //Component-ը PureComponent-ով կաշխատի մեկ անգամ միայն
         return { count: 1 };
       });
-    }, 1000)
+    }, 1000);
   }
   render() {
-    console.log('render App')
+    console.log('render App');
     return (
       <div>
         <Pure count={this.state.count} />
       </div>
-    )
+    );
   }
 }

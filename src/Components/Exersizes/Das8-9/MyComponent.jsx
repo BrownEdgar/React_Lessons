@@ -1,5 +1,5 @@
-import React from 'react'
+import React from 'react';
 
 export default function MyComponent() {
-	return <p>My Component</p>
+  return <p>My Component</p>;
 }

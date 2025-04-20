@@ -1,21 +1,14 @@
-import { useState, useEffect } from 'react'
-import { getData } from "./Helpers";
-
+import { useState, useEffect } from 'react';
+import { getData } from './Helpers';
 
 export default function App() {
-  const [data, setData] = useState()
+  const [data, setData] = useState();
   useEffect(() => {
-    getD()
-
-  })
-  async function getD(params) {
-    let newdata = await getData()
-    setData(newdata)
+    getD();
+  });
+  async function getD() {
+    let newdata = await getData();
+    setData(newdata);
   }
-  return (
-    <div>
-      {data && data.name}
-    </div>
-  )
+  return <div>{data && data.name}</div>;
 }
-

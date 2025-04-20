@@ -4,25 +4,28 @@
 //// link --> https://youtu.be/-Ls48dd-vJE
 ////////////////////////////////////////////////////////////////////////////////
 
-import { useState, useCallback, useEffect } from 'react'
-import "./App.css"
+import { useState, useCallback, useEffect } from 'react';
+import './App.css';
 import { Child } from './Child';
 export default function App() {
   const [count, setCount] = useState(0);
-  const [name, setName] = useState("Karlen");
+  const [name, setName] = useState('Karlen');
 
-  const clickHandler = useCallback((n) => {
-    setCount(count => count + n)
-  }, [count]);
+  const clickHandler = useCallback(
+    (n) => {
+      setCount((count) => count + n);
+    },
+    [count]
+  );
 
   const handleChange = () => {
-    setName("vardan")
-  }
+    setName('vardan');
+  };
   useEffect(() => {
-    console.log("as");
-  }, [count])
+    console.log('as');
+  }, [count]);
   return (
-    <div className="box">
+    <div className='box'>
       <h1>useCallback hook</h1>
       <h3>count: {count}</h3>
       <h3>count: {name}</h3>
@@ -30,7 +33,5 @@ export default function App() {
       <Child increment={clickHandler} name={name} />
       <button onClick={handleChange}>Gnage name</button>
     </div>
-  )
+  );
 }
-
-
