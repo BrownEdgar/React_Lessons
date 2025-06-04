@@ -1,5 +1,3 @@
-
-
 function UserList({ data, handleDelete }) {
   return (
     <div>
@@ -31,4 +29,4 @@ function UserList({ data, handleDelete }) {
   );
 }
 
-export default UserList
+export default UserList;

@@ -6,4 +6,4 @@ function FragmentTwo() {
   );
 }
 
-export default FragmentTwo
+export default FragmentTwo;

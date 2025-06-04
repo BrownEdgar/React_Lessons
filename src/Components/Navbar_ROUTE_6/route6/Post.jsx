@@ -1,9 +1,5 @@
 import { useEffect } from 'react';
-import {
-  useParams,
-  useNavigate,
-  useLocation,
-} from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 
 export default function Post() {
   const navigate = useNavigate();

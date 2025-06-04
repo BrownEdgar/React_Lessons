@@ -17,7 +17,7 @@ export default function App2() {
       });
   }
 
-  function searchPhotos() { }
+  function searchPhotos() {}
 
   return (
     <div className='app'>

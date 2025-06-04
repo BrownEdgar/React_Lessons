@@ -10,8 +10,9 @@ const Post = () => {
   // const [error, setError] = useState(false);
 
   const handleFetch = () => {
-    fetch('https://jsonplaceholder.typicode.com/posts/1')
-      .then((res) => res.json())
+    fetch('https://jsonplaceholder.typicode.com/posts/1').then((res) =>
+      res.json()
+    );
   };
 
   return (

@@ -8,4 +8,4 @@ function Friends(props) {
   );
 }
 
-export default Friends
+export default Friends;
