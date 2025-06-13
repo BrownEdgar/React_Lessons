@@ -4,7 +4,6 @@ import './Title.css';
 export default function Title({ title, lesson, children }) {
   return (
     <>
-      {' '}
       <div className='title__wrapper'>
         <h1 className='title'>
           {title}
@@ -15,6 +14,11 @@ export default function Title({ title, lesson, children }) {
     </>
   );
 }
+
+
+
+
+
 
 Title.defaultProps = {
   lesson: 3,

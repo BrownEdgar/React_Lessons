@@ -23,7 +23,7 @@
   width: 100%;
   height: 270px;
   display: flex;
-  padding-left: calc(100px + 4vw);
+  padding-left: calc(50px + 2vw);
   align-items: center;
 }
 
