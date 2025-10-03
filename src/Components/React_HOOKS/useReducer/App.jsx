@@ -1,10 +1,10 @@
 import { useReducer } from 'react';
-import reduser from './useReducer';
+import reducer from './useReducer';
 import Title from '../../Title/Title';
 const initialState = { count: 0 };
 
 function Counter() {
-  const [state, dispatch] = useReducer(reduser, initialState, () => ({
+  const [state, dispatch] = useReducer(reducer, initialState, () => ({
     count: 5,
   }));
   return (

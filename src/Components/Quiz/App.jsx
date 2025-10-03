@@ -2,8 +2,8 @@ import { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  Redirect,
+  Routes,
+  Navigate,
 } from 'react-router-dom';
 import QuizCreator from './QuizCreator/QuizCreator';
 import QuizList from './QuizList/QuizList';
@@ -18,13 +18,13 @@ export default class App extends Component {
       <div>
         <Router>
           <Header />
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/quizCreator' component={QuizCreator} />
-            <Route exact path='/quizlist' component={QuizList} />
-            <Route exact path='/quizlist/:id' component={TestList} />
-            <Redirect to={'/'} />
-          </Switch>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/quizCreator' element={<QuizCreator />} />
+            <Route path='/quizlist' element={<QuizList />} />
+            <Route path='/quizlist/:id' element={<TestList />} />
+            <Route path='*' element={<Navigate to='/' replace />} />
+          </Routes>
         </Router>
       </div>
     );

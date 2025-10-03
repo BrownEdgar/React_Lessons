@@ -30,7 +30,7 @@ class App extends Component {
 				և հետևել նրա թարմացումներին։Իր մեջ ստանում է 'prop':value
 				որը փոխանցվում է բոլոր զավակներին 
 				Եթե օգտագործում ենք "MyContext.Provider" -ը ապա այն առանց "value" չենք կարող թողնել, հակառակ դեպքում պետք է այն ամբողյությամբ ջնջել*/}
-        <MyContext.Provider>
+        <MyContext.Provider value={this.state.stateValue}>
           <RContext />
         </MyContext.Provider>
       </div>

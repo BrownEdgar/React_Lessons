@@ -28,10 +28,10 @@ export default function App() {
     <div className='box'>
       <h1>useCallback hook</h1>
       <h3>count: {count}</h3>
-      <h3>count: {name}</h3>
+      <h3>name: {name}</h3>
 
       <Child increment={clickHandler} name={name} />
-      <button onClick={handleChange}>Gnage name</button>
+      <button onClick={handleChange}>Change name</button>
     </div>
   );
 }

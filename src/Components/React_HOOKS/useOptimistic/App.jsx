@@ -16,9 +16,9 @@ export default function OptimisticList() {
     const tempId = Date.now(); // 987675682132
     const newItem = { id: tempId, text: input };
 
-    //  "оптимистично"
+    //  "оптимистично" добавляем элемент
     addOptimisticItem(newItem);
-    //  ջնջում ենք input-ի տեքստը
+    //  очищаем input
     setInput('');
 
     const savedItem = await fakeSaveToServer(input);

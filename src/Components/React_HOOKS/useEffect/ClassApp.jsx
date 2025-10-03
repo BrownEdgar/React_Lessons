@@ -7,18 +7,18 @@ export default class ClassApp extends Component {
     x: null,
     y: null,
   };
-  inctementHandler = () => {
+  incrementHandler = () => {
     this.setState({
       count: this.state.count + 1,
     });
   };
   //----------------------- add start-----------------------
   componentDidMount() {
-    document.title = `Clickeld ${this.state.count} times`;
+    document.title = `Clicked ${this.state.count} times`;
     window.addEventListener('mousemove', this.handleMouseMove);
   }
   componentDidUpdate() {
-    document.title = `Clickeld ${this.state.count} times`;
+    document.title = `Clicked ${this.state.count} times`;
   }
   handleMouseMove = (event) => {
     this.setState({ x: event.pageX, y: event.pageY });
@@ -32,7 +32,7 @@ export default class ClassApp extends Component {
     return (
       <div className='main'>
         <h1>With Classes</h1>
-        <button onClick={this.inctementHandler}>
+        <button onClick={this.incrementHandler}>
           Increment Me {this.state.count}
         </button>
         <hr />

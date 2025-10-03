@@ -4,6 +4,7 @@ export default function FunctionalRef() {
   const inputEl = useRef(null);
   const onButtonClick = () => {
     // `current` մատնանշում է `input`-ը
+    inputEl.current.focus();
   };
   useEffect(() => {
     inputEl.current.focus();

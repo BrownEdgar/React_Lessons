@@ -24,7 +24,7 @@ export class App extends Component {
         valid: false,
         touched: false,
         validation: {
-          reqired: true,
+          required: true,
           email: true,
         },
       },
@@ -36,7 +36,7 @@ export class App extends Component {
         valid: false,
         touched: false,
         validation: {
-          reqired: true,
+          required: true,
           minLength: 7,
         },
       },
@@ -73,7 +73,7 @@ export class App extends Component {
     };
     try {
       const response = await axios.post(
-        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDDgXhQCNqtZhxe78UoHEBZFPm97kky2KU',
+        `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`,
         data
       );
       console.log(response);

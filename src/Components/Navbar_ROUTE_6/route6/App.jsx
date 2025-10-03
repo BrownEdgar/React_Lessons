@@ -17,7 +17,7 @@ import Post from './Post';
 import LoaderData, { TodoLoader } from './LoaderData';
 
 import './App.css';
-import LoaderDataById, { todoByIdLoader } from './LoaderDataById';
+import LoaderDataById, { TodoByIdLoader } from './LoaderDataById';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,10 +32,7 @@ const router = createBrowserRouter(
       <Route
         path='todos/:id'
         element={<LoaderDataById />}
-        action={todoByIdLoader}
-        loader={({ params }) => {
-          // return fakeGetSong(params.songId);
-        }}
+        loader={TodoByIdLoader}
       />
     </Route>
   )

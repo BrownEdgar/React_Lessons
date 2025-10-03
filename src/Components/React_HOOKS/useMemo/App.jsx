@@ -27,9 +27,9 @@ export default function App() {
     <div className='box'>
       <h1>useMemo hook</h1>
       <h3>count: {count}</h3>
-      <h3>count: {name}</h3>
+      <h3>name: {name}</h3>
       <button onClick={clickHandler}>Increment</button>
-      <button onClick={nameHandler}>Increment</button>
+      <button onClick={nameHandler}>Change name</button>
       <h3>Normal render</h3>
       <Child />
       <h3>Memo Render</h3>

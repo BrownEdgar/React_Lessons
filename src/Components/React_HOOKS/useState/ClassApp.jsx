@@ -6,14 +6,14 @@ export default class ClassApp extends Component {
     count: 0,
     name: 'React',
   };
-  inctementHandler = () => {
+  incrementHandler = () => {
     this.setState({ count: this.state.count + 1 });
   };
   render() {
     return (
       <div className='main'>
         <h1>With Classes</h1>
-        <button onClick={this.inctementHandler}>
+        <button onClick={this.incrementHandler}>
           Increment Me {this.state.count}
         </button>
         <p>{this.state.name}</p>

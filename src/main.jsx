@@ -1,10 +1,10 @@
 import ReactDOM from 'react-dom/client';
-import Title from './Components/Title/Title';
 import './index.css';
-import App from '@/test/App';
+import App from '@/React_HOOKS/uesTransition/App';
+import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Title lesson={1} title='Prop drilling'>
+  <Router>
     <App />
-  </Title>
+  </Router>
 );

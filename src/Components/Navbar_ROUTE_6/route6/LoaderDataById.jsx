@@ -5,19 +5,17 @@
 
 import { useLoaderData } from 'react-router-dom';
 
-export default function LoaderDataById() {
+function LoaderDataById() {
   const { todo } = useLoaderData();
   return (
     <div>
-      <>
-        <h2>Title: {todo.title}</h2>
-        <h3>completed: {todo.completed.toString()}</h3>
-      </>
+      <h2>Title: {todo.title}</h2>
+      <h3>completed: {todo.completed.toString()}</h3>
     </div>
   );
 }
 
-const TodoByIdLoader = async ({ params }) => {
+export const TodoByIdLoader = async ({ params }) => {
   const id = params.id;
   console.log({ params });
   const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
@@ -25,4 +23,4 @@ const TodoByIdLoader = async ({ params }) => {
   return { todo, id };
 };
 
-export { LoaderDataById, TodoByIdLoader };
+export default LoaderDataById;

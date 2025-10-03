@@ -11,7 +11,7 @@ export default class App extends PureComponent {
     count: 1,
   };
   componentDidMount() {
-    setInterval(() => {
+    this.interval = setInterval(() => {
       this.setState(() => {
         //կաշխատի ամեն վրկ․ մեկ
         //Component-ը PureComponent-ով կաշխատի մեկ անգամ միայն
@@ -19,6 +19,13 @@ export default class App extends PureComponent {
       });
     }, 1000);
   }
+
+  componentWillUnmount() {
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
+  }
+
   render() {
     console.log('render App');
     return (

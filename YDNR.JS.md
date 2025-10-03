@@ -13,3 +13,8 @@
 10. be able to use `axios | fetch`
 11. be able work with forms in react(`save & send data`)
 12. created a custom React UI elements
+
+# jpg/jpeg to webp
+
+brew install webp
+cwebp -q 50 ./photo.jpg -o ./flower1.webp
