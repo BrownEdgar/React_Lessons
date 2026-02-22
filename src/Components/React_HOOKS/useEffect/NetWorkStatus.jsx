@@ -16,38 +16,40 @@ const locationState = {
 export default function FinctionalApp() {
   const [status, setStatus] = useState(navigator.onLine);
   const [location, setLocation] = useState(locationState);
-  let mounted = true;
 
   useEffect(() => {
+    let mounted = true;
+
+    const handleOnline = () => {
+      if (mounted) setStatus(true);
+    };
+
+    const handleOffline = () => {
+      if (mounted) setStatus(false);
+    };
+
+    const handleGeolocation = (event) => {
+      if (mounted) {
+        setLocation({
+          latitude: event.coords.latitude,
+          longitude: event.coords.longitude,
+          speed: event.coords.speed,
+        });
+      }
+    };
+
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
-    // --- geolocation ---
     navigator.geolocation.getCurrentPosition(handleGeolocation);
     const id = navigator.geolocation.watchPosition(handleGeolocation);
+
     return () => {
+      mounted = false;
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
-      //removeListener
       navigator.geolocation.clearWatch(id);
-      mounted = false;
     };
-  });
-  const handleOnline = () => {
-    setStatus(true);
-  };
-  const handleOffline = () => {
-    setStatus(false);
-  };
-  // --- geolocation ---
-  const handleGeolocation = (event) => {
-    if (mounted) {
-      setLocation({
-        latitude: event.coords.latitude,
-        longitude: event.coords.longitude,
-        speed: event.coords.speed,
-      });
-    }
-  };
+  }, []);
 
   return (
     <div className='main'>

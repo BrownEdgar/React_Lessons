@@ -15,11 +15,6 @@ export default function Title({ title, lesson, children }) {
   );
 }
 
-
-
-
-
-
 Title.defaultProps = {
   lesson: 3,
   title: 'flexbox',

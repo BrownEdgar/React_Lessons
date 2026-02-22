@@ -12,22 +12,22 @@ export default class ClassApp extends Component {
       count: this.state.count + 1,
     });
   };
-  //----------------------- add start-----------------------
   componentDidMount() {
     document.title = `Clicked ${this.state.count} times`;
     window.addEventListener('mousemove', this.handleMouseMove);
   }
+
   componentDidUpdate() {
     document.title = `Clicked ${this.state.count} times`;
   }
-  handleMouseMove = (event) => {
-    this.setState({ x: event.pageX, y: event.pageY });
-  };
+
   componentWillUnmount() {
     window.removeEventListener('mousemove', this.handleMouseMove);
   }
 
-  //----------------------- add end-----------------------
+  handleMouseMove = (event) => {
+    this.setState({ x: event.pageX, y: event.pageY });
+  };
   render() {
     return (
       <div className='main'>

@@ -15,7 +15,7 @@ export default function BetterDevelopers(props) {
         key={index}
         name={elem.name}
         skilss={elem.skilss}
-        changeTitle={(event) => props.changeTitleHandler(elem.name)}
+        changeTitle={() => props.changeTitleHandler(elem.name)}
       />
     );
   });

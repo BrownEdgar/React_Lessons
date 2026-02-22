@@ -13,8 +13,6 @@ export default class App extends PureComponent {
   componentDidMount() {
     this.interval = setInterval(() => {
       this.setState(() => {
-        //կաշխատի ամեն վրկ․ մեկ
-        //Component-ը PureComponent-ով կաշխատի մեկ անգամ միայն
         return { count: 1 };
       });
     }, 1000);
@@ -27,7 +25,6 @@ export default class App extends PureComponent {
   }
 
   render() {
-    console.log('render App');
     return (
       <div>
         <Pure count={this.state.count} />

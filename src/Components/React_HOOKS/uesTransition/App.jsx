@@ -18,7 +18,6 @@ export default function App() {
   const handleSearch = (event) => {
     const { value } = event.target;
     startTransition(() => setSearch(value)); // 2
-
   };
 
   return (

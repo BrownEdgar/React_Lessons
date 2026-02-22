@@ -4,7 +4,7 @@
 // Работает только внутри <form> компонента
 ////////////////////////////////////////////////////////////////////////////////
 import { useFormStatus } from 'react';
-import './App.scss';
+import './App.css';
 
 // Компонент кнопки, который использует useFormStatus
 function SubmitButton() {
@@ -12,7 +12,7 @@ function SubmitButton() {
 
   return (
     <button
-      type="submit"
+      type='submit'
       disabled={pending}
       className='submit-button'
     >
@@ -29,8 +29,8 @@ function LoadingIndicator() {
 
   return (
     <div className='loading-indicator'>
-      <div className='loading-text'>⏳ Отправка формы...</div>
-      <div className='loading-details'>
+      <div>⏳ Отправка формы...</div>
+      <div className='loading-indicator-info'>
         Метод: {method} | Действие: {action}
       </div>
     </div>
@@ -39,13 +39,13 @@ function LoadingIndicator() {
 
 export default function App() {
   return (
-    <div className='app'>
+    <div className='container'>
       <h1>useFormStatus Hook (React 19)</h1>
 
       <form
         action={async (formData) => {
           // Имитация асинхронной отправки
-          await new Promise(resolve => setTimeout(resolve, 3000));
+          await new Promise((resolve) => setTimeout(resolve, 3000));
 
           const name = formData.get('name');
           const email = formData.get('email');
@@ -57,33 +57,37 @@ export default function App() {
         <LoadingIndicator />
 
         <div className='form-group'>
-          <label>
+          <label className='label'>
             Имя:
           </label>
           <input
-            type="text"
-            name="name"
+            type='text'
+            name='name'
             required
-            placeholder="Введите ваше имя"
+            className='input'
+            placeholder='Введите ваше имя'
           />
         </div>
 
-        <div className='form-group'>
-          <label>
+        <div className='form-group-large'>
+          <label className='label'>
             Email:
           </label>
           <input
-            type="email"
-            name="email"
+            type='email'
+            name='email'
             required
-            placeholder="Введите ваш email"
+            className='input'
+            placeholder='Введите ваш email'
           />
         </div>
 
         <SubmitButton />
 
         <div className='info-section'>
-          <h3>Что делает useFormStatus:</h3>
+          <p>
+            <strong>Что делает useFormStatus:</strong>
+          </p>
           <ul>
             <li>Предоставляет информацию о статусе отправки формы</li>
             <li>Работает только внутри компонента &lt;form&gt;</li>

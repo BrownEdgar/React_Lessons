@@ -4,26 +4,20 @@
 //// link --> https://youtu.be/-Ls48dd-vJE
 ////////////////////////////////////////////////////////////////////////////////
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback } from 'react';
 import './App.css';
 import { Child } from './Child';
 export default function App() {
   const [count, setCount] = useState(0);
   const [name, setName] = useState('Karlen');
 
-  const clickHandler = useCallback(
-    (n) => {
-      setCount((count) => count + n);
-    },
-    [count]
-  );
+  const clickHandler = useCallback((n) => {
+    setCount((count) => count + n);
+  }, []);
 
   const handleChange = () => {
     setName('vardan');
   };
-  useEffect(() => {
-    console.log('as');
-  }, [count]);
   return (
     <div className='box'>
       <h1>useCallback hook</h1>

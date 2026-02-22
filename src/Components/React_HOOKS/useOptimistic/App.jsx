@@ -23,7 +23,7 @@ export default function OptimisticList() {
 
     const savedItem = await fakeSaveToServer(input);
 
-    setItems(prev => [...prev, savedItem]);
+    setItems((prev) => [...prev, savedItem]);
   };
 
   return (
@@ -33,12 +33,12 @@ export default function OptimisticList() {
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Добавить элемент"
+          placeholder='Добавить элемент'
         />
-        <button type="submit">Добавить</button>
+        <button type='submit'>Добавить</button>
       </form>
       <ul>
-        {optimisticItems.map(item => (
+        {optimisticItems.map((item) => (
           <li key={item.id}>{item.text}</li>
         ))}
       </ul>
@@ -46,14 +46,10 @@ export default function OptimisticList() {
   );
 }
 
-
 async function fakeSaveToServer(text) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve({ id: Math.floor(Math.random() * 10000), text });
     }, 1000);
   });
 }
-
-
-

@@ -82,9 +82,9 @@ class Life extends React.Component {
     console.log(`------------------------`);
   }
 
-  handleClick() {
+  handleClick = () => {
     this.setState({ name: 'changed name2!' });
-  }
+  };
   // Կանչվում է Կոմպոնենտի թարմացումից անմիջապես հետո։
   componentDidUpdate(prevProps, prevState, prevContext) {
     console.log('Cpmponent updating');
@@ -106,8 +106,7 @@ class Life extends React.Component {
       <div>
         <h1>{this.state.name}</h1>
         <LifeComponent name={this.state.name} age='25' />
-        <button onClick={this.handleClick.bind(this)}>Click me</button>
-        {/* <p><img src={} alt="LifeCycle Methods view"/></p> */}
+        <button onClick={this.handleClick}>Click me</button>
       </div>
     );
   }
