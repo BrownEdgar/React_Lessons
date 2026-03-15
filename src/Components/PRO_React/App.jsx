@@ -15,6 +15,7 @@ const users = {
     { id: 8, name: 'Hannah Martin', age: 22, salary: 45000 },
   ],
 };
+
 const cars = {
   fields: ['id', 'brand', 'model', 'year', 'price'],
   data: [

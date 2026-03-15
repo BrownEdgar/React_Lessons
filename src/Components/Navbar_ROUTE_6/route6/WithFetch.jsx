@@ -11,6 +11,7 @@ export default function WithParams() {
         setposts(json);
       });
   }, []);
+
   return (
     <ol className='PostList'>
       {posts.map((elem) => (

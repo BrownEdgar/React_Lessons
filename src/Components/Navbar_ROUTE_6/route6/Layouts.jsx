@@ -15,7 +15,7 @@ export default function Layouts() {
     <>
       <Navbar />
       <Outlet />
-      <footer>copyRight 2022 SmartCode</footer>
+      <footer>copyRight 2026</footer>
     </>
   );
 }
