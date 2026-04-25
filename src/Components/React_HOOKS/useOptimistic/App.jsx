@@ -22,7 +22,7 @@ export default function OptimisticList() {
     setInput('');
 
     const savedItem = await fakeSaveToServer(input);
-
+  
     setItems((prev) => [...prev, savedItem]);
   };
 

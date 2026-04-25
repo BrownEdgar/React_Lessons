@@ -1,5 +1,15 @@
 import ListRenderer from './components/ListRenderer/ListRenderer';
 import Table from './components/Table/Table';
+import RenderPropsApp from './components/RenderPropsPatern/App';
+import OrchestratorApp from './components/OrchestratorPattern/App';
+import CompoundComponentsApp from './components/CompoundComponents/App';
+import SlotsPatternApp from './components/SlotsPattern/App';
+import StateReducerApp from './components/StateReducerPattern/App';
+import ControlledUncontrolledApp from './components/ControlledUncontrolled/App';
+import OptimisticUIApp from './components/OptimisticUI/App';
+import PortalPatternApp from './components/PortalPattern/App';
+import ComponentInjectionApp from './components/ComponentInjection/App';
+import ObserverPatternApp from './components/ObserverPattern/App';
 const items = ['html', 'css', 'Java Script', 'React.js', 'Node.js', 'Python'];
 
 const users = {
@@ -26,13 +36,7 @@ const cars = {
     { id: 14, brand: 'Tesla', model: 'Model 3', year: 2023, price: 45000 },
     { id: 15, brand: 'BMW', model: 'X5', year: 2021, price: 60000 },
     { id: 16, brand: 'Audi', model: 'A4', year: 2020, price: 40000 },
-    {
-      id: 17,
-      brand: 'Mercedes-Benz',
-      model: 'C-Class',
-      year: 2022,
-      price: 55000,
-    },
+    { id: 17, brand: 'Mercedes-Benz', model: 'C-Class', year: 2022, price: 55000 },
   ],
 };
 
@@ -60,18 +64,73 @@ const renderRow = (entity) => {
 };
 export default function App() {
   return (
-    <div>
-      <h1>ListRenderer</h1>
-      <ListRenderer
-        items={items}
-        render={(item) => <li key={item}>{item}</li>}
-      />
-      <hr />
-      <h1>
-        Dynamic <span>&lt;Table&gt;</span> Render
-      </h1>
-      <Table data={users} renderHeader={renderHeader} renderRow={renderRow} />
-      <Table data={cars} renderHeader={renderHeader} renderRow={renderRow} />
+    <div style={{ padding: '2rem' }}>
+      <section>
+        <h1>ListRenderer</h1>
+        <ListRenderer
+          items={items}
+          render={(item) => <li key={item}>{item}</li>}
+        />
+        <hr />
+      </section>
+
+      <section>
+        <h1>
+          Dynamic <span>&lt;Table&gt;</span> Render
+        </h1>
+        <Table data={users} renderHeader={renderHeader} renderRow={renderRow} />
+        <Table data={cars} renderHeader={renderHeader} renderRow={renderRow} />
+        <hr />
+      </section>
+
+      <section>
+        <RenderPropsApp />
+        <hr />
+      </section>
+
+      <section>
+        <OrchestratorApp />
+        <hr />
+      </section>
+
+      <section>
+        <CompoundComponentsApp />
+        <hr />
+      </section>
+
+      <section>
+        <SlotsPatternApp />
+        <hr />
+      </section>
+
+      <section>
+        <StateReducerApp />
+        <hr />
+      </section>
+
+      <section>
+        <ControlledUncontrolledApp />
+        <hr />
+      </section>
+
+      <section>
+        <OptimisticUIApp />
+        <hr />
+      </section>
+
+      <section>
+        <PortalPatternApp />
+        <hr />
+      </section>
+
+      <section>
+        <ComponentInjectionApp />
+        <hr />
+      </section>
+
+      <section>
+        <ObserverPatternApp />
+      </section>
     </div>
   );
 }

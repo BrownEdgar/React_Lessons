@@ -1,0 +1,21 @@
+.state-reducer-app { width: 100%; }
+.toggle-demo { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
+.demo-section { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 0.8rem; padding: 2rem; color: #e0e0e0; }
+.demo-section h2 { margin-top: 0; font-size: 1.3rem; color: #7c3aed; }
+.hint { font-size: 0.95rem; color: rgba(224, 224, 224, 0.7); margin-bottom: 1.5rem; padding: 1rem; background: rgba(124, 58, 237, 0.1); border-left: 3px solid #7c3aed; border-radius: 0.4rem; }
+.toggle-container { display: flex; flex-direction: column; gap: 1.5rem; }
+.toggle-display { background: rgba(124, 58, 237, 0.1); padding: 1.5rem; border-radius: 0.6rem; border-left: 3px solid #7c3aed; }
+.toggle-status { margin: 0 0 0.5rem 0; font-size: 1.1rem; }
+.toggle-status span { font-weight: 700; margin-left: 0.5rem; }
+.toggle-status span.on { color: #06b6d4; }
+.toggle-status span.off { color: #f87171; }
+.toggle-count { margin: 0; font-size: 0.95rem; color: rgba(224, 224, 224, 0.7); }
+.toggle-switch { padding: 1rem 2rem; background: rgba(124, 58, 237, 0.2); border: 2px solid #7c3aed; border-radius: 0.4rem; color: #7c3aed; font-weight: 600; cursor: pointer; transition: all 0.3s ease; font-family: inherit; }
+.toggle-switch:hover { background: rgba(124, 58, 237, 0.3); transform: translateY(-2px); }
+.toggle-switch.active { background: #06b6d4; border-color: #06b6d4; color: white; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.4); }
+.toggle-reset { padding: 0.8rem 1.5rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 0.4rem; color: rgba(224, 224, 224, 0.7); font-weight: 600; cursor: pointer; transition: all 0.3s ease; font-family: inherit; }
+.toggle-reset:hover { background: rgba(255, 255, 255, 0.15); color: #e0e0e0; }
+.description { color: rgba(224, 224, 224, 0.7); font-size: 1.1rem; margin: 1rem 0; }
+.resource { margin-top: 2rem; padding: 1rem; background: rgba(6, 182, 212, 0.1); border-left: 3px solid #06b6d4; border-radius: 0.4rem; }
+.resource a { color: #06b6d4; text-decoration: none; font-weight: 600; }
+.resource a:hover { color: #0891b2; }
