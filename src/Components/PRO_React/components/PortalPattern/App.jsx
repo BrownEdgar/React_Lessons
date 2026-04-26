@@ -3,6 +3,7 @@ import { Modal } from './Modal';
 import './Modal.css';
 import Title from '../../ui/Title';
 import { Divider } from '../../ui/Divider';
+import { demoModals } from '../../constants';
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -13,6 +14,8 @@ export default function App() {
     setIsModalOpen(true);
   };
 
+  const currentModal = demoModals.find((m) => m.id === selectedDemo);
+
   return (
     <div className='portal-app'>
       <Title>
@@ -21,24 +24,16 @@ export default function App() {
       <p className='description'>
         createPortal() - Render մեջ DOM tree-ից դուս
       </p>
-      <Divider />
-
       <div className='modal-demos'>
-        <button
-          className='demo-button primary'
-          onClick={() => openModal('notification')}
-        >
-          📢 Show Notification
-        </button>
-        <button
-          className='demo-button success'
-          onClick={() => openModal('alert')}
-        >
-          ✅ Show Alert
-        </button>
-        <button className='demo-button info' onClick={() => openModal('form')}>
-          📝 Show Form
-        </button>
+        {demoModals.map((demo) => (
+          <button
+            key={demo.id}
+            className={`demo-button ${demo.buttonClass}`}
+            onClick={() => openModal(demo.id)}
+          >
+            {demo.buttonText}
+          </button>
+        ))}
       </div>
 
       <Modal
@@ -46,22 +41,10 @@ export default function App() {
         onClose={() => setIsModalOpen(false)}
         title='Portal Modal'
       >
-        {selectedDemo === 'notification' && (
+        {currentModal && (
           <div>
-            <h3>🎉 Notification</h3>
-            <p>This modal renders outside the component tree!</p>
-          </div>
-        )}
-        {selectedDemo === 'alert' && (
-          <div>
-            <h3>⚠️ Alert</h3>
-            <p>Portals are useful for modals and dropdowns.</p>
-          </div>
-        )}
-        {selectedDemo === 'form' && (
-          <div>
-            <h3>📝 Form</h3>
-            <p>Form content here</p>
+            <h3>{currentModal.title}</h3>
+            <p>{currentModal.content}</p>
           </div>
         )}
       </Modal>

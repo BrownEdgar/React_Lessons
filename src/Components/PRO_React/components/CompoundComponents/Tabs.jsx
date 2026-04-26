@@ -2,7 +2,7 @@
 // Compound Components Pattern (Բաղադրյալ Կոմպոնենտներ)
 //
 // Մի քանի միատեսակ կոմպոնենտներ (Tabs, Tab, TabPanel) աշխատում են
-// միասին` ձևավորում են մեկ ամբողջ ֆունկցիոնալ միավոր։
+// միասին` ձևավորում են մեկ ամբողջ ֆունկցիոնալ:
 //
 // React Context-ի միջով դրանք կիսում են վիճակ առանց
 // prop drilling-ի (props անցում ամբ. ծառի միջով)։
@@ -61,3 +61,5 @@ export const TabPanel = ({ id, children }) => {
 Tabs.List = TabsList;
 Tabs.Tab = Tab;
 Tabs.Panel = TabPanel;
+
+

@@ -89,3 +89,8 @@ button {
   color: #ecf0f1;
   margin: 0.2rem 0.5rem;
 }
+
+button.active {
+  background-color: #edea0e;
+  color: #2c3e50;
+}

@@ -3,6 +3,7 @@ import eventBus from './eventBus';
 import './Observer.css';
 import Title from '../../ui/Title';
 import { Divider } from '../../ui/Divider';
+import { notifications } from '../../constants';
 
 const ActionButtons = () => {
   const sendNotification = (type, title, message, icon) => {
@@ -11,43 +12,17 @@ const ActionButtons = () => {
 
   return (
     <div className='action-buttons'>
-      <button
-        className='btn btn-success'
-        onClick={() =>
-          sendNotification(
-            'success',
-            '✅ Success',
-            'Operation completed!',
-            '🎉'
-          )
-        }
-      >
-        Send Success
-      </button>
-      <button
-        className='btn btn-error'
-        onClick={() =>
-          sendNotification('error', '❌ Error', 'Something went wrong!', '⚠️')
-        }
-      >
-        Send Error
-      </button>
-      <button
-        className='btn btn-info'
-        onClick={() =>
-          sendNotification('info', 'ℹ️ Info', 'Here is some info!', 'ℹ️')
-        }
-      >
-        Send Info
-      </button>
-      <button
-        className='btn btn-warning'
-        onClick={() =>
-          sendNotification('warning', '⚠️ Warning', 'Be careful!', '⚠️')
-        }
-      >
-        Send Warning
-      </button>
+      {notifications.map((notif) => (
+        <button
+          key={notif.type}
+          className={`btn btn-${notif.type}`}
+          onClick={() =>
+            sendNotification(notif.type, notif.title, notif.message, notif.icon)
+          }
+        >
+          {notif.buttonText}
+        </button>
+      ))}
     </div>
   );
 };

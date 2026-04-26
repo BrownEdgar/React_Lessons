@@ -9,8 +9,8 @@ export default function TableRendererApp() {
       <Title>
         Dynamic <span>&lt;Table&gt;</span> Render
       </Title>
-      <Table data={users} renderHeader={renderHeader} renderRow={renderRow} />
-      <Table data={cars} renderHeader={renderHeader} renderRow={renderRow} />
+      {/* <Table data={users} renderHeader={renderHeader} renderRow={renderRow} /> */}
+      {/* <Table data={cars} renderHeader={renderHeader} renderRow={renderRow} /> */}
     </>
   );
 }

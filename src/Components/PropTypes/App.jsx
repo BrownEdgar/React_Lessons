@@ -3,11 +3,7 @@ import Person from './prop_Types';
 
 class App extends Component {
   render() {
-    return (
-      <div>
-        <Person />
-      </div>
-    );
+    return <Person />;
   }
 }
 
