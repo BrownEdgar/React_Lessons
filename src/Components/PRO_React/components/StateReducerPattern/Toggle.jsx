@@ -25,7 +25,10 @@ const defaultReducer = (state, action) => {
   }
 };
 
-export const Toggle = ({ stateReducer = defaultReducer, initialState: customInitialState = initialState }) => {
+export const Toggle = ({
+  stateReducer = defaultReducer,
+  initialState: customInitialState = initialState,
+}) => {
   const [state, dispatch] = useReducer(stateReducer, customInitialState);
 
   const handleToggle = () => {
@@ -37,15 +40,25 @@ export const Toggle = ({ stateReducer = defaultReducer, initialState: customInit
   };
 
   return (
-    <div className="toggle-container">
-      <div className="toggle-display">
-        <p className="toggle-status">Status: <span className={state.on ? 'on' : 'off'}>{state.on ? 'ON' : 'OFF'}</span></p>
-        <p className="toggle-count">Toggles: {state.count}</p>
+    <div className='toggle-container'>
+      <div className='toggle-display'>
+        <p className='toggle-status'>
+          Status:{' '}
+          <span className={state.on ? 'on' : 'off'}>
+            {state.on ? 'ON' : 'OFF'}
+          </span>
+        </p>
+        <p className='toggle-count'>Toggles: {state.count}</p>
       </div>
-      <button className={`toggle-switch ${state.on ? 'active' : ''}`} onClick={handleToggle}>
+      <button
+        className={`toggle-switch ${state.on ? 'active' : ''}`}
+        onClick={handleToggle}
+      >
         {state.on ? '✓ Enabled' : '✗ Disabled'}
       </button>
-      <button className="toggle-reset" onClick={handleReset}>Reset</button>
+      <button className='toggle-reset' onClick={handleReset}>
+        Reset
+      </button>
     </div>
   );
 };

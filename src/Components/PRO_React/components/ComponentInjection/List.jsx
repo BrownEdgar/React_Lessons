@@ -12,7 +12,7 @@
 
 export const List = ({ items, renderItem }) => {
   return (
-    <ul className="injected-list">
+    <ul className='injected-list'>
       {items.map((item, idx) => (
         <li key={item.id || idx}>
           {renderItem ? renderItem(item) : item.name || String(item)}
@@ -24,9 +24,9 @@ export const List = ({ items, renderItem }) => {
 
 export const CardList = ({ items, renderCard }) => {
   return (
-    <div className="card-list">
+    <div className='card-list'>
       {items.map((item, idx) => (
-        <div key={item.id || idx} className="card-item">
+        <div key={item.id || idx} className='card-item'>
           {renderCard(item)}
         </div>
       ))}

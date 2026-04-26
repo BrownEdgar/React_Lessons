@@ -12,7 +12,11 @@
 
 import { useState } from 'react';
 
-export const SmartInput = ({ value, onChange, placeholder = 'Type something...' }) => {
+export const SmartInput = ({
+  value,
+  onChange,
+  placeholder = 'Type something...',
+}) => {
   const [internalValue, setInternalValue] = useState('');
   const isControlled = value !== undefined;
   const currentValue = isControlled ? value : internalValue;
@@ -27,9 +31,18 @@ export const SmartInput = ({ value, onChange, placeholder = 'Type something...' 
   };
 
   return (
-    <div className="smart-input-wrapper">
-      <input type="text" value={currentValue} onChange={handleChange} placeholder={placeholder} className="smart-input" />
-      <div className="input-display"><span className="label">Value:</span><span className="value">{currentValue || 'empty'}</span></div>
+    <div className='smart-input-wrapper'>
+      <input
+        type='text'
+        value={currentValue}
+        onChange={handleChange}
+        placeholder={placeholder}
+        className='smart-input'
+      />
+      <div className='input-display'>
+        <span className='label'>Value:</span>
+        <span className='value'>{currentValue || 'empty'}</span>
+      </div>
     </div>
   );
 };

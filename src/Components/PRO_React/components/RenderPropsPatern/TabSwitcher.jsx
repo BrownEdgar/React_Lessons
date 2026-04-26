@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Divider } from '../../ui/Divider';
 
 export default function TabSwitcher({ tabIds, getHeader, renderContent }) {
   const [selectedId, setSelectedId] = useState(tabIds[0]);
@@ -9,7 +10,7 @@ export default function TabSwitcher({ tabIds, getHeader, renderContent }) {
           {getHeader(tabId)}
         </button>
       ))}
-      <hr />
+      <Divider />
       <div key={selectedId}>
         <h3>{getHeader(selectedId)}</h3>
         {renderContent(selectedId)}

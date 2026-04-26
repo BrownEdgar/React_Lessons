@@ -1,9 +1,13 @@
 import { DataFetcher } from './DataFetcher.jsx';
 import TabSwitcher from './TabSwitcher.jsx';
+import { Divider } from '../../ui/Divider';
+import Title from '../../ui/Title.jsx';
 
 export default function App() {
   return (
     <div className='App'>
+      <Title>TabSwitcher</Title>
+      <Divider />
       <TabSwitcher
         tabIds={['first', 'second', 'third']}
         getHeader={(tabId) => {
@@ -14,9 +18,9 @@ export default function App() {
         }}
       />
 
-      <hr />
-      <h1>DataFetcher</h1>
-      <hr />
+      <Divider />
+      <Title>DataFetcher</Title>
+      <Divider />
       {/* Ունիվերսալ կոմպոնենտ render props patern 
       կարելի է բազմակի օգտագործել անկախ fetch-ով եկած տվյալների տիպից
       Այն մենք վերափոխում ենք հենց render-ի մեջ*/}

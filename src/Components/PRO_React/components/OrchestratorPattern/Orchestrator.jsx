@@ -20,22 +20,22 @@ export const Orchestrator = ({ children }) => {
   });
 
   const handleNext = () => {
-    setCurrentStep(prev => Math.min(prev + 1, children.length - 1));
+    setCurrentStep((prev) => Math.min(prev + 1, children.length - 1));
   };
 
   const handlePrev = () => {
-    setCurrentStep(prev => Math.max(prev - 1, 0));
+    setCurrentStep((prev) => Math.max(prev - 1, 0));
   };
 
   const handleUpdateField = (field, value) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [field]: value,
     }));
   };
 
   return (
-    <div className="orchestrator-container">
+    <div className='orchestrator-container'>
       {/* Հիմնական տեղեկատվություն պետք կա այս կոմպոնենտից */}
       {children[currentStep]?.({
         step: currentStep,

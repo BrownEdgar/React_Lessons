@@ -13,14 +13,14 @@
 
 import { useState } from 'react';
 
-export const LikeButton = ({ itemId, initialLikes = 0 }) => {
+export const LikeButton = ({ initialLikes = 0 }) => {
   const [likes, setLikes] = useState(initialLikes);
   const [isPending, setIsPending] = useState(false);
   const [hasError, setHasError] = useState(false);
 
   const handleLike = async () => {
     const previousLikes = likes;
-    setLikes(prev => prev + 1);
+    setLikes((prev) => prev + 1);
     setIsPending(true);
     setHasError(false);
 
@@ -40,12 +40,16 @@ export const LikeButton = ({ itemId, initialLikes = 0 }) => {
   };
 
   return (
-    <div className="like-button-wrapper">
-      <button className={`like-button ${isPending ? 'pending' : ''} ${hasError ? 'error' : ''}`} onClick={handleLike} disabled={isPending}>
-        <span className="like-icon">❤️</span>
-        <span className="like-text">{likes} Likes</span>
+    <div className='like-button-wrapper'>
+      <button
+        className={`like-button ${isPending ? 'pending' : ''} ${hasError ? 'error' : ''}`}
+        onClick={handleLike}
+        disabled={isPending}
+      >
+        <span className='like-icon'>❤️</span>
+        <span className='like-text'>{likes} Likes</span>
       </button>
-      {hasError && <span className="error-message">Failed! Try again</span>}
+      {hasError && <span className='error-message'>Failed! Try again</span>}
     </div>
   );
 };

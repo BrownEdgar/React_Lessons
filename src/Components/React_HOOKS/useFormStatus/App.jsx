@@ -11,11 +11,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
 
   return (
-    <button
-      type='submit'
-      disabled={pending}
-      className='submit-button'
-    >
+    <button type='submit' disabled={pending} className='submit-button'>
       {pending ? 'Отправка...' : 'Отправить'}
     </button>
   );
@@ -57,9 +53,7 @@ export default function App() {
         <LoadingIndicator />
 
         <div className='form-group'>
-          <label className='label'>
-            Имя:
-          </label>
+          <label className='label'>Имя:</label>
           <input
             type='text'
             name='name'
@@ -70,9 +64,7 @@ export default function App() {
         </div>
 
         <div className='form-group-large'>
-          <label className='label'>
-            Email:
-          </label>
+          <label className='label'>Email:</label>
           <input
             type='email'
             name='email'

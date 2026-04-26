@@ -18,18 +18,18 @@ export const eventBus = {
     if (!listeners[event]) listeners[event] = [];
     listeners[event].push(callback);
     return () => {
-      listeners[event] = listeners[event].filter(cb => cb !== callback);
+      listeners[event] = listeners[event].filter((cb) => cb !== callback);
     };
   },
 
   publish(event, data) {
     if (listeners[event]) {
-      listeners[event].forEach(callback => callback(data));
+      listeners[event].forEach((callback) => callback(data));
     }
   },
 
   clear() {
-    Object.keys(listeners).forEach(key => {
+    Object.keys(listeners).forEach((key) => {
       listeners[key] = [];
     });
   },

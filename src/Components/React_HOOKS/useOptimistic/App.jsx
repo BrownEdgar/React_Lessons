@@ -13,7 +13,7 @@ export default function OptimisticList() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const tempId = Date.now(); // 987675682132
+    const tempId = Date.now();
     const newItem = { id: tempId, text: input };
 
     //  "оптимистично" добавляем элемент
@@ -22,7 +22,7 @@ export default function OptimisticList() {
     setInput('');
 
     const savedItem = await fakeSaveToServer(input);
-  
+
     setItems((prev) => [...prev, savedItem]);
   };
 

@@ -27,13 +27,13 @@ export const Tabs = ({ children, defaultTab = 0 }) => {
 
   return (
     <TabsContext.Provider value={{ activeTab, setActiveTab }}>
-      <div className="tabs-wrapper">{children}</div>
+      <div className='tabs-wrapper'>{children}</div>
     </TabsContext.Provider>
   );
 };
 
 export const TabsList = ({ children }) => (
-  <div className="tabs-list">{children}</div>
+  <div className='tabs-list'>{children}</div>
 );
 
 export const Tab = ({ id, children }) => {
@@ -55,11 +55,7 @@ export const TabPanel = ({ id, children }) => {
 
   if (activeTab !== id) return null;
 
-  return (
-    <div className="tab-panel">
-      {children}
-    </div>
-  );
+  return <div className='tab-panel'>{children}</div>;
 };
 
 Tabs.List = TabsList;

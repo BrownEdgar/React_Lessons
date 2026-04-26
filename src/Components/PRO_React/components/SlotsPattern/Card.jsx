@@ -12,9 +12,9 @@
 export const Card = ({ header, body, footer, className = '' }) => {
   return (
     <div className={`card ${className}`}>
-      {header && <div className="card-header">{header}</div>}
-      {body && <div className="card-body">{body}</div>}
-      {footer && <div className="card-footer">{footer}</div>}
+      {header && <div className='card-header'>{header}</div>}
+      {body && <div className='card-body'>{body}</div>}
+      {footer && <div className='card-footer'>{footer}</div>}
     </div>
   );
 };
