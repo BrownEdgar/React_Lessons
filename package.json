@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@radix-ui/react-icons": "^1.3.2",
+    "@radix-ui/themes": "^3.3.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "axios": "^1.9.0",
+    "clsx": "^2.1.1",
     "formik": "^2.4.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -14,17 +18,24 @@
     "react-infinite-scroll-component": "^6.1.0",
     "react-router-dom": "^7.6.0",
     "sass": "^1.89.0",
+    "tailwind-merge": "^3.5.0",
     "yup": "^1.6.1"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.2.4",
+    "@types/node": "^25.6.0",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
+    "@typescript-eslint/eslint-plugin": "^8.59.0",
+    "@typescript-eslint/parser": "^8.59.0",
     "@vitejs/plugin-react": "^4.4.1",
     "eslint": "^9.27.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "prettier": "^3.5.3",
+    "tailwindcss": "^4.2.4",
+    "typescript": "^6.0.3",
     "vite": "^6.3.5"
   },
   "scripts": {
@@ -32,7 +43,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
-    "check-pretty": "prettier --check \"./**/*.{js,jsx,json}\""
+    "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
+    "check-pretty": "prettier --check \"./**/*.{js,jsx,ts,tsx,json}\""
   }
 }

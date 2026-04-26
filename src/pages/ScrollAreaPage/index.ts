@@ -1,0 +1,1 @@
+export { ScrollAreaPage } from './ScrollAreaPage';

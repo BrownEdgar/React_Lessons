@@ -1,0 +1,1 @@
+export { BadgesPage } from './BadgesPage';

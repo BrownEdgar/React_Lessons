@@ -1,0 +1,1 @@
+export { TypographyPage } from './TypographyPage';
