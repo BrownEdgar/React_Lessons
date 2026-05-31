@@ -1,5 +1,5 @@
-@import "../../../sass/abstracts/variables";
-@import "../../../sass/abstracts/mixins";
+@import '../../../sass/abstracts/variables';
+@import '../../../sass/abstracts/mixins';
 
 .container {
   @include MainFlex(row, stretch, flex-start, 20px);
@@ -10,7 +10,9 @@
 
   &__item {
     width: 340px;
-    box-shadow: rgba(14, 11, 11, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px;
+    box-shadow:
+      rgba(14, 11, 11, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px;
     cursor: pointer;
     border-radius: 6px;
   }

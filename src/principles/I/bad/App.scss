@@ -1,0 +1,88 @@
+.isp-bad__demo-title {
+  margin: 0 0 4px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.isp-bad__demo-warn {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: #ef4444;
+}
+
+.isp-bad__demo-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #f3f4f6;
+  border-radius: 8px;
+}
+
+.isp-bad__demo-caption {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.isp-bad__demo-divider {
+  border: none;
+  border-top: 1px solid #f3f4f6;
+}
+
+.isp-bad__demo-footer {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: #fff5f5;
+  border-radius: 6px;
+
+  p {
+    margin: 0;
+    font-size: 13px;
+    color: #991b1b;
+  }
+}
+
+.isp-bad__avatar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.isp-bad__avatar-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+}
+
+.isp-bad__avatar-name {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.isp-bad__badge-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.isp-bad__badge-role {
+  background: #7c3aed;
+  color: #fff;
+  padding: 3px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.isp-bad__badge-perm {
+  background: #f3f4f6;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: #555;
+  border: 1px solid #e5e7eb;
+}

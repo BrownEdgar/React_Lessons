@@ -1,0 +1,40 @@
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+
+  &--primary {
+    background: #3b82f6;
+    color: #fff;
+  }
+
+  &--danger {
+    background: #ef4444;
+    color: #fff;
+  }
+
+  &--success {
+    background: #22c55e;
+    color: #fff;
+  }
+
+  &--warning {
+    background: #f59e0b;
+    color: #fff;
+  }
+
+  &--ghost {
+    background: transparent;
+    color: #374151;
+    border: 1px solid #d1d5db;
+  }
+
+  &--ghost-2 {
+    background: transparent;
+    color: #6366f1;
+    border: 2px dashed #6366f1;
+  }
+}

@@ -1,0 +1,47 @@
+.ocp-bad-button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  border: none;
+
+  &--primary {
+    background: #3b82f6;
+    color: #fff;
+  }
+
+  &--danger {
+    background: #ef4444;
+    color: #fff;
+  }
+
+  &--success {
+    background: #22c55e;
+    color: #fff;
+    padding: 10px;
+  }
+
+  &--default {
+    border: 1px solid #ccc;
+    background: #fff;
+    color: inherit;
+  }
+}
+
+.ocp-bad__demo-title {
+  margin: 0 0 16px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.ocp-bad__demo-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ocp-bad__demo-note {
+  margin: 16px 0 0;
+  font-size: 13px;
+  color: #ef4444;
+}

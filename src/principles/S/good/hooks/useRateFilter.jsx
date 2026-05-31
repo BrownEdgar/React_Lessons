@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState } from 'react';
 
+// Хук: отвечает только за состояние и логику фильтра по рейтингу
 export function useRateFilter() {
   const [filterRate, setFilterRate] = useState(1);
 

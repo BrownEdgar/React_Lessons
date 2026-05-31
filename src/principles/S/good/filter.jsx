@@ -1,23 +1,19 @@
-import React from "react";
-import { Rating } from "react-simple-star-rating";
+import React from 'react';
+import { Rating } from 'react-simple-star-rating';
 
+// Чистая функция: отвечает только за логику фильтрации товаров по рейтингу
 export function filterProducts(products, rate) {
-  return products.filter(
-    (product) => product.rating.rate > rate
-  );
+  return products.filter((product) => product.rating.rate > rate);
 }
 
+// Компонент: отвечает только за отображение UI фильтра
 export function Filter(props) {
   const { filterRate, handleRating } = props;
 
   return (
     <div className="flex flex-col justify-center items-center mb-4">
       <span className="font-semibold">Minimum Rating </span>
-      <Rating
-        initialValue={filterRate}
-        SVGclassName="inline-block"
-        onClick={handleRating}
-      />
+      <Rating initialValue={filterRate} SVGclassName="inline-block" onClick={handleRating} />
     </div>
   );
 }
