@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
+.box {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  color: #e0e0e0;
+}
+
+.box h1 {
+  font-size: 2.4em;
+  color: #e17055;
+  margin-bottom: 10px;
+  text-shadow: 0 0 18px #e1705566;
+}
+
+.desc {
+  font-size: 1.1em;
+  color: #b2bec3;
+  text-align: center;
+  max-width: 500px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: #2d3436;
+  border: 1px solid #455;
+  border-radius: 14px;
+  padding: 20px 28px;
+  margin-bottom: 18px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.card h2 {
+  font-size: 1.4em;
+  color: #74b9ff;
+  margin: 0 0 12px;
+}
+
+.status-badge {
+  font-size: 1.3em;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.status-badge.online {
+  background: #00b894;
+  color: #fff;
+}
+
+.status-badge.offline {
+  background: #d63031;
+  color: #fff;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.row button {
+  padding: 6px 14px;
+  font-size: 0.95em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Indie Flower', cursive;
+  background: linear-gradient(140deg, #ee5253 50%, #feca57 100%);
+  color: #1a1a2e;
+  font-weight: bold;
+}
+
+.hint {
+  font-size: 0.9em;
+  color: #636e72;
+  margin: 6px 0 0;
+}
+
+.hint code {
+  color: #fdcb6e;
+  background: #ffffff10;
+  padding: 1px 5px;
+  border-radius: 4px;
+}

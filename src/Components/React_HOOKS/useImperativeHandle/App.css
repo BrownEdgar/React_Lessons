@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Indie Flower', cursive;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.box {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #e0e0e0;
+  padding: 20px;
+}
+
+.box h1 {
+  font-size: 2.5em;
+  color: #64ffda;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px #64ffda88;
+}
+
+.desc {
+  font-size: 1.1em;
+  color: #a0a0b0;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 500px;
+}
+
+.desc code {
+  color: #ff79c6;
+  background: #ffffff1a;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.fancy-input {
+  font-size: 1.3em;
+  padding: 10px 16px;
+  border: 2px solid #64ffda;
+  border-radius: 8px;
+  background: #ffffff10;
+  color: #e0e0e0;
+  outline: none;
+  width: 280px;
+  font-family: 'Indie Flower', cursive;
+}
+
+.fancy-input:focus {
+  border-color: #ff79c6;
+  box-shadow: 0 0 12px #ff79c655;
+}
+
+.btn-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btn-row button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Indie Flower', cursive;
+  background: linear-gradient(140deg, #ee5253 50%, #feca57 100%);
+  color: #1a1a2e;
+  font-weight: bold;
+  transition: transform 0.1s;
+}
+
+.btn-row button:hover {
+  transform: scale(1.05);
+}
+
+.log {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+  font-size: 1.1em;
+  color: #feca57;
+}
+
+.log li::before {
+  content: '→ ';
+  color: #64ffda;
+}

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
+:root {
+  --card-bg: #0077b6;
+  --card-text: #caf0f8;
+  --card-border: #90e0ef;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Indie Flower', cursive;
+  background: linear-gradient(135deg, #212529, #343a40);
+}
+
+.box {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #e0e0e0;
+  padding: 20px;
+}
+
+.box h1 {
+  font-size: 2.4em;
+  color: #ffd43b;
+  margin-bottom: 10px;
+  text-shadow: 0 0 18px #ffd43b66;
+}
+
+.desc {
+  font-size: 1.1em;
+  color: #ced4da;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 520px;
+}
+
+.desc code {
+  color: #74c0fc;
+  background: #ffffff15;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.theme-card {
+  background: var(--card-bg);
+  color: var(--card-text);
+  border: 2px solid var(--card-border);
+  border-radius: 12px;
+  padding: 20px 36px;
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  box-shadow: 0 4px 20px #00000040;
+}
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-row button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: 2px solid #555;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Indie Flower', cursive;
+  background: #2c2c2c;
+  color: #ccc;
+  text-transform: capitalize;
+  transition: all 0.2s;
+}
+
+.btn-row button.active,
+.btn-row button:hover {
+  border-color: #ffd43b;
+  color: #ffd43b;
+  background: #3a3a1a;
+}
+
+.warning {
+  font-size: 0.95em;
+  color: #ff6b6b;
+  text-align: center;
+  max-width: 460px;
+}
