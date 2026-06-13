@@ -1,0 +1,85 @@
+.user-avatar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &__img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #86efac;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+.user-badge {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  &__role {
+    background: #7c3aed;
+    color: #fff;
+    padding: 3px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  &__perm {
+    background: #f3f4f6;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    color: #555;
+    border: 1px solid #e5e7eb;
+  }
+}
+
+.user-contacts {
+  color: #3b82f6;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.isp-demo-title {
+  margin: 0 0 4px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.isp-demo-subtitle {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: #16a34a;
+}
+
+.isp-demo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #f3f4f6;
+  border-radius: 8px;
+}
+
+.isp-demo-label {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.isp-demo-divider {
+  border: none;
+  border-top: 1px solid #f3f4f6;
+}

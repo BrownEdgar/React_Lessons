@@ -1,5 +1,6 @@
 // ✅ ХОРОШО: UserList зависит от абстракции (функция fetchUsers), а не от конкретной реализации.
 import React, { useState, useEffect } from 'react';
+import './App.scss';
 import axios from 'axios';
 import { PrinciplePage, PrinciplePanel } from '../../shared/PrincipleLayout';
 
@@ -16,23 +17,14 @@ function UserList({ fetchUsers }) {
     });
   }, [fetchUsers]);
 
-  if (loading) return <p style={{ color: '#9ca3af', fontStyle: 'italic' }}>Загрузка...</p>;
+  if (loading) return <p className="user-list-loading">Загрузка...</p>;
 
   return (
-    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+    <ul className="user-list">
       {users.map((user) => (
-        <li
-          key={user.id}
-          style={{
-            padding: '10px 16px',
-            marginBottom: 8,
-            background: '#f0fdf4',
-            borderRadius: 8,
-            border: '1px solid #86efac',
-          }}
-        >
+        <li key={user.id} className="user-list__item">
           <strong>{user.name}</strong>
-          <span style={{ color: '#6b7280', marginLeft: 8, fontSize: 13 }}>{user.email}</span>
+          <span className="user-list__email">{user.email}</span>
         </li>
       ))}
     </ul>
@@ -67,6 +59,7 @@ export function App() {
           GraphQL или моки.
         </p>
         <p>
+          Модули высокого уровня не должны зависеть от модулей низкого уровня. Оба должны зависеть от абстракций.
           Конкретная реализация «инжектируется» снаружи — это и есть{' '}
           <strong>Dependency Injection</strong>. Компонент остаётся чистым, тестируемым и
           независимым от инфраструктурных деталей.
@@ -94,26 +87,26 @@ export function App() {
 
       {/* ───── Демо ───── */}
       <PrinciplePanel variant="demo">
-        <p style={{ margin: '0 0 4px', fontWeight: 600, color: '#374151' }}>
+        <p className="dip-demo-title">
           🎮 Тот же компонент <code>UserList</code> — разные источники данных:
         </p>
-        <p style={{ margin: '0 0 16px', fontSize: 13, color: '#16a34a' }}>
+        <p className="dip-demo-subtitle">
           ✅ Ниже — данные из реального API. Закомментируй <code>fetchFromAPI</code> и
           раскомментируй <code>fetchMock</code> — компонент не изменится
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+        <div className="dip-demo-grid">
           <div>
-            <p style={{ margin: '0 0 10px', fontSize: 13, fontWeight: 600, color: '#1d4ed8' }}>
+            <p className="dip-demo-label dip-demo-label--api">
               📡 <code>fetchFromAPI</code> — реальный HTTP:
             </p>
-            <UserList fetchUsers={fetchFromAPI} />
+            {/* <UserList fetchUsers={fetchFromAPI} /> */}
           </div>
           <div>
-            <p style={{ margin: '0 0 10px', fontSize: 13, fontWeight: 600, color: '#7c3aed' }}>
+            <p className="dip-demo-label dip-demo-label--mock">
               🧪 <code>fetchMock</code> — мок для тестов:
             </p>
-            <UserList fetchUsers={fetchMock} />
+            <UserList fetchUsers={fetchFromAPI} />
           </div>
         </div>
       </PrinciplePanel>

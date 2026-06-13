@@ -1,26 +1,17 @@
 // ✅ ХОРОШО: ReadonlyInput честно описывает контракт — не принимает onChange совсем.
 import React, { useState } from 'react';
+import './App.scss';
 import { PrinciplePage, PrinciplePanel } from '../../shared/PrincipleLayout';
 
-const baseInput = {
-  padding: '8px 12px',
-  border: '1px solid #ccc',
-  borderRadius: 6,
-  fontSize: 15,
-  width: '100%',
-  outline: 'none',
-  boxSizing: 'border-box',
-};
-
 function Input({ value, onChange, placeholder }) {
-  return <input style={baseInput} value={value} onChange={onChange} placeholder={placeholder} />;
+  return <input className="base-input" value={value} onChange={onChange} placeholder={placeholder} />;
 }
 
 // Честный контракт: нет onChange в интерфейсе — нет ложных обещаний
 function ReadonlyInput({ value, placeholder }) {
   return (
     <input
-      style={{ ...baseInput, background: '#f5f5f5', color: '#888', cursor: 'not-allowed' }}
+      className="base-input base-input--readonly"
       value={value}
       readOnly
       placeholder={placeholder}
@@ -70,20 +61,12 @@ export function App() {
 
       {/* ───── Демо ───── */}
       <PrinciplePanel variant="demo">
-        <p style={{ margin: '0 0 16px', fontWeight: 600, color: '#374151' }}>
+        <p className="lsp-demo-title">
           🎮 Попробуй набирать текст — каждый компонент честен о своих возможностях:
         </p>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+        <div className="lsp-demo-col">
           <div>
-            <label
-              style={{
-                display: 'block',
-                fontSize: 13,
-                color: '#16a34a',
-                fontWeight: 600,
-                marginBottom: 6,
-              }}
-            >
+            <label className="lsp-demo-label lsp-demo-label--green">
               ✅ Input — принимает onChange и честно его вызывает:
             </label>
             <Input
@@ -91,27 +74,17 @@ export function App() {
               onChange={(e) => setText(e.target.value)}
               placeholder="Введи текст"
             />
-            <span style={{ fontSize: 12, color: '#6b7280', marginTop: 4, display: 'block' }}>
-              Значение: «{text}»
-            </span>
+            <span className="lsp-demo-hint">Значение: «{text}»</span>
           </div>
           <div>
-            <label
-              style={{
-                display: 'block',
-                fontSize: 13,
-                color: '#2563eb',
-                fontWeight: 600,
-                marginBottom: 6,
-              }}
-            >
+            <label className="lsp-demo-label lsp-demo-label--blue">
               ✅ ReadonlyInput — не принимает onChange, честно сигнализирует «только чтение»:
             </label>
             <ReadonlyInput
               value="Это значение зафиксировано — и ReadonlyInput честно об этом говорит"
               placeholder="Только чтение"
             />
-            <span style={{ fontSize: 12, color: '#6b7280', marginTop: 4, display: 'block' }}>
+            <span className="lsp-demo-hint">
               Курсор: not-allowed | onChange отсутствует в интерфейсе — никакого обмана
             </span>
           </div>

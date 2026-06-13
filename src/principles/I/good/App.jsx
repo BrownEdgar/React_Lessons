@@ -1,5 +1,6 @@
 // ✅ ХОРОШО: каждый компонент принимает только нужные ему поля.
 import React from 'react';
+import './App.scss';
 import { PrinciplePage, PrinciplePanel } from '../../shared/PrincipleLayout';
 
 const user = {
@@ -16,19 +17,9 @@ const user = {
 // Только name и avatar — ничего лишнего
 function UserAvatar({ name, avatar }) {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-      <img
-        src={avatar}
-        alt={name}
-        style={{
-          width: 52,
-          height: 52,
-          borderRadius: '50%',
-          objectFit: 'cover',
-          border: '2px solid #86efac',
-        }}
-      />
-      <span style={{ fontWeight: 700, fontSize: 16 }}>{name}</span>
+    <div className="user-avatar">
+      <img src={avatar} alt={name} className="user-avatar__img" />
+      <span className="user-avatar__name">{name}</span>
     </div>
   );
 }
@@ -36,33 +27,10 @@ function UserAvatar({ name, avatar }) {
 // Только role и permissions — ничего лишнего
 function UserBadge({ role, permissions }) {
   return (
-    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-      <span
-        style={{
-          background: '#7c3aed',
-          color: '#fff',
-          padding: '3px 12px',
-          borderRadius: 12,
-          fontSize: 13,
-          fontWeight: 600,
-        }}
-      >
-        {role}
-      </span>
+    <div className="user-badge">
+      <span className="user-badge__role">{role}</span>
       {permissions.map((p) => (
-        <span
-          key={p}
-          style={{
-            background: '#f3f4f6',
-            padding: '3px 10px',
-            borderRadius: 10,
-            fontSize: 12,
-            color: '#555',
-            border: '1px solid #e5e7eb',
-          }}
-        >
-          {p}
-        </span>
+        <span key={p} className="user-badge__perm">{p}</span>
       ))}
     </div>
   );
@@ -71,17 +39,7 @@ function UserBadge({ role, permissions }) {
 // Только email — ничего лишнего
 function UserContacts({ email }) {
   return (
-    <a
-      href={`mailto:${email}`}
-      style={{
-        color: '#3b82f6',
-        fontSize: 15,
-        textDecoration: 'none',
-        display: 'flex',
-        alignItems: 'center',
-        gap: 6,
-      }}
-    >
+    <a href={`mailto:${email}`} className="user-contacts">
       ✉️ {email}
     </a>
   );
@@ -132,41 +90,25 @@ export function App() {
 
       {/* ───── Демо ───── */}
       <PrinciplePanel variant="demo">
-        <p style={{ margin: '0 0 4px', fontWeight: 600, color: '#374151' }}>
+        <p className="isp-demo-title">
           🎮 Демонстрация — каждый компонент получает ровно то, что ему нужно:
         </p>
-        <p style={{ margin: '0 0 16px', fontSize: 13, color: '#16a34a' }}>
+        <p className="isp-demo-subtitle">
           ✅ Изменение любого другого поля user (settings, createdAt...) не затронет эти компоненты
         </p>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 12,
-            padding: '16px',
-            background: '#fff',
-            border: '1px solid #f3f4f6',
-            borderRadius: 8,
-          }}
-        >
+        <div className="isp-demo-container">
           <div>
-            <p style={{ margin: '0 0 8px', fontSize: 12, color: '#16a34a', fontWeight: 600 }}>
-              UserAvatar получает: name, avatar (2/8 полей)
-            </p>
+            <p className="isp-demo-label">UserAvatar получает: name, avatar (2/8 полей)</p>
             <UserAvatar name={user.name} avatar={user.avatar} />
           </div>
-          <hr style={{ border: 'none', borderTop: '1px solid #f3f4f6' }} />
+          <hr className="isp-demo-divider" />
           <div>
-            <p style={{ margin: '0 0 8px', fontSize: 12, color: '#16a34a', fontWeight: 600 }}>
-              UserBadge получает: role, permissions (2/8 полей)
-            </p>
+            <p className="isp-demo-label">UserBadge получает: role, permissions (2/8 полей)</p>
             <UserBadge role={user.role} permissions={user.permissions} />
           </div>
-          <hr style={{ border: 'none', borderTop: '1px solid #f3f4f6' }} />
+          <hr className="isp-demo-divider" />
           <div>
-            <p style={{ margin: '0 0 8px', fontSize: 12, color: '#16a34a', fontWeight: 600 }}>
-              UserContacts получает: email (1/8 полей)
-            </p>
+            <p className="isp-demo-label">UserContacts получает: email (1/8 полей)</p>
             <UserContacts email={user.email} />
           </div>
         </div>

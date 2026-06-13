@@ -1,0 +1,51 @@
+.user-list-loading {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    background: #f0fdf4;
+    border-radius: 8px;
+    border: 1px solid #86efac;
+  }
+
+  &__email {
+    color: #6b7280;
+    margin-left: 8px;
+    font-size: 13px;
+  }
+}
+
+.dip-demo-title {
+  margin: 0 0 4px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.dip-demo-subtitle {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: #16a34a;
+}
+
+.dip-demo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.dip-demo-label {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 600;
+
+  &--api  { color: #1d4ed8; }
+  &--mock { color: #7c3aed; }
+}

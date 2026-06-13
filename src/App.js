@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css';
 import SRP from './principles/S/SRP';
 import OCP from './principles/O/OCP';
 import LSP from './principles/L/LSP';
@@ -25,7 +26,7 @@ export default function App() {
 
   return (
     <div className="Main">
-      <h1 className="Title" style={{ marginBottom: 8 }}>
+      <h1 className="Title app-title">
         <span>SOLID</span> принципы в React
       </h1>
 

@@ -18,46 +18,23 @@ export function App() {
       </h1>
 
       {/* ───── Что такое принцип ───── */}
-      <div
-        style={{
-          maxWidth: 780,
-          margin: '0 auto 16px',
-          padding: '20px 24px',
-          background: '#f0f4ff',
-          border: '1px solid #c7d7ff',
-          borderRadius: 12,
-        }}
-      >
-        <h2 style={{ margin: '0 0 10px', fontSize: 17, color: '#1e3a8a' }}>
-          📖 Single Responsibility Principle (SRP)
-        </h2>
-        <p style={{ margin: '0 0 10px', color: '#334155', lineHeight: 1.7 }}>
+      <div className="srp-panel srp-panel--info">
+        <h2>📖 Single Responsibility Principle (SRP)</h2>
+        <p>
           <strong>Каждый модуль — одна обязанность, одна причина меняться.</strong> Здесь каждый
           файл делает ровно одно дело. Смена API-логики не затрагивает UI. Смена UI карточки не
           затрагивает хук загрузки данных.
         </p>
-        <p style={{ margin: 0, color: '#334155', lineHeight: 1.7 }}>
+        <p>
           Декомпозиция по обязанностям делает код тестируемым, переиспользуемым и понятным. Каждый
           модуль можно прочитать, понять и изменить изолированно.
         </p>
       </div>
 
       {/* ───── Что конкретно хорошо ───── */}
-      <div
-        style={{
-          maxWidth: 780,
-          margin: '0 auto 24px',
-          padding: '20px 24px',
-          background: '#f0fdf4',
-          border: '1px solid #86efac',
-          borderLeft: '5px solid #22c55e',
-          borderRadius: 8,
-        }}
-      >
-        <h3 style={{ margin: '0 0 12px', color: '#16a34a', fontSize: 16 }}>
-          ✅ Каждый модуль отвечает ровно за одно:
-        </h3>
-        <ul style={{ margin: 0, paddingLeft: 20, color: '#14532d', lineHeight: 2 }}>
+      <div className="srp-panel srp-panel--good">
+        <h3>✅ Каждый модуль отвечает ровно за одно:</h3>
+        <ul>
           <li>
             <code>useProducts</code> — <strong>только загрузка</strong> товаров с API (хук)
           </li>
@@ -78,14 +55,14 @@ export function App() {
             <code>&lt;App /&gt;</code> — <strong>только оркестрация</strong>: соединяет всё вместе
           </li>
         </ul>
-        <p style={{ margin: '12px 0 0', color: '#166534', fontSize: 14 }}>
+        <p className="srp-panel-note">
           💡 Хочешь переиспользовать карточку товара? Просто импортируй{' '}
           <code>&lt;Product /&gt;</code>. Хочешь сменить API? Только <code>useProducts.jsx</code>.
         </p>
       </div>
 
       {/* ───── Интерактивная демонстрация ───── */}
-      <div style={{ maxWidth: 780, margin: '0 auto', padding: '0 16px' }}>
+      <div className="srp-demo-wrapper">
         <Filter filterRate={filterRate} handleRating={handleRating} />
         <div className="container">
           {filterProducts(products, filterRate).length > 0 ? (

@@ -38,46 +38,23 @@ export function App() {
       </h1>
 
       {/* ───── Что такое принцип ───── */}
-      <div
-        style={{
-          maxWidth: 780,
-          margin: '0 auto 16px',
-          padding: '20px 24px',
-          background: '#f0f4ff',
-          border: '1px solid #c7d7ff',
-          borderRadius: 12,
-        }}
-      >
-        <h2 style={{ margin: '0 0 10px', fontSize: 17, color: '#1e3a8a' }}>
-          📖 Single Responsibility Principle (SRP)
-        </h2>
-        <p style={{ margin: '0 0 10px', color: '#334155', lineHeight: 1.7 }}>
+      <div className="srp-panel srp-panel--info">
+        <h2>📖 Single Responsibility Principle (SRP)</h2>
+        <p>
           <strong>Каждый компонент должен иметь одну и только одну причину для изменения.</strong>{' '}
           Если ты описываешь компонент словом «И» — это сигнал нарушения: «он загружает данные{' '}
           <em>И</em> фильтрует их <em>И</em> рендерит карточки».
         </p>
-        <p style={{ margin: 0, color: '#334155', lineHeight: 1.7 }}>
+        <p>
           Представь: ты меняешь внешний вид карточки товара — и случайно ломаешь логику фильтрации,
           потому что всё находится в одном месте. Вот цена нарушения SRP.
         </p>
       </div>
 
       {/* ───── Что конкретно плохо ───── */}
-      <div
-        style={{
-          maxWidth: 780,
-          margin: '0 auto 24px',
-          padding: '20px 24px',
-          background: '#fff5f5',
-          border: '1px solid #fca5a5',
-          borderLeft: '5px solid #ef4444',
-          borderRadius: 8,
-        }}
-      >
-        <h3 style={{ margin: '0 0 12px', color: '#dc2626', fontSize: 16 }}>
-          ❌ В этом компоненте 4 разные обязанности:
-        </h3>
-        <ul style={{ margin: 0, paddingLeft: 20, color: '#7f1d1d', lineHeight: 2 }}>
+      <div className="srp-panel srp-panel--bad">
+        <h3>❌ В этом компоненте 4 разные обязанности:</h3>
+        <ul>
           <li>
             <strong>Загрузка данных</strong> —{' '}
             <code>fetch('https://fakestoreapi.com/products')</code> прямо внутри компонента
@@ -94,7 +71,7 @@ export function App() {
             <strong>Отображение</strong> — вся разметка карточки товара жёстко зашита внутри
           </li>
         </ul>
-        <p style={{ margin: '12px 0 0', color: '#991b1b', fontSize: 14 }}>
+        <p className="srp-panel-note">
           ⚠️ Чтобы переиспользовать карточку товара на другой странице — придётся копипастить. Чтобы
           сменить API — придётся идти в UI-компонент. Это признак нарушения SRP.
         </p>
