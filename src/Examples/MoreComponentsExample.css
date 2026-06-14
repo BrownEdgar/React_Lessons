@@ -1,0 +1,6 @@
+/* Полная ширина колонок без инлайна style={{ width: '100%' }} */
+
+.ant-demo-more-root,
+.ant-demo-more-progress-stack {
+  width: 100%;
+}

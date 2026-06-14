@@ -1,0 +1,73 @@
+/* Стили корневого демо Ant Design — без инлайнов в App.jsx */
+
+.ant-demo-root.ant-layout {
+  min-height: 100vh;
+  background: transparent;
+}
+
+.ant-demo-header.ant-layout-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding-block: 12px;
+  height: auto;
+  line-height: 1.3;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ant-demo-header-title {
+  margin: 0;
+  color: #fff;
+}
+
+.ant-demo-content.ant-layout-content {
+  padding: 24px 16px 48px;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.ant-demo-lead {
+  margin-bottom: 24px;
+}
+
+.ant-demo-intro-section {
+  margin-bottom: 8px;
+}
+
+.ant-demo-intro-subtitle {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.ant-demo-intro-footer {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.ant-demo-card-cover {
+  height: 160px;
+  object-fit: cover;
+}
+
+.ant-demo-collapse-spacing {
+  margin-top: 16px;
+}
+
+.ant-demo-intro-stat-value {
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ant-demo-card-narrow {
+  max-width: 480px;
+}
+
+.ant-demo-stack-full {
+  width: 100%;
+}

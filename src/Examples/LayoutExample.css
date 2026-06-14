@@ -1,0 +1,24 @@
+/* Превью вложенного Layout: рамка и минимальная высота — без инлайнов в JSX */
+
+.ant-demo-layout-shell.ant-layout {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 260px;
+}
+
+.ant-demo-layout-header.ant-layout-header {
+  color: #fff;
+  line-height: 64px;
+  padding-inline: 16px;
+}
+
+.ant-demo-layout-content.ant-layout-content {
+  margin: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.ant-demo-layout-footer.ant-layout-footer {
+  text-align: center;
+}
